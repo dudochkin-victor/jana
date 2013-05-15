@@ -1,0 +1,77 @@
+<!-- ##### SECTION Title ##### -->
+JanaEcalTime
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEcalTime ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaEcalTime:icaltime ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_ecal_time_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_time_new_from_icaltime ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_time_new_from_ecaltime ##### -->
+<para>
+
+</para>
+
+@dt: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_time_set_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@location: 
+
+
+<!-- ##### FUNCTION jana_ecal_time_get_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

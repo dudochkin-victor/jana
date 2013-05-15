@@ -1,0 +1,972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jana-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="JanaTime.html" title="JanaTime">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaTime.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td> </td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libjana-jana-utils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libjana-jana-utils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="jana-utils">
+<a name="libjana-jana-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libjana-jana-utils.top_of_page"></a>jana-utils</span></h2>
+<p>jana-utils — A set of utility functions</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="libjana-jana-utils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libjana-jana-utils.html#jana-utils-time-is-leap-year" title="jana_utils_time_is_leap_year ()">jana_utils_time_is_leap_year</a>        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> year</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>              <a class="link" href="libjana-jana-utils.html#jana-utils-time-days-in-month" title="jana_utils_time_days_in_month ()">jana_utils_time_days_in_month</a>       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> month</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        <a class="link" href="libjana-jana-utils.html#jana-utils-time-day-of-week" title="jana_utils_time_day_of_week ()">jana_utils_time_day_of_week</a>         (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="libjana-jana-utils.html#jana-utils-time-day-of-year" title="jana_utils_time_day_of_year ()">jana_utils_time_day_of_year</a>         (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        <a class="link" href="libjana-jana-utils.html#jana-utils-time-set-start-of-week" title="jana_utils_time_set_start_of_week ()">jana_utils_time_set_start_of_week</a>   (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        <a class="link" href="libjana-jana-utils.html#jana-utils-time-set-end-of-week" title="jana_utils_time_set_end_of_week ()">jana_utils_time_set_end_of_week</a>     (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="libjana-jana-utils.html#jana-utils-time-week-of-year" title="jana_utils_time_week_of_year ()">jana_utils_time_week_of_year</a>        (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> week_starts_monday</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDate"><span class="returnvalue">GDate</span></a> *             <a class="link" href="libjana-jana-utils.html#jana-utils-time-to-gdate" title="jana_utils_time_to_gdate ()">jana_utils_time_to_gdate</a>            (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+struct <a href="/usr/share/gtk-doc/html/libedataserver/libedataserver-e-util.html#tm"><span class="returnvalue">tm</span></a>           <a class="link" href="libjana-jana-utils.html#jana-utils-time-to-tm" title="jana_utils_time_to_tm ()">jana_utils_time_to_tm</a>               (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libjana-jana-utils.html#jana-utils-strftime" title="jana_utils_strftime ()">jana_utils_strftime</a>                 (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="libjana-jana-utils.html#jana-utils-time-compare" title="jana_utils_time_compare ()">jana_utils_time_compare</a>             (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> date_only</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="libjana-jana-utils.html#jana-utils-time-copy" title="jana_utils_time_copy ()">jana_utils_time_copy</a>                (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *dest</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libjana-jana-utils.html#jana-utils-time-diff" title="jana_utils_time_diff ()">jana_utils_time_diff</a>                (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *t1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *t2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *month</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *day</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *hours</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minutes</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> *seconds</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libjana-jana-utils.html#jana-utils-time-adjust" title="jana_utils_time_adjust ()">jana_utils_time_adjust</a>              (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> month</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> day</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> hours</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> minutes</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> seconds</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="libjana-jana-utils.html#jana-utils-time-now" title="jana_utils_time_now ()">jana_utils_time_now</a>                 (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libjana-jana-utils.html#jana-utils-duration-contains" title="jana_utils_duration_contains ()">jana_utils_duration_contains</a>        (<em class="parameter"><code><a class="link" href="JanaTime.html#JanaDuration" title="JanaDuration"><span class="type">JanaDuration</span></a> *duration</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<a class="link" href="JanaEvent.html" title="JanaEvent"><span class="returnvalue">JanaEvent</span></a> *         <a class="link" href="libjana-jana-utils.html#jana-utils-event-copy" title="jana_utils_event_copy ()">jana_utils_event_copy</a>               (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *dest</code></em>);
+<a class="link" href="JanaNote.html" title="JanaNote"><span class="returnvalue">JanaNote</span></a> *          <a class="link" href="libjana-jana-utils.html#jana-utils-note-copy" title="jana_utils_note_copy ()">jana_utils_note_copy</a>                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *dest</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libjana-jana-utils.html#jana-utils-event-get-instances" title="jana_utils_event_get_instances ()">jana_utils_event_get_instances</a>      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *event</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *range_start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *range_end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libjana-jana-utils.html#jana-utils-component-insert-category" title="jana_utils_component_insert_category ()">jana_utils_component_insert_category</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> position</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libjana-jana-utils.html#jana-utils-component-remove-category" title="jana_utils_component_remove_category ()">jana_utils_component_remove_category</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libjana-jana-utils.html#jana-utils-component-has-category" title="jana_utils_component_has_category ()">jana_utils_component_has_category</a>   (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libjana-jana-utils.html#jana-utils-instance-list-free" title="jana_utils_instance_list_free ()">jana_utils_instance_list_free</a>       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *instances</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libjana-jana-utils.html#jana-utils-get-local-tzname" title="jana_utils_get_local_tzname ()">jana_utils_get_local_tzname</a>         ();
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libjana-jana-utils.html#jana-utils-recurrence-to-string" title="jana_utils_recurrence_to_string ()">jana_utils_recurrence_to_string</a>     (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recur</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libjana-jana-utils.html#jana-utils-recurrence-diff" title="jana_utils_recurrence_diff ()">jana_utils_recurrence_diff</a>          (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *r1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *r2</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libjana-jana-utils.html#jana-utils-ab-day" title="jana_utils_ab_day ()">jana_utils_ab_day</a>                   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> day</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="libjana-jana-utils.html#jana-utils-time-daylight-hours" title="jana_utils_time_daylight_hours ()">jana_utils_time_daylight_hours</a>      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> day_of_year</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="libjana-jana-utils.description"></a><h2>Description</h2>
+<p>
+jana-utils contains a collection of utility functions related to, and 
+using the interfaces specified in libjana.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="libjana-jana-utils.details"></a><h2>Details</h2>
+<div class="refsect2" title="jana_utils_time_is_leap_year ()">
+<a name="jana-utils-time-is-leap-year"></a><h3>jana_utils_time_is_leap_year ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_utils_time_is_leap_year        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> year</code></em>);</pre>
+<p>
+Determines if <em class="parameter"><code>year</code></em> is a leap year.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>year</code></em> :</span></p></td>
+<td>A year
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>year</code></em> is a leap year, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_days_in_month ()">
+<a name="jana-utils-time-days-in-month"></a><h3>jana_utils_time_days_in_month ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>              jana_utils_time_days_in_month       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> month</code></em>);</pre>
+<p>
+Determines the amount of days in the given month and year.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>year</code></em> :</span></p></td>
+<td>A year
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>month</code></em> :</span></p></td>
+<td>A month
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The amount of days in the given month and year.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_day_of_week ()">
+<a name="jana-utils-time-day-of-week"></a><h3>jana_utils_time_day_of_week ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        jana_utils_time_day_of_week         (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Determines the day of the week that <em class="parameter"><code>time</code></em> occurs on.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The day of the week that <em class="parameter"><code>time</code></em> occurs on.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_day_of_year ()">
+<a name="jana-utils-time-day-of-year"></a><h3>jana_utils_time_day_of_year ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               jana_utils_time_day_of_year         (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Determines what day of the year <em class="parameter"><code>time</code></em> is, where 1st January is the first 
+day of the year.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The day of the year that <em class="parameter"><code>time</code></em> is.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_set_start_of_week ()">
+<a name="jana-utils-time-set-start-of-week"></a><h3>jana_utils_time_set_start_of_week ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        jana_utils_time_set_start_of_week   (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);</pre>
+<p>
+Moves <em class="parameter"><code>start</code></em> backwards to the start of the week (Monday), if it isn't 
+already.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The day of the week <em class="parameter"><code>start</code></em> was on, before modification.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_set_end_of_week ()">
+<a name="jana-utils-time-set-end-of-week"></a><h3>jana_utils_time_set_end_of_week ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDateWeekday"><span class="returnvalue">GDateWeekday</span></a>        jana_utils_time_set_end_of_week     (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);</pre>
+<p>
+Moves <em class="parameter"><code>end</code></em> forwards to the end of the week (Sunday), if it isn't already.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The day of the week <em class="parameter"><code>end</code></em> was on, before modification.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_week_of_year ()">
+<a name="jana-utils-time-week-of-year"></a><h3>jana_utils_time_week_of_year ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               jana_utils_time_week_of_year        (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> week_starts_monday</code></em>);</pre>
+<p>
+Retrieves what week of the year <em class="parameter"><code>time</code></em> occurs within.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>week_starts_monday</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the week begins on Monday, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if it 
+begins on Sunday
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The week of the year <em class="parameter"><code>time</code></em> occurs within.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_to_gdate ()">
+<a name="jana-utils-time-to-gdate"></a><h3>jana_utils_time_to_gdate ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDate"><span class="returnvalue">GDate</span></a> *             jana_utils_time_to_gdate            (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Converts a <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> to a <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDate"><span class="type">GDate</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GDate"><span class="type">GDate</span></a>, with fields set from <em class="parameter"><code>time</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_to_tm ()">
+<a name="jana-utils-time-to-tm"></a><h3>jana_utils_time_to_tm ()</h3>
+<pre class="programlisting">struct <a href="/usr/share/gtk-doc/html/libedataserver/libedataserver-e-util.html#tm"><span class="returnvalue">tm</span></a>           jana_utils_time_to_tm               (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Converts <em class="parameter"><code>time</code></em> to a broken-down time structure, usable by libc time
+functions. tm_gmtoff and tm_zone components of this structure are not 
+filled in, however, they can be completed using <a class="link" href="JanaTime.html#jana-time-get-offset" title="jana_time_get_offset ()"><code class="function">jana_time_get_offset()</code></a> and 
+<a class="link" href="JanaTime.html#jana-time-get-tzname" title="jana_time_get_tzname ()"><code class="function">jana_time_get_tzname()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> implementation
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A broken-down time structure
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_strftime ()">
+<a name="jana-utils-strftime"></a><h3>jana_utils_strftime ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_utils_strftime                 (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>);</pre>
+<p>
+Create a formatted string of <em class="parameter"><code>time</code></em>, using <code class="function">strftime()</code> and <em class="parameter"><code>format</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> implementation
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>format</code></em> :</span></p></td>
+<td>Time formatting string
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string, representing <em class="parameter"><code>time</code></em> using <em class="parameter"><code>format</code></em>, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on failure.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_compare ()">
+<a name="jana-utils-time-compare"></a><h3>jana_utils_time_compare ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                jana_utils_time_compare             (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> date_only</code></em>);</pre>
+<p>
+Compares <em class="parameter"><code>time1</code></em> to <em class="parameter"><code>time2</code></em>, taking into account the offset field.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time1</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time2</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> to compare with
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>date_only</code></em> :</span></p></td>
+<td>Whether to only consider date fields
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> -1 if <em class="parameter"><code>time1</code></em> occurs before <em class="parameter"><code>time2</code></em>, 0 if <em class="parameter"><code>time1</code></em> is equal to <em class="parameter"><code>time2</code></em>, 
+and 1 if <em class="parameter"><code>time1</code></em> is after <em class="parameter"><code>time2</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_copy ()">
+<a name="jana-utils-time-copy"></a><h3>jana_utils_time_copy ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_utils_time_copy                (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *dest</code></em>);</pre>
+<p>
+Copies the contents of <em class="parameter"><code>source</code></em> to <em class="parameter"><code>dest</code></em>. This can be useful when you want 
+to duplicate a time without creating a new <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>, or when you need 
+to convert a time between different implementations of <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>. Fields 
+are set in such an order as to not cause normalisation to alter the time.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> to copy from
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dest</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> to copy to
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <em class="parameter"><code>dest</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_diff ()">
+<a name="jana-utils-time-diff"></a><h3>jana_utils_time_diff ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_utils_time_diff                (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *t1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *t2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *month</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *day</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *hours</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minutes</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> *seconds</code></em>);</pre>
+<p>
+Gets the difference between two times. Times are compared so that if <em class="parameter"><code>t2</code></em> is
+later than <em class="parameter"><code>t1</code></em>, the difference is positive. If a parameter is ommitted, the
+result will be accumulated in the next nearest parameter. For example, 
+if there were a years difference between <em class="parameter"><code>t1</code></em> and <em class="parameter"><code>t2</code></em>, but the <em class="parameter"><code>year</code></em>
+parameter was ommitted, the <em class="parameter"><code>month</code></em> parameter will accumulate 12 months. 
+This function takes into account the relative time offsets of <em class="parameter"><code>t1</code></em> and <em class="parameter"><code>t2</code></em>, 
+so no prior conversion is required.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>t1</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>t2</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>year</code></em> :</span></p></td>
+<td>Return location for difference in years, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>month</code></em> :</span></p></td>
+<td>Return location for difference in months, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>day</code></em> :</span></p></td>
+<td>Return location for difference in days, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>hours</code></em> :</span></p></td>
+<td>Return location for difference in hours, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minutes</code></em> :</span></p></td>
+<td>Return location for difference in minutes, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>seconds</code></em> :</span></p></td>
+<td>Return location for difference in seconds, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_adjust ()">
+<a name="jana-utils-time-adjust"></a><h3>jana_utils_time_adjust ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_utils_time_adjust              (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> year</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> month</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> day</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> hours</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> minutes</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> seconds</code></em>);</pre>
+<p>
+A convenience function to adjust a time by a specified amount on each field. 
+The time will be adjusted in the order seconds, minutes, hours, days, months 
+and years. It is important to take into account how a time may be normalised 
+when adjusting. This function can be used in conjunction with 
+<a class="link" href="libjana-jana-utils.html#jana-utils-time-diff" title="jana_utils_time_diff ()"><code class="function">jana_utils_time_diff()</code></a> to adjust one time to be equal to another, while 
+taking time offsets into account.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>year</code></em> :</span></p></td>
+<td>Years to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>month</code></em> :</span></p></td>
+<td>Months to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>day</code></em> :</span></p></td>
+<td>Days to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>hours</code></em> :</span></p></td>
+<td>Hours to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minutes</code></em> :</span></p></td>
+<td>Minutes to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>seconds</code></em> :</span></p></td>
+<td>Seconds to add to <em class="parameter"><code>time</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_now ()">
+<a name="jana-utils-time-now"></a><h3>jana_utils_time_now ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_utils_time_now                 (<em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Retrieves the current time, with the timezone and offset set.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> to overwrite
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <em class="parameter"><code>time</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_duration_contains ()">
+<a name="jana-utils-duration-contains"></a><h3>jana_utils_duration_contains ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_utils_duration_contains        (<em class="parameter"><code><a class="link" href="JanaTime.html#JanaDuration" title="JanaDuration"><span class="type">JanaDuration</span></a> *duration</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Determines whether <em class="parameter"><code>time</code></em> occurs within <em class="parameter"><code>duration</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>duration</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html#JanaDuration" title="JanaDuration"><span class="type">JanaDuration</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>time</code></em> occurs within <em class="parameter"><code>duration</code></em>, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_event_copy ()">
+<a name="jana-utils-event-copy"></a><h3>jana_utils_event_copy ()</h3>
+<pre class="programlisting"><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="returnvalue">JanaEvent</span></a> *         jana_utils_event_copy               (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *dest</code></em>);</pre>
+<p>
+Copies the contents of <em class="parameter"><code>source</code></em> into <em class="parameter"><code>dest</code></em>. This function copies all fields
+of <em class="parameter"><code>source</code></em> over those of <em class="parameter"><code>dest</code></em>, taking into account whether alarms, 
+recurrences and custom properties are supported.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> to copy from
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dest</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> to copy to
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <em class="parameter"><code>dest</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_note_copy ()">
+<a name="jana-utils-note-copy"></a><h3>jana_utils_note_copy ()</h3>
+<pre class="programlisting"><a class="link" href="JanaNote.html" title="JanaNote"><span class="returnvalue">JanaNote</span></a> *          jana_utils_note_copy                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *dest</code></em>);</pre>
+<p>
+Copies the contents of <em class="parameter"><code>source</code></em> into <em class="parameter"><code>dest</code></em>. This function copies all fields
+of <em class="parameter"><code>source</code></em> over those of <em class="parameter"><code>dest</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> to copy from
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dest</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> to copy to
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <em class="parameter"><code>dest</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_event_get_instances ()">
+<a name="jana-utils-event-get-instances"></a><h3>jana_utils_event_get_instances ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             jana_utils_event_get_instances      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *event</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *range_start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *range_end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>);</pre>
+<p>
+Splits an event across each day it occurs, taking into account <em class="parameter"><code>offset</code></em>, 
+and returns a list of <a class="link" href="JanaTime.html#JanaDuration" title="JanaDuration"><span class="type">JanaDuration</span></a>'s for each day it occurs. The first and 
+last instances have their start and end adjusted correctly. If the event 
+doesn't occur over more than one day, the list will contain just one 
+duration whose start and end match the start and end of the event, adjusted 
+by <em class="parameter"><code>offset</code></em>. If <em class="parameter"><code>range_end</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> and <em class="parameter"><code>event</code></em> has an indefinite 
+recurrence, the recurrence will be ignored. This is to avoid 
+infinite loops; it is discouraged to call this function without bounds.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range_start</code></em> :</span></p></td>
+<td>The start boundary for instances, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for no boundary
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range_end</code></em> :</span></p></td>
+<td>The end boundary for instances, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for no boundary
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>The offset, in seconds, to offset the event by
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A list of <a class="link" href="JanaTime.html#JanaDuration" title="JanaDuration"><span class="type">JanaDuration</span></a>'s for each day <em class="parameter"><code>event</code></em> occurs. This list 
+should be freed with <a class="link" href="libjana-jana-utils.html#jana-utils-instance-list-free" title="jana_utils_instance_list_free ()"><code class="function">jana_utils_instance_list_free()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_component_insert_category ()">
+<a name="jana-utils-component-insert-category"></a><h3>jana_utils_component_insert_category ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_utils_component_insert_category
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> position</code></em>);</pre>
+<p>
+Inserts a category in the category list of the given component, at the 
+given position. If <em class="parameter"><code>position</code></em> is <code class="literal">-1</code>, the category will be placed at the end 
+of the list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>component</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>category</code></em> :</span></p></td>
+<td>The category to insert
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>position</code></em> :</span></p></td>
+<td>The position to insert at
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_component_remove_category ()">
+<a name="jana-utils-component-remove-category"></a><h3>jana_utils_component_remove_category ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_utils_component_remove_category
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>);</pre>
+<p>
+Removes the first occurrence of the given category from the component's 
+category list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>component</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>category</code></em> :</span></p></td>
+<td>The category to remove
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if a category was removed, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_component_has_category ()">
+<a name="jana-utils-component-has-category"></a><h3>jana_utils_component_has_category ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_utils_component_has_category   (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *component</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>);</pre>
+<p>
+Checks if the specified component has a particular category set.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>component</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>category</code></em> :</span></p></td>
+<td>The category to search for
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if that category exists, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_instance_list_free ()">
+<a name="jana-utils-instance-list-free"></a><h3>jana_utils_instance_list_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_utils_instance_list_free       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *instances</code></em>);</pre>
+<p>
+Frees an event instance list. See <a class="link" href="libjana-jana-utils.html#jana-utils-event-get-instances" title="jana_utils_event_get_instances ()"><code class="function">jana_utils_event_get_instances()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>instances</code></em> :</span></p></td>
+<td>An instance list returned by <a class="link" href="libjana-jana-utils.html#jana-utils-event-get-instances" title="jana_utils_event_get_instances ()"><code class="function">jana_utils_event_get_instances()</code></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_get_local_tzname ()">
+<a name="jana-utils-get-local-tzname"></a><h3>jana_utils_get_local_tzname ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_utils_get_local_tzname         ();</pre>
+<p>
+Retrieves the local timezone name using system functions.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the local tzname.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_recurrence_to_string ()">
+<a name="jana-utils-recurrence-to-string"></a><h3>jana_utils_recurrence_to_string ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_utils_recurrence_to_string     (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recur</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);</pre>
+<p>
+Creates a localised string that represents <em class="parameter"><code>recur</code></em> in a human-readable 
+format. If <em class="parameter"><code>recur</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, a string representing no recurrence 
+will be returned. If <em class="parameter"><code>start</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, monthly recurrences will not be 
+fully described.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>recur</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>The start of the recurrence
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the human-readable recurrence info
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_recurrence_diff ()">
+<a name="jana-utils-recurrence-diff"></a><h3>jana_utils_recurrence_diff ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_utils_recurrence_diff          (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *r1</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *r2</code></em>);</pre>
+<p>
+Determines whether two recurrence rules are different.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>r1</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>r2</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> to compare to
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>r1</code></em> is different to <em class="parameter"><code>r2</code></em>, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_ab_day ()">
+<a name="jana-utils-ab-day"></a><h3>jana_utils_ab_day ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       jana_utils_ab_day                   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> day</code></em>);</pre>
+<p>
+Retrieves the first UTF-8 character of the abbreviated, locale-correct day
+name, in a null-terminated string. The returned string must not be freed 
+and will be overwritten by subsequent calls to this function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>day</code></em> :</span></p></td>
+<td>The day number, where 0 is Monday, 1 is Tuesday, etc.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A NULL-terminated string containing the 
+first character of the abbreviated day name.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_utils_time_daylight_hours ()">
+<a name="jana-utils-time-daylight-hours"></a><h3>jana_utils_time_daylight_hours ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             jana_utils_time_daylight_hours      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> day_of_year</code></em>);</pre>
+<p>
+Calculates the amount of hours of daylight one should expect at a particular
+latitude and time of year.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>latitude</code></em> :</span></p></td>
+<td>A latitude, in decimal degrees
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>day_of_year</code></em> :</span></p></td>
+<td>The day of the year
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Hours of daylight
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

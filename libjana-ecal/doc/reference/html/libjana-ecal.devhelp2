@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libjana-ecal Reference Manual" link="index.html" author="" name="libjana-ecal" version="2" language="c">
+  <chapters>
+    <sub name="libjana-ecal" link="ch01.html">
+      <sub name="JanaEcalComponent" link="JanaEcalComponent.html"/>
+      <sub name="JanaEcalEvent" link="JanaEcalEvent.html"/>
+      <sub name="JanaEcalNote" link="JanaEcalNote.html"/>
+      <sub name="JanaEcalStore" link="JanaEcalStore.html"/>
+      <sub name="JanaEcalStoreView" link="JanaEcalStoreView.html"/>
+      <sub name="JanaEcalTime" link="JanaEcalTime.html"/>
+      <sub name="jana-ecal-utils" link="libjana-ecal-jana-ecal-utils.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="JanaEcalComponent" link="JanaEcalComponent.html#JanaEcalComponent-struct"/>
+    <keyword type="function" name="jana_ecal_component_new_from_ecalcomp ()" link="JanaEcalComponent.html#jana-ecal-component-new-from-ecalcomp"/>
+    <keyword type="function" name="jana_ecal_component_get_summary ()" link="JanaEcalComponent.html#jana-ecal-component-get-summary"/>
+    <keyword type="function" name="jana_ecal_component_get_description ()" link="JanaEcalComponent.html#jana-ecal-component-get-description"/>
+    <keyword type="function" name="jana_ecal_component_get_location ()" link="JanaEcalComponent.html#jana-ecal-component-get-location"/>
+    <keyword type="function" name="jana_ecal_component_get_start ()" link="JanaEcalComponent.html#jana-ecal-component-get-start"/>
+    <keyword type="function" name="jana_ecal_component_get_end ()" link="JanaEcalComponent.html#jana-ecal-component-get-end"/>
+    <keyword type="function" name="jana_ecal_component_set_summary ()" link="JanaEcalComponent.html#jana-ecal-component-set-summary"/>
+    <keyword type="function" name="jana_ecal_component_set_description ()" link="JanaEcalComponent.html#jana-ecal-component-set-description"/>
+    <keyword type="function" name="jana_ecal_component_set_location ()" link="JanaEcalComponent.html#jana-ecal-component-set-location"/>
+    <keyword type="function" name="jana_ecal_component_set_start ()" link="JanaEcalComponent.html#jana-ecal-component-set-start"/>
+    <keyword type="function" name="jana_ecal_component_set_end ()" link="JanaEcalComponent.html#jana-ecal-component-set-end"/>
+    <keyword type="property" name="The &quot;ecalcomp&quot; property" link="JanaEcalComponent.html#JanaEcalComponent--ecalcomp"/>
+    <keyword type="struct" name="JanaEcalEvent" link="JanaEcalEvent.html#JanaEcalEvent-struct"/>
+    <keyword type="function" name="jana_ecal_event_new ()" link="JanaEcalEvent.html#jana-ecal-event-new"/>
+    <keyword type="function" name="jana_ecal_event_new_from_ecalcomp ()" link="JanaEcalEvent.html#jana-ecal-event-new-from-ecalcomp"/>
+    <keyword type="struct" name="JanaEcalNote" link="JanaEcalNote.html#JanaEcalNote-struct"/>
+    <keyword type="function" name="jana_ecal_note_new ()" link="JanaEcalNote.html#jana-ecal-note-new"/>
+    <keyword type="function" name="jana_ecal_note_new_from_ecalcomp ()" link="JanaEcalNote.html#jana-ecal-note-new-from-ecalcomp"/>
+    <keyword type="struct" name="JanaEcalStore" link="JanaEcalStore.html#JanaEcalStore-struct"/>
+    <keyword type="function" name="jana_ecal_store_new ()" link="JanaEcalStore.html#jana-ecal-store-new"/>
+    <keyword type="function" name="jana_ecal_store_new_from_uri ()" link="JanaEcalStore.html#jana-ecal-store-new-from-uri"/>
+    <keyword type="property" name="The &quot;ecal&quot; property" link="JanaEcalStore.html#JanaEcalStore--ecal"/>
+    <keyword type="property" name="The &quot;type&quot; property" link="JanaEcalStore.html#JanaEcalStore--type"/>
+    <keyword type="struct" name="JanaEcalStoreView" link="JanaEcalStoreView.html#JanaEcalStoreView-struct"/>
+    <keyword type="function" name="jana_ecal_store_view_new ()" link="JanaEcalStoreView.html#jana-ecal-store-view-new"/>
+    <keyword type="property" name="The &quot;end&quot; property" link="JanaEcalStoreView.html#JanaEcalStoreView--end"/>
+    <keyword type="property" name="The &quot;parent&quot; property" link="JanaEcalStoreView.html#JanaEcalStoreView--parent"/>
+    <keyword type="property" name="The &quot;start&quot; property" link="JanaEcalStoreView.html#JanaEcalStoreView--start"/>
+    <keyword type="property" name="The &quot;timeout&quot; property" link="JanaEcalStoreView.html#JanaEcalStoreView--timeout"/>
+    <keyword type="property" name="The &quot;view&quot; property" link="JanaEcalStoreView.html#JanaEcalStoreView--view"/>
+    <keyword type="struct" name="JanaEcalTime" link="JanaEcalTime.html#JanaEcalTime-struct"/>
+    <keyword type="function" name="jana_ecal_time_new ()" link="JanaEcalTime.html#jana-ecal-time-new"/>
+    <keyword type="function" name="jana_ecal_time_new_from_icaltime ()" link="JanaEcalTime.html#jana-ecal-time-new-from-icaltime"/>
+    <keyword type="function" name="jana_ecal_time_new_from_ecaltime ()" link="JanaEcalTime.html#jana-ecal-time-new-from-ecaltime"/>
+    <keyword type="function" name="jana_ecal_time_set_location ()" link="JanaEcalTime.html#jana-ecal-time-set-location"/>
+    <keyword type="function" name="jana_ecal_time_get_location ()" link="JanaEcalTime.html#jana-ecal-time-get-location"/>
+    <keyword type="property" name="The &quot;icaltime&quot; property" link="JanaEcalTime.html#JanaEcalTime--icaltime"/>
+    <keyword type="function" name="jana_ecal_utils_time_now ()" link="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-now"/>
+    <keyword type="function" name="jana_ecal_utils_time_now_local ()" link="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-now-local"/>
+    <keyword type="function" name="jana_ecal_utils_time_today ()" link="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-today"/>
+    <keyword type="function" name="jana_ecal_utils_guess_location ()" link="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-guess-location"/>
+    <keyword type="function" name="jana_ecal_utils_get_locations ()" link="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-get-locations"/>
+    <keyword type="macro" name="JANA_ECAL_LOCATION_KEY" link="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS"/>
+    <keyword type="macro" name="JANA_ECAL_LOCATION_KEY_DIR" link="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY-DIR:CAPS"/>
+  </functions>
+</book>

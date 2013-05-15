@@ -1,0 +1,298 @@
+<!-- ##### SECTION Title ##### -->
+JanaEvent
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEvent ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT JanaRecurrence ##### -->
+<para>
+
+</para>
+
+@type: 
+@interval: 
+@week_days: 
+@by_date: 
+@end: 
+
+<!-- ##### ENUM JanaRecurrenceType ##### -->
+<para>
+
+</para>
+
+@JANA_RECURRENCE_DAILY: 
+@JANA_RECURRENCE_WEEKLY: 
+@JANA_RECURRENCE_MONTHLY: 
+@JANA_RECURRENCE_YEARLY: 
+
+<!-- ##### FUNCTION jana_recurrence_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_recurrence_copy ##### -->
+<para>
+
+</para>
+
+@recurrence: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_recurrence_free ##### -->
+<para>
+
+</para>
+
+@recurrence: 
+
+
+<!-- ##### FUNCTION jana_exceptions_free ##### -->
+<para>
+
+</para>
+
+@exceptions: 
+
+
+<!-- ##### FUNCTION jana_event_get_summary ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_description ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_start ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_end ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_categories ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_supports_alarm ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_has_alarm ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_alarm_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_supports_recurrence ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_has_recurrence ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_recurrence ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_supports_exceptions ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_has_exceptions ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_get_exceptions ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_event_set_summary ##### -->
+<para>
+
+</para>
+
+@self: 
+@summary: 
+
+
+<!-- ##### FUNCTION jana_event_set_description ##### -->
+<para>
+
+</para>
+
+@self: 
+@description: 
+
+
+<!-- ##### FUNCTION jana_event_set_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@location: 
+
+
+<!-- ##### FUNCTION jana_event_set_start ##### -->
+<para>
+
+</para>
+
+@self: 
+@start: 
+
+
+<!-- ##### FUNCTION jana_event_set_end ##### -->
+<para>
+
+</para>
+
+@self: 
+@end: 
+
+
+<!-- ##### FUNCTION jana_event_set_categories ##### -->
+<para>
+
+</para>
+
+@self: 
+@categories: 
+
+
+<!-- ##### FUNCTION jana_event_set_alarm ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_event_set_recurrence ##### -->
+<para>
+
+</para>
+
+@self: 
+@recurrence: 
+
+
+<!-- ##### FUNCTION jana_event_set_exceptions ##### -->
+<para>
+
+</para>
+
+@self: 
+@exceptions: 
+
+

@@ -1,0 +1,940 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaGtkDayView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-gtk Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-gtk">
+<link rel="prev" href="JanaGtkDateTime.html" title="JanaGtkDateTime">
+<link rel="next" href="JanaGtkEventList.html" title="JanaGtkEventList">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaGtkDateTime.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-gtk Reference Manual</th>
+<td><a accesskey="n" href="JanaGtkEventList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaGtkDayView.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaGtkDayView.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaGtkDayView.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaGtkDayView.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaGtkDayView.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#JanaGtkDayView.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaGtkDayView">
+<a name="JanaGtkDayView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaGtkDayView.top_of_page"></a>JanaGtkDayView</span></h2>
+<p>JanaGtkDayView</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaGtkDayView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaGtkDayView.html#JanaGtkDayView-struct" title="JanaGtkDayView">JanaGtkDayView</a>;
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-new" title="jana_gtk_day_view_new ()">jana_gtk_day_view_new</a>               (<em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cells</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-add-store" title="jana_gtk_day_view_add_store ()">jana_gtk_day_view_add_store</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-remove-store" title="jana_gtk_day_view_remove_store ()">jana_gtk_day_view_remove_store</a>      (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-scroll-to-cell" title="jana_gtk_day_view_scroll_to_cell ()">jana_gtk_day_view_scroll_to_cell</a>    (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-scroll-to-time" title="jana_gtk_day_view_scroll_to_time ()">jana_gtk_day_view_scroll_to_time</a>    (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);
+<a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="returnvalue">JanaGtkCellRendererEvent</span></a> * <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-cell-renderer" title="jana_gtk_day_view_get_cell_renderer ()">jana_gtk_day_view_get_cell_renderer</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="returnvalue">JanaGtkCellRendererEvent</span></a> * <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-24hr-cell-renderer" title="jana_gtk_day_view_get_24hr_cell_renderer ()">jana_gtk_day_view_get_24hr_cell_renderer</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-range" title="jana_gtk_day_view_set_range ()">jana_gtk_day_view_set_range</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>);
+<a href="../libjana/JanaTime.html#JanaDuration"><span class="returnvalue">JanaDuration</span></a> *      <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-range" title="jana_gtk_day_view_get_range ()">jana_gtk_day_view_get_range</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-cells" title="jana_gtk_day_view_set_cells ()">jana_gtk_day_view_set_cells</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cells</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-cells" title="jana_gtk_day_view_get_cells ()">jana_gtk_day_view_get_cells</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-spacing" title="jana_gtk_day_view_set_spacing ()">jana_gtk_day_view_set_spacing</a>       (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> spacing</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-spacing" title="jana_gtk_day_view_get_spacing ()">jana_gtk_day_view_get_spacing</a>       (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<a href="../libjana/JanaTime.html#JanaDuration"><span class="returnvalue">JanaDuration</span></a> *      <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-selection" title="jana_gtk_day_view_get_selection ()">jana_gtk_day_view_get_selection</a>     (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-selection" title="jana_gtk_day_view_set_selection ()">jana_gtk_day_view_set_selection</a>     (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *selection</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-visible-ratio" title="jana_gtk_day_view_set_visible_ratio ()">jana_gtk_day_view_set_visible_ratio</a> (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xratio</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yratio</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-visible-ratio" title="jana_gtk_day_view_get_visible_ratio ()">jana_gtk_day_view_get_visible_ratio</a> (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xratio</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *yratio</code></em>);
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="returnvalue">GtkTreeRowReference</span></a> * <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-get-selected-event" title="jana_gtk_day_view_get_selected_event ()">jana_gtk_day_view_get_selected_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-selected-event" title="jana_gtk_day_view_set_selected_event ()">jana_gtk_day_view_set_selected_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> *row</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-visible-func" title="jana_gtk_day_view_set_visible_func ()">jana_gtk_day_view_set_visible_func</a>  (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModelFilter.html#GtkTreeModelFilterVisibleFunc"><span class="type">GtkTreeModelFilterVisibleFunc</span></a> visible_cb</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-refilter" title="jana_gtk_day_view_refilter ()">jana_gtk_day_view_refilter</a>          (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-highlighted-time" title="jana_gtk_day_view_set_highlighted_time ()">jana_gtk_day_view_set_highlighted_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-active-range" title="jana_gtk_day_view_set_active_range ()">jana_gtk_day_view_set_active_range</a>  (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaGtkDayView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkObject.html">GtkObject</a>
+               +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html">GtkWidget</a>
+                     +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkContainer.html">GtkContainer</a>
+                           +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkBin.html">GtkBin</a>
+                                 +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkEventBox.html">GtkEventBox</a>
+                                       +----JanaGtkDayView
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaGtkDayView.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaGtkDayView implements
+ AtkImplementorIface and  <a href="http://library.gnome.org/devel/gtk/unstable/gtk-gtkbuildable.html#GtkBuildable">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaGtkDayView.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--active-range" title='The "active-range" property'>active-range</a>"             <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--cells" title='The "cells" property'>cells</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--highlighted-time" title='The "highlighted-time" property'>highlighted-time</a>"         <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--range" title='The "range" property'>range</a>"                    <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--selected-event" title='The "selected-event" property'>selected-event</a>"           <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a>*  : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--selection" title='The "selection" property'>selection</a>"                <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--spacing" title='The "spacing" property'>spacing</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--style-hint" title='The "style-hint" property'>style-hint</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--xratio" title='The "xratio" property'>xratio</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView--yratio" title='The "yratio" property'>yratio</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="JanaGtkDayView.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView-event-activated" title='The "event-activated" signal'>event-activated</a>"                                : Run Last
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView-event-selected" title='The "event-selected" signal'>event-selected</a>"                                 : Run Last
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView-selection-changed" title='The "selection-changed" signal'>selection-changed</a>"                              : Run Last
+  "<a class="link" href="JanaGtkDayView.html#JanaGtkDayView-set-scroll-adjustments" title='The "set-scroll-adjustments" signal'>set-scroll-adjustments</a>"                         : Run Last / Action
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaGtkDayView.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaGtkDayView.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaGtkDayView">
+<a name="JanaGtkDayView-struct"></a><h3>JanaGtkDayView</h3>
+<pre class="programlisting">typedef struct _JanaGtkDayView JanaGtkDayView;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_new ()">
+<a name="jana-gtk-day-view-new"></a><h3>jana_gtk_day_view_new ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         jana_gtk_day_view_new               (<em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cells</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>, which is a view of a single or multiple 
+days on any amount of <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> objects. <em class="parameter"><code>range</code></em> will be used to 
+determine a rectangular viewing area, where the start of the duration is 
+used to determine the earliest visible time each day, and the end of the 
+duration is used to determine the latest visible time each day.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range</code></em> :</span></p></td>
+<td>The visible range on the day view
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cells</code></em> :</span></p></td>
+<td>How many cells to use vertically
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_add_store ()">
+<a name="jana-gtk-day-view-add-store"></a><h3>jana_gtk_day_view_add_store ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_add_store         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);</pre>
+<p>
+Adds a <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> to the view. Added stores will be monitored and 
+visualised events will be kept up-to-date.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_remove_store ()">
+<a name="jana-gtk-day-view-remove-store"></a><h3>jana_gtk_day_view_remove_store ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_remove_store      (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);</pre>
+<p>
+Removes a <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> from the view.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_scroll_to_cell ()">
+<a name="jana-gtk-day-view-scroll-to-cell"></a><h3>jana_gtk_day_view_scroll_to_cell ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_scroll_to_cell    (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>);</pre>
+<p>
+Sets adjustments on <em class="parameter"><code>self</code></em> so that the cell at <em class="parameter"><code>x</code></em> , <em class="parameter"><code>y</code></em> is visible.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>The cell's x coordinate
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>The cell's y coordinate
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_scroll_to_time ()">
+<a name="jana-gtk-day-view-scroll-to-time"></a><h3>jana_gtk_day_view_scroll_to_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_scroll_to_time    (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Sets adjustments on <em class="parameter"><code>self</code></em> so that <em class="parameter"><code>time</code></em> is visible, assuming that <em class="parameter"><code>time</code></em> is
+in the visible range.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>The <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> to scroll to
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_cell_renderer ()">
+<a name="jana-gtk-day-view-get-cell-renderer"></a><h3>jana_gtk_day_view_get_cell_renderer ()</h3>
+<pre class="programlisting"><a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="returnvalue">JanaGtkCellRendererEvent</span></a> * jana_gtk_day_view_get_cell_renderer
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a> used to draw standard events.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a> used to draw standard events.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_24hr_cell_renderer ()">
+<a name="jana-gtk-day-view-get-24hr-cell-renderer"></a><h3>jana_gtk_day_view_get_24hr_cell_renderer ()</h3>
+<pre class="programlisting"><a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="returnvalue">JanaGtkCellRendererEvent</span></a> * jana_gtk_day_view_get_24hr_cell_renderer
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a> used to draw all-day events.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a> used to draw all-day events.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_range ()">
+<a name="jana-gtk-day-view-set-range"></a><h3>jana_gtk_day_view_set_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_range         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>);</pre>
+<p>
+Set the rectangular viewing area, where the start of <em class="parameter"><code>range</code></em> is 
+used to determine the earliest visible time each day, and the end 
+is used to determine the latest visible time each day.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range</code></em> :</span></p></td>
+<td>The visible range
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_range ()">
+<a name="jana-gtk-day-view-get-range"></a><h3>jana_gtk_day_view_get_range ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html#JanaDuration"><span class="returnvalue">JanaDuration</span></a> *      jana_gtk_day_view_get_range         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Get the visible time-range, as a <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>. 
+See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-range" title="jana_gtk_day_view_set_range ()"><code class="function">jana_gtk_day_view_set_range()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The visible range.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_cells ()">
+<a name="jana-gtk-day-view-set-cells"></a><h3>jana_gtk_day_view_set_cells ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_cells         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cells</code></em>);</pre>
+<p>
+Sets the amount of cells to divide time up into, per day; i.e. the amount
+of cells to display vertically.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cells</code></em> :</span></p></td>
+<td>Amount of cells to use, vertically.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_cells ()">
+<a name="jana-gtk-day-view-get-cells"></a><h3>jana_gtk_day_view_get_cells ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               jana_gtk_day_view_get_cells         (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Gets the amount of cells used vertically.
+See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-cells" title="jana_gtk_day_view_set_cells ()"><code class="function">jana_gtk_day_view_set_cells()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Amount of cells used vertically.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_spacing ()">
+<a name="jana-gtk-day-view-set-spacing"></a><h3>jana_gtk_day_view_set_spacing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_spacing       (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> spacing</code></em>);</pre>
+<p>
+Sets the spacing used around events and text, in pixels.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>spacing</code></em> :</span></p></td>
+<td>Spacing, in pixels
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_spacing ()">
+<a name="jana-gtk-day-view-get-spacing"></a><h3>jana_gtk_day_view_get_spacing ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               jana_gtk_day_view_get_spacing       (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Gets the spacing used around events and text.
+See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-spacing" title="jana_gtk_day_view_set_spacing ()"><code class="function">jana_gtk_day_view_set_spacing()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Spacing used around events and text, in pixels.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_selection ()">
+<a name="jana-gtk-day-view-get-selection"></a><h3>jana_gtk_day_view_get_selection ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html#JanaDuration"><span class="returnvalue">JanaDuration</span></a> *      jana_gtk_day_view_get_selection     (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Get the selected time-range, as a <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>. 
+See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-selection" title="jana_gtk_day_view_set_selection ()"><code class="function">jana_gtk_day_view_set_selection()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The selected time-range, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no range is selected.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_selection ()">
+<a name="jana-gtk-day-view-set-selection"></a><h3>jana_gtk_day_view_set_selection ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_selection     (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *selection</code></em>);</pre>
+<p>
+Sets the selected time range.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selection</code></em> :</span></p></td>
+<td>The time-range to select
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_visible_ratio ()">
+<a name="jana-gtk-day-view-set-visible-ratio"></a><h3>jana_gtk_day_view_set_visible_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_visible_ratio (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xratio</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yratio</code></em>);</pre>
+<p>
+Sets the amount of the visible range that should be viewable at once,
+without scrolling. This is represented as a fraction, from G_MINFLOAT to
+1.0, inclusive. If, for example, a <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> was placed in a 
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkScrolledWindow.html"><span class="type">GtkScrolledWindow</span></a>, and the xratio and yratio were set to 1.0 and 0.5, 
+respectively, a horizontal scroll-bar would not be required, but the 
+<a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> would size itself so that only half of itself were visible 
+and a vertical scroll-bar would be required. Ratios below 1.0 must not be 
+set when the scrolling policy of the containing widget disallows scrolling.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xratio</code></em> :</span></p></td>
+<td>The fraction of the set visible range that should be visible 
+without scrolling, on the x-axis. 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>yratio</code></em> :</span></p></td>
+<td>The fraction of the set visible range that should be visible 
+without scrolling, on the y-axis.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_visible_ratio ()">
+<a name="jana-gtk-day-view-get-visible-ratio"></a><h3>jana_gtk_day_view_get_visible_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_get_visible_ratio (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xratio</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *yratio</code></em>);</pre>
+<p>
+Retrieves the amount of the visible range that should be viewable at once,
+on each axis. See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-visible-ratio" title="jana_gtk_day_view_set_visible_ratio ()"><code class="function">jana_gtk_day_view_set_visible_ratio()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xratio</code></em> :</span></p></td>
+<td>Return location for xratio, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>yratio</code></em> :</span></p></td>
+<td>Return location for yratio, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_get_selected_event ()">
+<a name="jana-gtk-day-view-get-selected-event"></a><h3>jana_gtk_day_view_get_selected_event ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="returnvalue">GtkTreeRowReference</span></a> * jana_gtk_day_view_get_selected_event
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the selected event, returned as a <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> on a 
+<a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a>. See <a class="link" href="JanaGtkDayView.html#jana-gtk-day-view-set-selected-event" title="jana_gtk_day_view_set_selected_event ()"><code class="function">jana_gtk_day_view_set_selected_event()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the selected event, as a row reference on a <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_selected_event ()">
+<a name="jana-gtk-day-view-set-selected-event"></a><h3>jana_gtk_day_view_set_selected_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_selected_event
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> *row</code></em>);</pre>
+<p>
+Sets the selected event, if the specified <em class="parameter"><code>row</code></em> is visible on <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>row</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> on a <a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_visible_func ()">
+<a name="jana-gtk-day-view-set-visible-func"></a><h3>jana_gtk_day_view_set_visible_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_visible_func  (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModelFilter.html#GtkTreeModelFilterVisibleFunc"><span class="type">GtkTreeModelFilterVisibleFunc</span></a> visible_cb</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible_cb</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_refilter ()">
+<a name="jana-gtk-day-view-refilter"></a><h3>jana_gtk_day_view_refilter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_refilter          (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_highlighted_time ()">
+<a name="jana-gtk-day-view-set-highlighted-time"></a><h3>jana_gtk_day_view_set_highlighted_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_highlighted_time
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_day_view_set_active_range ()">
+<a name="jana-gtk-day-view-set-active-range"></a><h3>jana_gtk_day_view_set_active_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_day_view_set_active_range  (<em class="parameter"><code><a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a> *range</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaGtkDayView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "active-range" property'>
+<a name="JanaGtkDayView--active-range"></a><h3>The <code class="literal">"active-range"</code> property</h3>
+<pre class="programlisting">  "active-range"             <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write</pre>
+<p>The range that should be considered 'active'.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "cells" property'>
+<a name="JanaGtkDayView--cells"></a><h3>The <code class="literal">"cells"</code> property</h3>
+<pre class="programlisting">  "cells"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>Amount of cells to partition time into, per day.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "highlighted-time" property'>
+<a name="JanaGtkDayView--highlighted-time"></a><h3>The <code class="literal">"highlighted-time"</code> property</h3>
+<pre class="programlisting">  "highlighted-time"         <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write</pre>
+<p>A time that should be highlighted, for example, the current time.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "range" property'>
+<a name="JanaGtkDayView--range"></a><h3>The <code class="literal">"range"</code> property</h3>
+<pre class="programlisting">  "range"                    <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write</pre>
+<p>The range shown by this day-view, as a JanaDuration.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "selected-event" property'>
+<a name="JanaGtkDayView--selected-event"></a><h3>The <code class="literal">"selected-event"</code> property</h3>
+<pre class="programlisting">  "selected-event"           <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a>*  : Read / Write</pre>
+<p>A reference to the currently selected event in a JanaGtkEventStore.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "selection" property'>
+<a name="JanaGtkDayView--selection"></a><h3>The <code class="literal">"selection"</code> property</h3>
+<pre class="programlisting">  "selection"                <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>*         : Read / Write</pre>
+<p>The currently selected range, as a JanaDuration.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "spacing" property'>
+<a name="JanaGtkDayView--spacing"></a><h3>The <code class="literal">"spacing"</code> property</h3>
+<pre class="programlisting">  "spacing"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>Spacing to use inside day boxes.</p>
+<p>Default value: 2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "style-hint" property'>
+<a name="JanaGtkDayView--style-hint"></a><h3>The <code class="literal">"style-hint"</code> property</h3>
+<pre class="programlisting">  "style-hint"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>The style hint to use when drawing.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xratio" property'>
+<a name="JanaGtkDayView--xratio"></a><h3>The <code class="literal">"xratio"</code> property</h3>
+<pre class="programlisting">  "xratio"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>The proportion of the calendar that should be visible, on the x-axis.</p>
+<p>Allowed values: [G_MINDOUBLE,1]</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yratio" property'>
+<a name="JanaGtkDayView--yratio"></a><h3>The <code class="literal">"yratio"</code> property</h3>
+<pre class="programlisting">  "yratio"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>The proportion of the calendar that should be visible, on the y-axis.</p>
+<p>Allowed values: [G_MINDOUBLE,1]</p>
+<p>Default value: 1</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="JanaGtkDayView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "event-activated" signal'>
+<a name="JanaGtkDayView-event-activated"></a><h3>The <code class="literal">"event-activated"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>      *janagtkdayview,
+                                                        <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)           : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkdayview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "event-selected" signal'>
+<a name="JanaGtkDayView-event-selected"></a><h3>The <code class="literal">"event-selected"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a>      *janagtkdayview,
+                                                        <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModel.html#GtkTreeRowReference"><span class="type">GtkTreeRowReference</span></a> *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)           : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkdayview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "selection-changed" signal'>
+<a name="JanaGtkDayView-selection-changed"></a><h3>The <code class="literal">"selection-changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *janagtkdayview,
+                                                        <a href="../libjana/JanaTime.html#JanaDuration"><span class="type">JanaDuration</span></a>   *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)           : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkdayview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "set-scroll-adjustments" signal'>
+<a name="JanaGtkDayView-set-scroll-adjustments"></a><h3>The <code class="literal">"set-scroll-adjustments"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkDayView.html" title="JanaGtkDayView"><span class="type">JanaGtkDayView</span></a> *janagtkdayview,
+                                                        <a href="http://library.gnome.org/devel/gtk/unstable/GtkAdjustment.html"><span class="type">GtkAdjustment</span></a>  *arg1,
+                                                        <a href="http://library.gnome.org/devel/gtk/unstable/GtkAdjustment.html"><span class="type">GtkAdjustment</span></a>  *arg2,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)           : Run Last / Action</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkdayview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

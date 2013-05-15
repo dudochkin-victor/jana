@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaGtkWorldMap</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-gtk Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-gtk">
+<link rel="prev" href="JanaGtkClock.html" title="JanaGtkClock">
+<link rel="next" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaGtkClock.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-gtk Reference Manual</th>
+<td><a accesskey="n" href="JanaGtkWorldMapMarker.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaGtkWorldMap.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaGtkWorldMap.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaGtkWorldMap.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaGtkWorldMap.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaGtkWorldMap.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#JanaGtkWorldMap.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaGtkWorldMap">
+<a name="JanaGtkWorldMap"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaGtkWorldMap.top_of_page"></a>JanaGtkWorldMap</span></h2>
+<p>JanaGtkWorldMap</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaGtkWorldMap.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap-struct" title="JanaGtkWorldMap">JanaGtkWorldMap</a>;
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-new" title="jana_gtk_world_map_new ()">jana_gtk_world_map_new</a>              (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-set-time" title="jana_gtk_world_map_set_time ()">jana_gtk_world_map_set_time</a>         (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-latlon" title="jana_gtk_world_map_get_latlon ()">jana_gtk_world_map_get_latlon</a>       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lon</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-xy" title="jana_gtk_world_map_get_xy ()">jana_gtk_world_map_get_xy</a>           (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *y</code></em>);
+<a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="returnvalue">JanaGtkWorldMapMarker</span></a> * <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-add-marker" title="jana_gtk_world_map_add_marker ()">jana_gtk_world_map_add_marker</a>   (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-remove-marker" title="jana_gtk_world_map_remove_marker ()">jana_gtk_world_map_remove_marker</a>    (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-move-marker" title="jana_gtk_world_map_move_marker ()">jana_gtk_world_map_move_marker</a>      (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-markers" title="jana_gtk_world_map_get_markers ()">jana_gtk_world_map_get_markers</a>      (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-set-static" title="jana_gtk_world_map_set_static ()">jana_gtk_world_map_set_static</a>       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> set_static</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-static" title="jana_gtk_world_map_get_static ()">jana_gtk_world_map_get_static</a>       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-set-width" title="jana_gtk_world_map_set_width ()">jana_gtk_world_map_set_width</a>        (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-width" title="jana_gtk_world_map_get_width ()">jana_gtk_world_map_get_width</a>        (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-set-height" title="jana_gtk_world_map_set_height ()">jana_gtk_world_map_set_height</a>       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="JanaGtkWorldMap.html#jana-gtk-world-map-get-height" title="jana_gtk_world_map_get_height ()">jana_gtk_world_map_get_height</a>       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaGtkWorldMap.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkObject.html">GtkObject</a>
+               +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html">GtkWidget</a>
+                     +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkContainer.html">GtkContainer</a>
+                           +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkBin.html">GtkBin</a>
+                                 +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkEventBox.html">GtkEventBox</a>
+                                       +----JanaGtkWorldMap
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaGtkWorldMap.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaGtkWorldMap implements
+ AtkImplementorIface and  <a href="http://library.gnome.org/devel/gtk/unstable/gtk-gtkbuildable.html#GtkBuildable">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaGtkWorldMap.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap--height" title='The "height" property'>height</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap--static" title='The "static" property'>static</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap--time" title='The "time" property'>time</a>"                     <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap--width" title='The "width" property'>width</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="JanaGtkWorldMap.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap-clicked" title='The "clicked" signal'>clicked</a>"                                        : Run Last
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap-render-start" title='The "render-start" signal'>render-start</a>"                                   : Run Last
+  "<a class="link" href="JanaGtkWorldMap.html#JanaGtkWorldMap-render-stop" title='The "render-stop" signal'>render-stop</a>"                                    : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaGtkWorldMap.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaGtkWorldMap.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaGtkWorldMap">
+<a name="JanaGtkWorldMap-struct"></a><h3>JanaGtkWorldMap</h3>
+<pre class="programlisting">typedef struct _JanaGtkWorldMap JanaGtkWorldMap;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_new ()">
+<a name="jana-gtk-world-map-new"></a><h3>jana_gtk_world_map_new ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         jana_gtk_world_map_new              (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_set_time ()">
+<a name="jana-gtk-world-map-set-time"></a><h3>jana_gtk_world_map_set_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_set_time         (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_latlon ()">
+<a name="jana-gtk-world-map-get-latlon"></a><h3>jana_gtk_world_map_get_latlon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_get_latlon       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lon</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lat</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lon</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_xy ()">
+<a name="jana-gtk-world-map-get-xy"></a><h3>jana_gtk_world_map_get_xy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_get_xy           (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *y</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lat</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lon</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_add_marker ()">
+<a name="jana-gtk-world-map-add-marker"></a><h3>jana_gtk_world_map_add_marker ()</h3>
+<pre class="programlisting"><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="returnvalue">JanaGtkWorldMapMarker</span></a> * jana_gtk_world_map_add_marker   (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mark</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lat</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lon</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_remove_marker ()">
+<a name="jana-gtk-world-map-remove-marker"></a><h3>jana_gtk_world_map_remove_marker ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_remove_marker    (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mark</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_move_marker ()">
+<a name="jana-gtk-world-map-move-marker"></a><h3>jana_gtk_world_map_move_marker ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_move_marker      (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkWorldMapMarker.html" title="JanaGtkWorldMapMarker"><span class="type">JanaGtkWorldMapMarker</span></a> *mark</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lat</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lon</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mark</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lat</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lon</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_markers ()">
+<a name="jana-gtk-world-map-get-markers"></a><h3>jana_gtk_world_map_get_markers ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             jana_gtk_world_map_get_markers      (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_set_static ()">
+<a name="jana-gtk-world-map-set-static"></a><h3>jana_gtk_world_map_set_static ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_set_static       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> set_static</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set_static</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_static ()">
+<a name="jana-gtk-world-map-get-static"></a><h3>jana_gtk_world_map_get_static ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_gtk_world_map_get_static       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_set_width ()">
+<a name="jana-gtk-world-map-set-width"></a><h3>jana_gtk_world_map_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_set_width        (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_width ()">
+<a name="jana-gtk-world-map-get-width"></a><h3>jana_gtk_world_map_get_width ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                jana_gtk_world_map_get_width        (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_set_height ()">
+<a name="jana-gtk-world-map-set-height"></a><h3>jana_gtk_world_map_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_world_map_set_height       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_world_map_get_height ()">
+<a name="jana-gtk-world-map-get-height"></a><h3>jana_gtk_world_map_get_height ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                jana_gtk_world_map_get_height       (<em class="parameter"><code><a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaGtkWorldMap.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "height" property'>
+<a name="JanaGtkWorldMap--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>The height to use when using a static size.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "static" property'>
+<a name="JanaGtkWorldMap--static"></a><h3>The <code class="literal">"static"</code> property</h3>
+<pre class="programlisting">  "static"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>Whether to render a static size once and scale to the widget's allocated size.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "time" property'>
+<a name="JanaGtkWorldMap--time"></a><h3>The <code class="literal">"time"</code> property</h3>
+<pre class="programlisting">  "time"                     <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write</pre>
+<p>The JanaTime the world map will show.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "width" property'>
+<a name="JanaGtkWorldMap--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>The width to use when using a static size.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="JanaGtkWorldMap.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "clicked" signal'>
+<a name="JanaGtkWorldMap-clicked"></a><h3>The <code class="literal">"clicked"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *janagtkworldmap,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)            : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkworldmap</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "render-start" signal'>
+<a name="JanaGtkWorldMap-render-start"></a><h3>The <code class="literal">"render-start"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *janagtkworldmap,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)            : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkworldmap</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "render-stop" signal'>
+<a name="JanaGtkWorldMap-render-stop"></a><h3>The <code class="literal">"render-stop"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkWorldMap.html" title="JanaGtkWorldMap"><span class="type">JanaGtkWorldMap</span></a> *janagtkworldmap,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)            : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkworldmap</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

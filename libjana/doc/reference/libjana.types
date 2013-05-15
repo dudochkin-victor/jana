@@ -1,0 +1,9 @@
+jana_store_get_type
+jana_time_get_type
+jana_duration_get_type
+jana_task_get_type
+jana_component_get_type
+jana_store_view_get_type
+jana_note_get_type
+jana_event_get_type
+jana_recurrence_get_type

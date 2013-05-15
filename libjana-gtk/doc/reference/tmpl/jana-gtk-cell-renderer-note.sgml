@@ -1,0 +1,142 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkCellRendererNote
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkCellRendererNote ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaGtkCellRendererNote:author ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:body ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:categories ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:category-color-hash ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:category-icon-hash ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:cell-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:created ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:draw-box ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:icon ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:justify ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:modified ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:recipient ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:show-author ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:show-body ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:show-created ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:show-modified ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:show-recipient ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:style-hint ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:uid ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:xpad-inner ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererNote:ypad-inner ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_cell_renderer_note_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

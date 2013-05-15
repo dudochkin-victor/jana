@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaEcalEvent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-ecal Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-ecal">
+<link rel="prev" href="JanaEcalComponent.html" title="JanaEcalComponent">
+<link rel="next" href="JanaEcalNote.html" title="JanaEcalNote">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaEcalComponent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-ecal Reference Manual</th>
+<td><a accesskey="n" href="JanaEcalNote.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaEcalEvent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaEcalEvent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaEcalEvent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaEcalEvent.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaEcalEvent">
+<a name="JanaEcalEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaEcalEvent.top_of_page"></a>JanaEcalEvent</span></h2>
+<p>JanaEcalEvent — An implementation of <a href="../libjana/JanaEvent.html"><span class="type">JanaEvent</span></a> using libecal</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaEcalEvent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaEcalEvent.html#JanaEcalEvent-struct" title="JanaEcalEvent">JanaEcalEvent</a>;
+<a href="../libjana/JanaEvent.html"><span class="returnvalue">JanaEvent</span></a> *         <a class="link" href="JanaEcalEvent.html#jana-ecal-event-new" title="jana_ecal_event_new ()">jana_ecal_event_new</a>                 ();
+<a href="../libjana/JanaEvent.html"><span class="returnvalue">JanaEvent</span></a> *         <a class="link" href="JanaEcalEvent.html#jana-ecal-event-new-from-ecalcomp" title="jana_ecal_event_new_from_ecalcomp ()">jana_ecal_event_new_from_ecalcomp</a>   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> *event</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaEcalEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent">JanaEcalComponent</a>
+         +----JanaEcalEvent
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaEcalEvent.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaEcalEvent implements
+ <a href="../libjana/JanaComponent.html">JanaComponent</a> and  <a href="../libjana/JanaEvent.html">JanaEvent</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaEcalEvent.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a> is an implementation of <a href="../libjana/JanaEvent.html"><span class="type">JanaEvent</span></a> that provides a 
+wrapper over <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> and its event-related functions, using libecal.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaEcalEvent.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaEcalEvent">
+<a name="JanaEcalEvent-struct"></a><h3>JanaEcalEvent</h3>
+<pre class="programlisting">typedef struct _JanaEcalEvent JanaEcalEvent;</pre>
+<p>
+The <a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_event_new ()">
+<a name="jana-ecal-event-new"></a><h3>jana_ecal_event_new ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaEvent.html"><span class="returnvalue">JanaEvent</span></a> *         jana_ecal_event_new                 ();</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_event_new_from_ecalcomp ()">
+<a name="jana-ecal-event-new-from-ecalcomp"></a><h3>jana_ecal_event_new_from_ecalcomp ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaEvent.html"><span class="returnvalue">JanaEvent</span></a> *         jana_ecal_event_new_from_ecalcomp   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> *event</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a> based on the given <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. The type of 
+the given <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> must be <code class="literal">E_CAL_COMPONENT_EVENT</code>. See 
+<a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html#e-cal-component-get-vtype"><code class="function">e_cal_component_get_vtype()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>An <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent"><span class="type">JanaEcalEvent</span></a> that wraps the given <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, cast as 
+a <a href="../libjana/JanaEvent.html"><span class="type">JanaEvent</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

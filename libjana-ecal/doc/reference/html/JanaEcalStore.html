@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaEcalStore</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-ecal Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-ecal">
+<link rel="prev" href="JanaEcalNote.html" title="JanaEcalNote">
+<link rel="next" href="JanaEcalStoreView.html" title="JanaEcalStoreView">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaEcalNote.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-ecal Reference Manual</th>
+<td><a accesskey="n" href="JanaEcalStoreView.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaEcalStore.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaEcalStore.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaEcalStore.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaEcalStore.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaEcalStore.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaEcalStore">
+<a name="JanaEcalStore"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaEcalStore.top_of_page"></a>JanaEcalStore</span></h2>
+<p>JanaEcalStore — An implementation of <a href="../libjana/JanaStore.html"><span class="type">JanaStore</span></a> using libecal</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaEcalStore.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaEcalStore.html#JanaEcalStore-struct" title="JanaEcalStore">JanaEcalStore</a>;
+<a href="../libjana/JanaStore.html"><span class="returnvalue">JanaStore</span></a> *         <a class="link" href="JanaEcalStore.html#jana-ecal-store-new" title="jana_ecal_store_new ()">jana_ecal_store_new</a>                 (<em class="parameter"><code><a href="../libjana/JanaComponent.html#JanaComponentType"><span class="type">JanaComponentType</span></a> type</code></em>);
+<a href="../libjana/JanaStore.html"><span class="returnvalue">JanaStore</span></a> *         <a class="link" href="JanaEcalStore.html#jana-ecal-store-new-from-uri" title="jana_ecal_store_new_from_uri ()">jana_ecal_store_new_from_uri</a>        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaComponent.html#JanaComponentType"><span class="type">JanaComponentType</span></a> type</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaEcalStore.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----JanaEcalStore
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaEcalStore.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaEcalStore implements
+ <a href="../libjana/JanaStore.html">JanaStore</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaEcalStore.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaEcalStore.html#JanaEcalStore--ecal" title='The "ecal" property'>ecal</a>"                     <a href="/usr/share/gtk-doc/html/libecal/ECal.html"><span class="type">ECal</span></a>*                 : Read / Write / Construct Only
+  "<a class="link" href="JanaEcalStore.html#JanaEcalStore--type" title='The "type" property'>type</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaEcalStore.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaEcalStore.html" title="JanaEcalStore"><span class="type">JanaEcalStore</span></a> is an implementation of <a href="../libjana/JanaStore.html"><span class="type">JanaStore</span></a> that provides a 
+wrapper over <a href="/usr/share/gtk-doc/html/libecal/ECal.html"><span class="type">ECal</span></a>, using libecal.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaEcalStore.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaEcalStore">
+<a name="JanaEcalStore-struct"></a><h3>JanaEcalStore</h3>
+<pre class="programlisting">typedef struct _JanaEcalStore JanaEcalStore;</pre>
+<p>
+The <a class="link" href="JanaEcalStore.html" title="JanaEcalStore"><span class="type">JanaEcalStore</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_store_new ()">
+<a name="jana-ecal-store-new"></a><h3>jana_ecal_store_new ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaStore.html"><span class="returnvalue">JanaStore</span></a> *         jana_ecal_store_new                 (<em class="parameter"><code><a href="../libjana/JanaComponent.html#JanaComponentType"><span class="type">JanaComponentType</span></a> type</code></em>);</pre>
+<p>
+Opens or creates the default evolution-data-server system storage for the 
+specified type of component.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>The type of store to create/open
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="JanaEcalStore.html" title="JanaEcalStore"><span class="type">JanaEcalStore</span></a> that wraps the evolution-data-server system 
+storage of the specified component type, cast as a <a href="../libjana/JanaStore.html"><span class="type">JanaStore</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_store_new_from_uri ()">
+<a name="jana-ecal-store-new-from-uri"></a><h3>jana_ecal_store_new_from_uri ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaStore.html"><span class="returnvalue">JanaStore</span></a> *         jana_ecal_store_new_from_uri        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaComponent.html#JanaComponentType"><span class="type">JanaComponentType</span></a> type</code></em>);</pre>
+<p>
+Opens or creates an evolution-data-server storage at the given uri for the 
+specified type of component.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>The uri to the store
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>The type of store to create/open
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="JanaEcalStore.html" title="JanaEcalStore"><span class="type">JanaEcalStore</span></a> that wraps an evolution-data-server storage of 
+the specified component type at the given uri, cast as a <a href="../libjana/JanaStore.html"><span class="type">JanaStore</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaEcalStore.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "ecal" property'>
+<a name="JanaEcalStore--ecal"></a><h3>The <code class="literal">"ecal"</code> property</h3>
+<pre class="programlisting">  "ecal"                     <a href="/usr/share/gtk-doc/html/libecal/ECal.html"><span class="type">ECal</span></a>*                 : Read / Write / Construct Only</pre>
+<p>The ECal represented by this JanaStore object.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "type" property'>
+<a name="JanaEcalStore--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only</pre>
+<p>The component type stored in this JanaStore object.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

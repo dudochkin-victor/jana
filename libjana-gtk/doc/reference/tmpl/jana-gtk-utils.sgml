@@ -1,0 +1,32 @@
+<!-- ##### SECTION Title ##### -->
+jana-gtk-utils
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION jana_gtk_utils_treeview_resize ##### -->
+<para>
+
+</para>
+
+@tree_view: 
+@allocation: 
+@cell_renderer: 
+
+

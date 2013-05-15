@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaComponent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="ch01.html" title="libjana">
+<link rel="next" href="JanaEvent.html" title="JanaEvent">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td><a accesskey="n" href="JanaEvent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaComponent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaComponent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaComponent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaComponent.prerequisites" class="shortcut">Prerequisites</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaComponent">
+<a name="JanaComponent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaComponent.top_of_page"></a>JanaComponent</span></h2>
+<p>JanaComponent — A basic store component interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaComponent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaComponent.html#JanaComponent-struct" title="JanaComponent">JanaComponent</a>;
+enum                <a class="link" href="JanaComponent.html#JanaComponentType" title="enum JanaComponentType">JanaComponentType</a>;
+<a class="link" href="JanaComponent.html#JanaComponentType" title="enum JanaComponentType"><span class="returnvalue">JanaComponentType</span></a>   <a class="link" href="JanaComponent.html#jana-component-get-component-type" title="jana_component_get_component_type ()">jana_component_get_component_type</a>   (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaComponent.html#jana-component-is-fully-represented" title="jana_component_is_fully_represented ()">jana_component_is_fully_represented</a> (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaComponent.html#jana-component-get-uid" title="jana_component_get_uid ()">jana_component_get_uid</a>              (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="JanaComponent.html#jana-component-get-categories" title="jana_component_get_categories ()">jana_component_get_categories</a>       (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaComponent.html#jana-component-set-categories" title="jana_component_set_categories ()">jana_component_set_categories</a>       (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **categories</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaComponent.html#jana-component-supports-custom-props" title="jana_component_supports_custom_props ()">jana_component_supports_custom_props</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="JanaComponent.html#jana-component-get-custom-props-list" title="jana_component_get_custom_props_list ()">jana_component_get_custom_props_list</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaComponent.html#jana-component-get-custom-prop" title="jana_component_get_custom_prop ()">jana_component_get_custom_prop</a>      (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaComponent.html#jana-component-set-custom-prop" title="jana_component_set_custom_prop ()">jana_component_set_custom_prop</a>      (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaComponent.html#jana-component-props-list-free" title="jana_component_props_list_free ()">jana_component_props_list_free</a>      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *props</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaComponent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----JanaComponent
+</pre>
+</div>
+<div class="refsect1" title="Prerequisites">
+<a name="JanaComponent.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+JanaComponent requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaComponent.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> is the basic interface for a component in a <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>. 
+A component is uniquely identifiable, has a type and optionally, can store 
+custom properties as key-value pairs.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaComponent.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaComponent">
+<a name="JanaComponent-struct"></a><h3>JanaComponent</h3>
+<pre class="programlisting">typedef struct _JanaComponent JanaComponent;</pre>
+<p>
+The <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum JanaComponentType">
+<a name="JanaComponentType"></a><h3>enum JanaComponentType</h3>
+<pre class="programlisting">typedef enum {
+	JANA_COMPONENT_NULL,
+	JANA_COMPONENT_EVENT,
+	JANA_COMPONENT_NOTE,
+	JANA_COMPONENT_TASK,
+} JanaComponentType;
+</pre>
+<p>
+Enum values for different types of component.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="JANA-COMPONENT-NULL:CAPS"></a><span class="term"><code class="literal">JANA_COMPONENT_NULL</code></span></p></td>
+<td>No specific type
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-COMPONENT-EVENT:CAPS"></a><span class="term"><code class="literal">JANA_COMPONENT_EVENT</code></span></p></td>
+<td>Event type. Component can be cast to a <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-COMPONENT-NOTE:CAPS"></a><span class="term"><code class="literal">JANA_COMPONENT_NOTE</code></span></p></td>
+<td>Note type. Component can be cast to a <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-COMPONENT-TASK:CAPS"></a><span class="term"><code class="literal">JANA_COMPONENT_TASK</code></span></p></td>
+<td>Task type. Component can be cast to a <a class="link" href="JanaTask.html" title="JanaTask"><span class="type">JanaTask</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_get_component_type ()">
+<a name="jana-component-get-component-type"></a><h3>jana_component_get_component_type ()</h3>
+<pre class="programlisting"><a class="link" href="JanaComponent.html#JanaComponentType" title="enum JanaComponentType"><span class="returnvalue">JanaComponentType</span></a>   jana_component_get_component_type   (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Get the <a class="link" href="JanaComponent.html#JanaComponentType" title="enum JanaComponentType"><span class="type">JanaComponentType</span></a> of <em class="parameter"><code>self</code></em>. The component type will 
+tell you if the component can be cast to a more specific type.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The <a class="link" href="JanaComponent.html#JanaComponentType" title="enum JanaComponentType"><span class="type">JanaComponentType</span></a> of <em class="parameter"><code>self</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_is_fully_represented ()">
+<a name="jana-component-is-fully-represented"></a><h3>jana_component_is_fully_represented ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_component_is_fully_represented (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the underlying data of <em class="parameter"><code>self</code></em> is fully 
+represented by the libjana interface. If it isn't, there may be data 
+in the component that is not reachable via libjana and modifying the 
+object may destroy this data.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the underlying data of <em class="parameter"><code>self</code></em> is fully represented by the 
+libjana interface.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_get_uid ()">
+<a name="jana-component-get-uid"></a><h3>jana_component_get_uid ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_component_get_uid              (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Get a unique identifying string for <em class="parameter"><code>self</code></em>. This can be used as the 
+key in a hash table and does not change when modifying the component. A 
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> that is not a part of a <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> may not have a uid.
+</p>
+<p>
+This function returns a newly allocated string. To avoid this allocation
+please use <code class="function">jana_component_peek_uid()</code>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The unique identifier of <em class="parameter"><code>self</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_get_categories ()">
+<a name="jana-component-get-categories"></a><h3>jana_component_get_categories ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            jana_component_get_categories       (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the list of categories this component is filed under. See
+<a class="link" href="JanaComponent.html#jana-component-set-categories" title="jana_component_set_categories ()"><code class="function">jana_component_set_categories()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated, NULL-terminated string array, containing the 
+component categories, to be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_set_categories ()">
+<a name="jana-component-set-categories"></a><h3>jana_component_set_categories ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_component_set_categories       (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **categories</code></em>);</pre>
+<p>
+Sets or clears the component's category list, overriding any previous set. 
+list. <em class="parameter"><code>categories</code></em> should be an array of <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated UTF-8 strings, and  
+the final member of the array should be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>categories</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_supports_custom_props ()">
+<a name="jana-component-supports-custom-props"></a><h3>jana_component_supports_custom_props ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_component_supports_custom_props
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether <em class="parameter"><code>self</code></em> supports the setting and retrieval 
+of custom properties.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em> supports custom properties, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_get_custom_props_list ()">
+<a name="jana-component-get-custom-props-list"></a><h3>jana_component_get_custom_props_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             jana_component_get_custom_props_list
+                                                        (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>);</pre>
+<p>
+Get a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of properties set on <em class="parameter"><code>self</code></em>. The data component of each  
+list element contains an array of two strings. The first string is the 
+property name, the second the value. This list can be freed using
+<a class="link" href="JanaComponent.html#jana-component-props-list-free" title="jana_component_props_list_free ()"><code class="function">jana_component_props_list_free()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing the properties set on <em class="parameter"><code>self</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_get_custom_prop ()">
+<a name="jana-component-get-custom-prop"></a><h3>jana_component_get_custom_prop ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_component_get_custom_prop      (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Retrieve a custom property set on <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The key name of the property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A string associated with the custom property, <em class="parameter"><code>name</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> 
+if the property has not been set.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_set_custom_prop ()">
+<a name="jana-component-set-custom-prop"></a><h3>jana_component_set_custom_prop ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_component_set_custom_prop      (<em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set a property on <em class="parameter"><code>self</code></em>. If the property has been set previously, the value 
+will be overwritten. Implementations of <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> may require that 
+property names conform to a particular specification.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The key name of the property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value of the property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the property was set successfully, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_component_props_list_free ()">
+<a name="jana-component-props-list-free"></a><h3>jana_component_props_list_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_component_props_list_free      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *props</code></em>);</pre>
+<p>
+Frees a <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> property list, returned by 
+<a class="link" href="JanaComponent.html#jana-component-get-custom-props-list" title="jana_component_get_custom_props_list ()"><code class="function">jana_component_get_custom_props_list()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>props</code></em> :</span></p></td>
+<td>A property list returned by <a class="link" href="JanaComponent.html#jana-component-get-custom-props-list" title="jana_component_get_custom_props_list ()"><code class="function">jana_component_get_custom_props_list()</code></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

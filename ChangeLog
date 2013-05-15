@@ -1,0 +1,3111 @@
+2009-03-20  Chris Lord  <chris@linux.intel.com>
+
+	* libjana-ecal/jana-ecal.h:
+	Define HANDLE_LIBICAL_MEMORY if it isn't already defined
+
+2009-03-19  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-store.c (get_jana_ecal_comp):
+	Teach the ecal store about JanaEcalTask.
+
+2009-03-19  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-task.c (task_get_due_date):
+	Only get a due date if one is set.
+
+2009-03-19  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana/jana-utils.c (jana_utils_task_copy):
+	* libjana/jana-utils.h:
+	Add the jana_utils_task_copy function.
+
+2009-03-18  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-store-view.c
+	(store_view_jcomp_from_ecomp):
+	Make the JanaEcalStoreView create JanaEcalTasks for tasks when it
+	encounters appropriate ECalComponents.
+
+2009-03-18  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-task.c (component_interface_init),
+	(task_interface_init), (jana_ecal_task_class_init),
+	(jana_ecal_task_init), (jana_ecal_task_new),
+	(jana_ecal_task_new_from_ecalcomp), (component_get_component_type),
+	(component_is_fully_represented), (task_get_summary),
+	(task_get_description), (task_get_completed), (task_get_due_date),
+	(task_get_priority), (task_set_summary), (task_set_description),
+	(task_set_completed), (task_set_due_date), (task_set_priority):
+	* libjana-ecal/jana-ecal-task.h:
+	* libjana-ecal/jana-ecal.h:
+	* Makefile.am:
+	Implement the JanaTask interface in the ECal backend.
+
+2009-03-18  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana/jana-task.c (jana_task_get_summary),
+	(jana_task_get_description), (jana_task_get_completed),
+	(jana_task_get_due_date), (jana_task_get_priority),
+	(jana_task_set_summary), (jana_task_set_description),
+	(jana_task_set_completed), (jana_task_set_due_date),
+	(jana_task_set_priority):
+	* libjana/jana-task.h:
+	Fill out the JanaTask interface with some function pointers for task
+	functionality and implement functions to uses these vfuncs.
+
+2009-03-16  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-store.c (jana_ecal_store_get_uri):
+	* libjana-ecal/jana-ecal-store.h:
+	Add a jana_ecal_store_get_uri function to return the URI of the
+	calendar behind the store.
+
+2009-03-11  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-utils.c (jana_ecal_utils_guess_location):
+	Avoid unreffing the GRegex twice.
+
+2009-03-11  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-utils.c (jana_ecal_utils_guess_location):
+	Remove another duplicate fclose (..) on an already closed fp.
+
+2009-03-11  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-utils.c:
+	Avoid duplicate fclose (..) calls on the same fp.
+
+2009-02-26  Rob Bradford  <rob@linux.intel.com>
+
+	* COPYING:
+	* README:
+	* libjana-*/*.[ch]:
+	* examples/*.[ch]:
+	* tests/*.[ch]:
+	  Relicense under LGPLv2.1
+
+2009-02-23  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-utils.c (jana_ecal_utils_guess_location):
+	  Loosen the regex used for extracting the location from
+	  /etc/sysconfig/clock to work with that found on Fedora.
+
+2009-02-17  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana/jana-utils.c (jana_utils_time_to_tm):
+	  Assign the minutes when creating the struct tm from a JanaTime.
+
+2009-01-12  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-store-view.c
+	(jana_ecal_store_view_set_property), (store_view_set_range):
+	Make jana_store_view_set_range () an atomic operation on
+	JanaEcalStoreView. This avoids potential races when setting up the
+	range on the ECalView.
+
+2008-12-31  Rob Bradford  <rob@linux.intel.com>
+
+	* libjana-ecal/jana-ecal-component.c (component_interface_init),
+	(component_peek_uid):
+	* libjana/jana-component.c (jana_component_peek_uid):
+	* libjana/jana-component.h:
+	Add jana_component_peek_uid which returns a constant string over
+	jana_component_get_uid which returns a newly allocated one.
+
+2008-11-27  Chris Lord  <chris@linux.intel.com>
+
+	* libjana-gtk/jana-gtk-day-view.c (create_layouts):
+	Fix buffer overflow
+
+2008-08-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Hide useless properties for JanaGtkEventList
+
+	* libjana-gtk/jana-gtk-event-list.c
+	(jana_gtk_event_list_class_init):
+	Fix property names
+
+2008-08-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-list.c
+	(jana_gtk_event_list_class_init):
+	Make show-headers property writable
+
+	* libjana/jana-component.c (jana_component_get_type):
+	* libjana/jana-event.c (jana_event_get_type):
+	* libjana/jana-note.c (jana_note_get_type):
+	* libjana/jana-store-view.c (jana_store_view_get_type):
+	* libjana/jana-store.c (jana_store_get_type):
+	* libjana/jana-task.c (jana_task_get_type):
+	* libjana/jana-time.c (jana_time_get_type):
+	Add GObject prerequisites to interfaces
+
+2008-08-17  Chris Lord  <chris@openedhand.com>
+
+	Fix up remaining crashers with Month/YearView in glade-3. All jana-gtk
+	widgets now work correctly in glade-3, however, day/month/list views
+	display blank
+
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Enable JanaGtkYearView and disable relevant properties for
+	JanaGtkMonthView and JanaGtkYearView
+
+	* libjana-gtk/jana-gtk-month-view.c
+	(jana_gtk_month_view_get_property),
+	(jana_gtk_month_view_expose_event), (relayout),
+	(button_press_event_cb), (jana_gtk_month_view_class_init):
+	Fix property getter for highlighted-time, name properties correctly
+	and fix crashing when some properties are unset
+
+	* libjana-gtk/jana-gtk-year-view.c (recount_events),
+	(jana_gtk_year_view_get_property),
+	(jana_gtk_year_view_set_property), (jana_gtk_year_view_class_init),
+	(regenerate_labels), (jana_gtk_year_view_init),
+	(jana_gtk_year_view_set_year):
+	Fix property getter for year and highlighted-time, name properties
+	correctly and fix property setter for year
+
+2008-08-15  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Hide some properties and remove the post-create function for
+	JanaGtkDayView
+
+	* libjana-gtk/jana-gtk-day-view.c (jana_gtk_day_view_get_property),
+	(jana_gtk_day_view_class_init):
+	Fix the get-property code for highlighted-time (fixes crash in glade).
+	Note, the widget works in glade-3 but doesn't display nicely
+
+2008-08-15  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Don't disable the 'time' property on classes, hide some properties on
+	JanaGtkWorldMap and JanaGtkRecurrence. Also add the JanaGtkWorldMap
+	post-create function
+
+	* libjana-gtk/jana-gtk-recurrence.c
+	(jana_gtk_recurrence_class_init):
+	Name properties correctly
+
+	* libjana-gtk/jana-gtk-world-map.c (refresh_buffer),
+	(jana_gtk_world_map_class_init), (placeholder_realize_cb),
+	(jana_gtk_world_map_glade_add_cb),
+	(jana_gtk_world_map_glade_remove_cb),
+	(jana_gtk_world_map_glade_post_create):
+	Check the buffer exists before spawning drawing thread (fixes crash),
+	add bits from JanaGtkClock to display correctly in glade-3
+
+2008-08-15  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Update properties and post-create function for JanaGtkTreeLayout
+
+	* libjana-gtk/jana-gtk-tree-layout.c
+	(jana_gtk_tree_layout_get_property),
+	(jana_gtk_tree_layout_set_property),
+	(jana_gtk_tree_layout_class_init):
+	Fix property names and types to work nicely with glade (and be
+	correct)
+
+2008-08-15  Chris Lord  <chris@openedhand.com>
+
+	Beginnings of glade-3 integration bits - JanaGtkClock and
+	JanaGtkDateTime work correctly, other widgets are likely to crash
+	glade-3
+
+	* configure.ac:
+	Add a --enable-glade switch
+
+	* libjana-ecal/jana-ecal-component.c
+	(jana_ecal_component_get_start):
+	Fix a compiler warning
+
+	* libjana-gtk/Makefile.am:
+	Link against gladeui
+
+	* libjana-gtk/data/Makefile.am:
+	* libjana-gtk/data/libjana-gtk-catalog.xml:
+	Add glade catalog file
+
+	* libjana-gtk/jana-gtk-clock.c (jana_gtk_clock_class_init),
+	(placeholder_realize_cb), (jana_gtk_clock_glade_add_cb),
+	(jana_gtk_clock_glade_remove_cb),
+	(jana_gtk_clock_glade_post_create):
+	Add post-create function for glade that uses some hacks to display
+	nicely in glade
+
+	* libjana-gtk/jana-gtk-date-time.c
+	(jana_gtk_date_time_set_property),
+	(jana_gtk_date_time_constructor), (jana_gtk_date_time_class_init),
+	(jana_gtk_date_time_glade_post_create):
+	Add a post-create function to set the time label, so it doesn't look
+	broken in glade
+
+2008-07-14  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c (draw_analogue_clock),
+	(draw_digital_clock):
+	Fix drawing of analogue clock when height > width
+
+2008-07-14  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (stop_draw_thread),
+	(draw_analogue_face), (draw_digital_face), (idle_redraw),
+	(draw_clock), (refresh_buffer), (jana_gtk_clock_map),
+	(jana_gtk_clock_unmap), (jana_gtk_clock_class_init):
+	Fix some concurrency / thread memory-access issues, still draw the
+	clock when time == NULL
+
+2008-07-11  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	Rename gettext package from 'Dates' to 'Jana'
+
+	* tests/Makefile.am:
+	* examples/Makefile.am:
+	Define HANDLE_LIBICAL_MEMORY to silence warnings
+
+	* libjana-gtk/jana-gtk-world-map-marker-pixbuf.h:
+	fix duplicate jana_gtk_world_map_marker_get_type typo
+
+2008-07-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_event_get_instances_cb):
+	Don't consider instances once the end range has been passed
+
+2008-07-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_event_get_instances):
+	Try not to consider instances that occur outside of the specified time
+	range with recurring events
+
+2008-07-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.c:
+	(jana_ecal_component_get_start):
+	Don't return NULL start times, instead create the earliest valid time
+
+2008-05-30  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (jana_gtk_day_view_set_range):
+	Free layouts before changing the range - fixes crash/leak when
+	adjusting the range
+
+2008-05-23  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.c
+	(component_get_custom_props_list), (component_get_custom_prop):
+	* libjana-ecal/jana-ecal-event.c:
+	* libjana-ecal/jana-ecal-note.c:
+	* libjana-ecal/jana-ecal-store-view.c:
+	* libjana-ecal/jana-ecal-store.c:
+	* libjana-ecal/jana-ecal-time.c:
+	* libjana-ecal/jana-ecal-utils.c:
+	Update, as per http://bugzilla.gnome.org/show_bug.cgi?id=516408
+
+2008-02-25  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_get_size):
+	Fix requesting too large a size when a cell width is set (we
+	ellipsize into the available size in this case, so no need to request
+	a size)
+
+2008-01-16  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_expose_event):
+	Fix incorrect week numbers (Openmoko bug #1184)
+
+2007-12-21  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-note.c:
+	(jana_gtk_cell_renderer_note_get_property),
+	(jana_gtk_cell_renderer_note_set_property),
+	(jana_gtk_cell_renderer_note_finalize),
+	(jana_gtk_cell_renderer_note_class_init),
+	(cell_renderer_note_render), (cell_renderer_note_get_size):
+	Add category-icon (emblems) support
+
+2007-12-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_component_insert_category),
+	(jana_utils_component_remove_category):
+	Fix possible segfaults in category insertion/removal
+
+2007-12-10  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store.c: (store_get_component):
+	Fix jana_ecal_store_get_component for journal components
+
+2007-12-07  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_component_has_category):
+	* libjana/jana-utils.h:
+	Add new utility function jana_utils_component_has_category
+
+2007-12-06  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (jana_gtk_clock_expose_event),
+	(draw_clock):
+	Don't draw the clock until the entire clock is ready to draw (cosmetic
+	issue, fixes OpenMoko bug #1037)
+
+2007-11-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store.c: (get_jana_ecal_comp):
+	Fix/implement adding notes to a store
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (copy_component_fields),
+	(jana_utils_event_copy), (jana_utils_note_copy):
+	* libjana/jana-utils.h:
+	Add new utility function jana_utils_note_copy
+
+2007-11-14  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c: (get_match_string):
+	* libjana/jana-store-view.h:
+	Allow matching on categories as well as fields
+
+2007-11-14  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c:
+	* libjana/jana-utils.h:
+	Add utility functions to insert and remove categories from components
+
+2007-11-14  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-8.c: (main):
+	Add a scrolled window around the treeview
+
+2007-11-13  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal.h:
+	Add jana-ecal-note.h to the global include
+
+2007-11-13  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-note.c: (note_interface_init),
+	(jana_ecal_note_new), (note_set_creation_time):
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-note.c: (jana_note_set_creation_time):
+	* libjana/jana-note.h:
+	Allow explicit setting of creation time for JanaNote objects
+
+2007-11-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-note-store.c: (note_store_added_cb),
+	(note_store_modified_cb):
+	Don't forget to add created/modified time to the note store
+
+2007-11-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c: (get_match_string):
+	Fix matching queries
+
+2007-11-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-note.c:
+	(cell_renderer_note_get_size):
+	Still set height when cell width is set
+
+2007-11-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_get_property),
+	(jana_ecal_store_view_set_property), (store_view_interface_init),
+	(jana_ecal_store_view_class_init), (jana_ecal_store_view_init),
+	(get_match_string), (store_view_refresh_query),
+	(store_view_add_match), (store_view_get_matches),
+	(store_view_remove_match), (store_view_clear_matches):
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-store-view.c: (jana_store_view_add_match),
+	(jana_store_view_get_matches), (jana_store_view_remove_match),
+	(jana_store_view_clear_matches):
+	* libjana/jana-store-view.h:
+	Re-design/implement Jana[Ecal]StoreView to allow for multiple matching
+	queries on one view
+
+2007-11-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-note.c:
+	(cell_renderer_note_get_size):
+	Fit into allocated width when a cell width is set
+
+2007-11-09  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-note.c:
+	(cell_renderer_note_get_size):
+	Fix size calculation
+
+2007-11-09  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c: (main):
+	* examples/jana-gtk-example-2.c: (main):
+	* examples/jana-gtk-example-3.c: (main):
+	* examples/jana-gtk-example-4.c: (main):
+	* examples/jana-gtk-example-5.c: (main):
+	* examples/jana-gtk-example-8.c: (main):
+	Fix warnings due to function prototype change
+	
+	* libjana-gtk/jana-gtk-event-store.c: (jana_gtk_event_store_init):
+	* libjana-gtk/jana-gtk-event-store.h:
+	* libjana-gtk/jana-gtk-note-store.c: (jana_gtk_note_store_init):
+	* libjana-gtk/jana-gtk-note-store.h:
+	Change return type to GtkTreeModel, to better follow convention
+
+2007-11-09  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-event.c: (jana_event_get_categories):
+	Fix typo in docs
+
+2007-11-09  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-8.c: (main):
+	Use JanaGtkCellRendererNote and jana_gtk_utils_treeview_resize
+
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/Makefile.am:
+	Add jana-gtk-cell-renderer-note.[ch] and jana-gtk-utils.[ch]
+
+	* libjana-gtk/doc/reference/libjana-gtk-docs.sgml:
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/doc/reference/libjana-gtk.types:
+	Refresh docs
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_finalize):
+	Unref the category-colours hash table on finalize
+
+	* libjana-gtk/jana-gtk-cell-renderer-note.[ch]:
+	Add new JanaGtkCellRendererNote
+
+	* libjana-gtk/jana-gtk-utils.[ch]:
+	Add jana-gtk utility functions - currently only contains a callback to
+	resize cell renderers on treeview resize
+
+2007-11-08  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* examples/Makefile.am:
+	* libjana-gtk/Makefile.am:
+	Link against gthread-2.0... Not sure why this error only just cropped
+	up?
+
+	* examples/jana-gtk-example-8.c: (opened_cb), (main):
+	Add example for JanaGtkNoteStore
+
+	* libjana-ecal/doc/reference/libjana-ecal-sections.txt:
+	Update documentation
+
+	* libjana-ecal/jana-ecal-component.c:
+	(jana_ecal_component_get_start), (jana_ecal_component_get_end):
+	Use jana_ecal_time_new_from_ecaltime
+
+	* libjana-ecal/jana-ecal-note.c: (note_get_creation_time),
+	(note_get_modified_time):
+	Get the creation/last-modified time if dtstart/dtend are missing
+
+	* libjana-ecal/jana-ecal-time.h:
+	* libjana-ecal/jana-ecal-time.c:
+	(jana_ecal_time_new_from_ecaltime):
+	Add new jana_ecal_time_new_from_ecaltime to create time objects from
+	ECalComponentDateTime structs
+
+	* libjana-gtk/jana-gtk-note-store.[ch]:
+	* libjana-gtk/jana-gtk.h:
+	Add new JanaGtkNoteStore
+
+	* libjana-gtk/libjana-gtk.pc.in:
+	Add gthread-2.0 to dependencies
+
+2007-11-07  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-note.[ch]:
+	* libjana-ecal/Makefile.am:
+	Add JanaEcalNote, providing for journal functionality
+
+	* libjana-ecal/doc/reference/libjana-ecal-docs.sgml:
+	* libjana-ecal/doc/reference/libjana-ecal-sections.txt:
+	* libjana-ecal/doc/reference/libjana-ecal.types:
+	Update documentation for new functions/classes
+
+	* libjana-ecal/jana-ecal-component.c: (component_interface_init),
+	(jana_ecal_component_get_summary),
+	(jana_ecal_component_get_description),
+	(jana_ecal_component_get_location),
+	(jana_ecal_component_set_summary),
+	(jana_ecal_component_set_description),
+	(jana_ecal_component_set_location),
+	(jana_ecal_component_get_start), (jana_ecal_component_get_end),
+	(jana_ecal_component_set_start), (jana_ecal_component_set_end),
+	(component_get_categories), (component_set_categories):
+	* libjana-ecal/jana-ecal-component.h:
+	* libjana-ecal/jana-ecal-event.c: (event_interface_init),
+	(event_get_summary), (event_get_description), (event_get_location),
+	(event_get_start), (event_get_end), (event_set_summary),
+	(event_set_description), (event_set_location), (event_set_start),
+	(event_set_end):
+	Move code from JanaEcalEvent to JanaEcalComponent, to make sub-classing
+	easier
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_get_property),
+	(jana_ecal_store_view_set_property), (store_view_interface_init),
+	(jana_ecal_store_view_class_init), (store_view_jcomp_from_ecomp),
+	(store_view_progress_cb), (store_view_done_cb),
+	(store_view_refresh_query), (store_view_get_match),
+	(store_view_set_match):
+	Add support for JanaEcalNote and add string-matching queries
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_time_now_local):
+	* libjana-ecal/jana-ecal-utils.h:
+	New utility function jana_ecal_utils_time_now_local
+
+	* libjana/doc/reference/libjana-sections.txt:
+	Update documentation for new interfaces/functions
+
+	* libjana/jana-component.c: (jana_component_get_categories),
+	(jana_component_set_categories):
+	* libjana/jana-component.h:
+	* libjana/jana-event.c: (jana_event_get_categories),
+	(jana_event_set_categories):
+	* libjana/jana-event.h:
+	Every component should have categories, move categories from JanaEvent
+	to JanaComponent, jana_event_[gs]et_categories now just calls the
+	JanaComponent functions
+
+	* libjana/jana-store-view.c: (jana_store_view_base_init),
+	(jana_store_view_get_match), (jana_store_view_set_match):
+	* libjana/jana-store-view.h:
+	Add string-matching queries
+
+2007-11-06  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-note.c: (jana_note_get_author),
+	(jana_note_get_recipient), (jana_note_get_body),
+	(jana_note_get_creation_time), (jana_note_get_modified_time),
+	(jana_note_set_author), (jana_note_set_recipient),
+	(jana_note_set_body):
+	* libjana/jana-note.h:
+	Flesh out JanaNote interface
+
+2007-11-02  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-6.c: (clicked_cb), (main):
+	* examples/jana-gtk-example-7.c: (clicked_cb), (main):
+	Update examples to use new 'clicked' signal
+
+	* libjana-gtk/jana-gtk-clock.c:
+	(jana_gtk_clock_enter_notify_event),
+	(jana_gtk_clock_leave_notify_event),
+	(jana_gtk_clock_button_press_event),
+	(jana_gtk_clock_button_release_event), (jana_gtk_clock_class_init),
+	(jana_gtk_clock_init):
+	* libjana-gtk/jana-gtk-clock.h:
+	* libjana-gtk/jana-gtk-world-map.c:
+	(jana_gtk_world_map_enter_notify_event),
+	(jana_gtk_world_map_leave_notify_event),
+	(jana_gtk_world_map_button_press_event),
+	(jana_gtk_world_map_button_release_event),
+	(jana_gtk_world_map_class_init), (jana_gtk_world_map_init):
+	* libjana-gtk/jana-gtk-world-map.h:
+	Add 'clicked' signals to world-map and clock widgets
+
+2007-11-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	Refresh
+
+	* libjana-gtk/jana-gtk-world-map.c:
+	(jana_gtk_world_map_get_markers):
+	* libjana-gtk/jana-gtk-world-map.h:
+	Add jana_gtk_world_map_get_markers
+
+2007-11-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_set_location):
+	Don't call icaltimezone_convert_time with a NULL timezone, fixes
+	possible error in UTC -> x conversions
+
+2007-11-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-time.c: (time_normalise), (time_set_day),
+	(time_set_month), (time_set_year):
+	Don't adjust the time too early when creating new time objects
+
+	* libjana/jana-utils.c: (jana_utils_time_to_tm):
+	Un-adjust for DST when converting to broken-down time format
+
+2007-11-01  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* libjana-gtk/jana-gtk-world-map.c: (draw_map):
+	* libjana/Makefile.am:
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_time_daylight_hours):
+	* libjana/jana-utils.h:
+	Move daylight hours calculation code outside of JanaGtkWorldMap to
+	jana-utils
+
+2007-11-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (number_suffix):
+	Fix '13rd' -> '13th'
+
+2007-11-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location):
+	Check if libc timezone is UTC before searching for an ecal location
+
+	* libjana/jana-utils.c: (jana_utils_get_local_tzname):
+	Don't put a '/' after timezones that don't have a 'sub-section'
+
+2007-11-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c:
+	(jana_gtk_world_map_get_property),
+	(jana_gtk_world_map_set_property),
+	(jana_gtk_world_map_expose_event),
+	(jana_gtk_world_map_size_allocate),
+	(jana_gtk_world_map_class_init), (jana_gtk_world_map_set_static),
+	(jana_gtk_world_map_get_static), (jana_gtk_world_map_set_width),
+	(jana_gtk_world_map_get_width), (jana_gtk_world_map_set_height),
+	(jana_gtk_world_map_get_height):
+	* libjana-gtk/jana-gtk-world-map.h:
+	Add a 'static' mode to render the map once at a specific size and scale
+	the buffer to fit the allocated space
+
+2007-11-01  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (jana_gtk_clock_init):
+	Initialise threads
+
+2007-10-31  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (draw_digital_face),
+	(draw_digital_clock):
+	Reduce the digital clock frame width slightly to better match the
+	analogue clock
+
+2007-10-31  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-7.c: (button_press_event_cb):
+	Change spacing
+
+	* libjana-gtk/jana-gtk-clock.c: (stop_draw_thread),
+	(jana_gtk_clock_dispose), (draw_analogue_face),
+	(draw_analogue_clock), (draw_digital_face), (draw_digital_clock),
+	(jana_gtk_clock_expose_event), (idle_redraw), (draw_clock),
+	(refresh_buffer), (jana_gtk_clock_size_allocate),
+	(jana_gtk_clock_map_event), (jana_gtk_clock_class_init):
+	* libjana-gtk/jana-gtk-clock.h:
+	Add threaded drawing
+
+	* libjana-gtk/jana-gtk-world-map.c:
+	(jana_gtk_world_map_size_allocate):
+	Stop the drawing thread before destroying the buffer surface
+
+2007-10-31  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location):
+	Check /etc/localtime symlink if it exists; also verify that whatever
+	timezone returned has a matching built-in ecal timezone
+
+2007-10-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map-marker-pixbuf.c: (render),
+	(jana_gtk_world_map_marker_pixbuf_new):
+	Don't crash when a NULL pixbuf is set - fallback to parent render
+
+2007-10-26  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* examples/Makefile.am:
+	* examples/data/Makefile.am:
+	* examples/jana-gtk-example-7.c: (main):
+	Add JanaGtkWorldMapMarkerPixbuf to example 7
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/doc/reference/libjana-gtk-docs.sgml:
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/doc/reference/libjana-gtk.types:
+	* libjana-gtk/jana-gtk-world-map-marker-pixbuf.[ch]:
+	* libjana-gtk/jana-gtk-world-map-marker.[ch]:
+	* libjana-gtk/jana-gtk-world-map.c: (draw_marks),
+	(jana_gtk_world_map_expose_event), (jana_gtk_world_map_init),
+	(jana_gtk_world_map_add_marker),
+	(jana_gtk_world_map_remove_marker),
+	(jana_gtk_world_map_move_marker):
+	* libjana-gtk/jana-gtk-world-map.h:
+	* libjana-gtk/jana-gtk.h:
+	Tidy up and integrate map marker patch from Iain Holmes
+
+2007-10-25  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	Add missing JanaComponentType
+
+2007-10-24  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	Check for GConf
+
+	* examples/jana-gtk-example-3.c: (clicked_cb), (main):
+	Add button to toggle showing of day headers
+
+	* libjana-ecal/Makefile.am:
+	* libjana-ecal/doc/reference/libjana-ecal-sections.txt:
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location):
+	* libjana-ecal/jana-ecal-utils.h:
+	Check the Evolution timezone key when guessing location - also add 
+	defines so apps can hook onto change notifications
+
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/jana-gtk-event-list.c: (recalculate_headers),
+	(jana_gtk_event_list_get_property),
+	(jana_gtk_event_list_set_property),
+	(jana_gtk_event_list_class_init), (style_set_cb),
+	(jana_gtk_event_list_init), (jana_gtk_event_list_set_show_headers),
+	(jana_gtk_event_list_get_show_headers):
+	* libjana-gtk/jana-gtk-event-list.h:
+	Add new property+functions to toggle the showing of day headers
+
+2007-10-24  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (draw_digital_number),
+	(draw_digital_face), (draw_digital_clock):
+	Make the border frame a bit thinner, the numbers a bit bigger and add
+	a seconds 'ticking' indicator to the digital clock - also tweak the 
+	background colour slightly to add contrast
+
+2007-10-24  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	Change package name to 'jana' from 'dates'
+
+2007-10-23  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-6.c: (button_press_event_cb), (main):
+	Click to toggle between digital/analogue display
+
+	* libjana-gtk/jana-gtk-clock.c: (jana_gtk_clock_get_property),
+	(draw_analogue_face), (draw_analogue_clock), (draw_digital_number),
+	(draw_digital_face), (draw_digital_clock),
+	(jana_gtk_clock_expose_event), (refresh_buffer),
+	(jana_gtk_clock_get_time), (jana_gtk_clock_get_digital),
+	(jana_gtk_clock_get_show_seconds),
+	(jana_gtk_clock_get_buffer_time), (jana_gtk_clock_get_draw_shadow):
+	* libjana-gtk/jana-gtk-clock.h:
+	Finish up get/set functions, make analogue hour hand take minutes into
+	account, make sure the background is *really* cleared before drawing
+	and implement digital clock.
+
+2007-10-22  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c: (jana_gtk_clock_style_set),
+	(jana_gtk_clock_class_init):
+	* libjana-gtk/jana-gtk-world-map.c: (jana_gtk_world_map_style_set),
+	(jana_gtk_world_map_class_init):
+	Redraw on style_set
+
+2007-10-22  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/Makefile.am:
+	* libjana-ecal/libjana-ecal.pc.in:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/libjana-gtk.pc.in:
+	* libjana/Makefile.am:
+	* libjana/libjana.pc.in:
+	Configure libjana[{-ecal,-gtk}] as dynamic libraries
+
+2007-10-22  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (idle_redraw), (draw_map):
+	Don't send render_stop signal when rendering interrupted, call idle 
+	callback after rendering with high priority so the signal emission 
+	doesn't get blocked by other things
+
+2007-10-21  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (idle_stop), (draw_map),
+	(refresh_buffer), (jana_gtk_world_map_class_init):
+	* libjana-gtk/jana-gtk-world-map.h:
+	Don't use a radial gradient to fill the map, it was too subtle to
+	notice anyway and takes too long on slower machines.
+	Add render_start and render_stop signals for drawing.
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (stop_draw_thread), (draw_map),
+	(refresh_buffer), (jana_gtk_world_map_set_time):
+	Check the dirty flag while drawing and break out of drawing thread
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (jana_gtk_world_map_set_time):
+	Make sure to stop drawing thread before unref'ing time object
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/libjana-ecal.pc.in:
+	* libjana-gtk/libjana-gtk.pc.in:
+	* libjana/libjana.pc.in:
+	Fix linking flags
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/doc/reference/libjana-gtk-docs.sgml:
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/doc/reference/libjana-gtk.types:
+	Refresh/update docs for JanaGtkWorldMap
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (refresh_buffer),
+	(jana_gtk_world_map_map_event), (jana_gtk_world_map_class_init):
+	Defer draw until the widget is mapped
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (stop_draw_thread),
+	(jana_gtk_world_map_dispose), (idle_redraw), (draw_map),
+	(refresh_buffer), (jana_gtk_world_map_init),
+	(jana_gtk_world_map_set_time):
+	Draw map in a thread
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (draw_map):
+	Make LOD more aggressive
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-world-map.c: (draw_map):
+	Add adaptive level-of-detail
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-7.c: (set_time):
+	Only update the world map every minute, instead of every second
+
+	* libjana-gtk/jana-gtk-world-map.c: (read_vmf):
+	Increase the allocation size
+
+2007-10-19  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-7.c: (main):
+	Make clock scale with window size
+
+	* libjana-gtk/jana-gtk-clock.c: (draw_analogue_face):
+	Make sure clock hands are always visible
+
+	* libjana-gtk/jana-gtk-world-map.c: (read_vmf):
+	Don't constantly realloc when loading data
+
+2007-10-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/libjana-gtk.pc.in:
+	Link correct library, as spotted by Iain Holmes
+
+2007-10-18  Rob Bradford  <rob@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	* hildon/Makefile.am:
+	* hildon/dates-main.c: (main):
+	Start adding infrastructure for Hildon port.
+
+2007-10-18  Chris Lord  <chris@openedhand.com>
+
+	* README:
+	Add note about landwater.vmf copyright
+
+	* configure.ac:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/data/Makefile.am:
+	* libjana-gtk/data/landwater.vmf:
+	Add data for JanaGtkWorldMap
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-7.c:
+	Add new example for JanaGtkWorldMap
+
+	* libjana-gtk/jana-gtk-clock.c: (draw_analogue_face),
+	(draw_analogue_clock), (jana_gtk_clock_expose_event):
+	Fix drawing when widget isn't at position 0,0
+
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-world-map.[ch]:
+	Add new widget JanaGtkWorldMap that shows a world map with an
+	optional daylight visualisation
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_time_day_of_year):
+	* libjana/jana-utils.h:
+	Add new utility function jana_utils_time_day_of_year
+
+2007-10-17  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-clock.c:
+	* libjana-gtk/jana-gtk-clock.h:
+	Add licence header
+
+2007-10-16  Chris Lord  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-6.c: (set_time), (main):
+	Add new example for JanaGtkClock
+
+	* libjana-gtk/doc/reference/libjana-gtk-docs.sgml:
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/doc/reference/libjana-gtk.types:
+	Refresh
+
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-clock.[ch]:
+	Add new clock widget
+
+	* libjana-gtk/jana-gtk-recurrence.c:
+	(jana_gtk_recurrence_class_init):
+	Fix typo with 'time' property
+
+2007-10-14  Chris Lord  <chris@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	* tests/Makefile.am:
+	* examples/Makefile.am:
+	Add --enable-tests and --enable-examples, build and install tests and 
+	examples when these are specified
+
+	* libjana-gtk/doc/reference/libjana-gtk-docs.sgml:
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	* libjana-gtk/doc/reference/libjana-gtk.types:
+	Refresh documentation
+
+	* libjana-gtk/jana-gtk-month-view.c: (relayout):
+	Hide out-of-range events
+
+2007-10-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_event_get_instances):
+	Really fix weekly recurrence instance generation (was OOB array
+	access, not off-by-one)
+
+2007-10-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_event_get_instances):
+	Fix off-by-1 error with weekly recurrence instance generation
+
+2007-10-12  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (event_set_recurrence):
+	Fix crash when committing an event with recurrence set by libjana-ecal
+
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-recurrence.[ch]:
+	Add a recurrence editing/display widget, JanaGtkRecurrence
+
+	* libjana-gtk/jana-gtk-date-time.c: (create_edit_page),
+	(jana_gtk_date_time_init), (jana_gtk_date_time_new):
+	* libjana-gtk/jana-gtk-date-time.h:
+	Set gtk_widget_set_no_show_all for internal widgets, don't leave
+	setting format to the user (should be locale-dependent)
+
+	* libjana/jana-event.c: (jana_recurrence_new):
+	Make a new JanaRecurrence valid by default, update docs to reflect this
+
+	* libjana/jana-utils.c: (jana_utils_recurrence_to_string),
+	(jana_utils_recurrence_diff):
+	Still return a recurrence string, even without a start time
+
+	* openmoko/dates.h:
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(edit_event), (page_shown), (edit_toggled_cb), (time_toggled_cb),
+	(start_changed_cb), (recur_toggled_cb), (dates_create_view_page):
+	Fix typo that meant that event was committed every time it was edited,
+	add recurrence editing/display (still quite rough)
+
+2007-10-10  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (create_layouts):
+	Use jana_utils_ab_day
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_expose_event):
+	Use jana_utils_ab_day
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_recurrence_to_string),
+	(jana_utils_ab_day):
+	* libjana/jana-utils.h:
+	Add new function jana_utils_ab_day to get the first letter of the 
+	locale-correct abbreviated day name (UTF-8 friendly).
+
+2007-10-09  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* libjana-ecal/Makefile.am:
+	* libjana-ecal/libjana-ecal.pc.in:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/libjana-gtk.pc.in:
+	* libjana/Makefile.am:
+	* libjana/libjana.pc.in:
+	Configure libjana/-ecal/-gtk as static libraries instead of
+	convenience libraries, as suggested in the autotools manual. Also
+	install static libraries, headers and pkg-config files for easy
+	development
+
+	* libjana-gtk/jana-gtk.h:
+	Add short section description
+
+2007-10-09  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (event_get_recurrence):
+	Implement recurrence setting
+
+	* libjana/jana-event.h:
+	Remove @indefinite property of JanaRecurrence, was redundant
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_event_get_instances),
+	(jana_utils_recurrence_to_string):
+	* libjana/jana-utils.h:
+	Add new function, jana_utils_recurrence_diff, that determines if two
+	recurrences are the same
+
+	* tests/test-jana-ecal-event.c: (main):
+	Add recurrence setting/retrieval to the JanaEcalEvent test
+
+2007-10-08  Chris Lord  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* examples/jana-ecal-example-1.c: (display_event), (added_cb),
+	(modified_cb), (removed_cb), (opened_cb), (main):
+	Add a libjana-ecal example that just lists all events in a store and 
+	listens for changes
+
+	* libjana-ecal/jana-ecal-event.c: (component_is_fully_represented),
+	(event_supports_recurrence), (event_has_recurrence),
+	(count_by_xxx), (event_get_recurrence):
+	Add support for reading recurrence properties
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_set_property), (store_view_refresh_query):
+	Add support for boundless queries
+
+	* libjana-gtk/jana-gtk-event-store.c: (event_store_added_cb),
+	(event_store_modified_cb):
+	Add support for recurrence
+
+	* libjana/doc/reference/libjana-sections.txt:
+	Add missing JanaRecurrenceType
+
+	* libjana/jana-event.c: (jana_recurrence_copy),
+	(jana_recurrence_free):
+	Don't crash when copying or freeing recurrences with no end time
+
+	* libjana/jana-event.h:
+	Amend documentation
+
+	* libjana/jana-utils.h:
+	* libjana/jana-utils.c: (jana_utils_time_diff),
+	(jana_utils_event_get_instances_cb),
+	(jana_utils_event_get_instances), (number_suffix),
+	(jana_utils_recurrence_to_string):
+	Fix typo in jana_utils_time_diff, add recurrence support to
+	jana_utils_event_get_instances and add a new function, 
+	jana_utils_recurrence_to_string that returns human-readable text that 
+	represents a recurrence structure
+
+	* openmoko/dates-view.c: (start_changed_cb), (end_changed_cb),
+	(timezone_search_changed_cb), (timezone_combo_changed_cb):
+	Fix warnings and adapt to an API change
+
+2007-10-05  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-view.c: (timezone_combo_changed_cb):
+	Don't use an undecorated window for the timezone selection, or
+	matchbox won't place it correctly when the keyboard pops up
+
+2007-10-04  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/Makefile.am:
+	* openmoko/dates-timezone-tile.[ch]:
+	Add DatesTimezoneTile, an extension of TakuIconTile that displays
+	searchable timezone information
+
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(edit_toggled_cb), (set_location), (timezone_tile_clicked_cb),
+	(timezone_search_changed_cb), (timezone_combo_changed_cb),
+	(dates_create_view_page):
+	Add extended timezone selector using libtaku
+
+2007-10-03  Chris Lord  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* tests/Makefile.am:
+	Unbreak build flags
+
+2007-10-03  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* libjana-ecal/Makefile.am:
+	* libjana-ecal/doc/reference/Makefile.am:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/doc/reference/Makefile.am:
+	* libjana/Makefile.am:
+	* libjana/doc/reference/Makefile.am:
+	* openmoko/Makefile.am:
+	Make build flags more fine-grained and build libtaku
+
+	* openmoko/dates-view.c: (timezone_combo_changed_cb),
+	(dates_create_view_page):
+	Make the timezone combo box functional
+
+2007-10-03  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_set_location),
+	(jana_ecal_time_get_location):
+	Return "UTC" instead of a NULL location in case a zone isn't set, 
+	accept a NULL location to mean "UTC" and special-case NULL / "UTC" 
+	to set the UTC timezone
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location):
+	Also make sure the offset of the local timezone is honoured when
+	using the fallback method
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_get_property):
+	Don't crash when trying to retrieve a selection when none is set
+
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(edit_toggled_cb), (dates_create_view_page):
+	* openmoko/dates.h:
+	Add a timezone combo box (displays correctly, but can't set timezone
+	currently)
+
+2007-10-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/doc/reference/libjana-ecal-sections.txt:
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location),
+	(jana_ecal_utils_get_locations):
+	* libjana-ecal/jana-ecal-utils.h:
+	Add new function jana_ecal_utils_get_locations() and add a glib
+	version check around use of GRegex
+
+2007-10-02  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/doc/reference/libjana-ecal-sections.txt:
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_guess_location):
+	* libjana-ecal/jana-ecal-utils.h:
+	Add new function jana_ecal_utils_guess_location() that checks common
+	system files for the timezone location
+
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-utils.c: (jana_utils_time_now):
+	* libjana/jana-utils.h:
+	Add new function jana_utils_time_now() that fills in a JanaTime with
+	the current local time
+
+	* openmoko/dates-main.c: (main):
+	Use jana_ecal_utils_guess_location()
+
+2007-10-01  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-view.c: (dates_create_view_page):
+	Put the view/edit page in a MokoFingerScroll, now that text selection
+	and holding work correctly
+
+2007-09-30  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.[ch]:
+	* libjana-ecal/jana-ecal-event.[ch]:
+	* libjana-ecal/jana-ecal-store-view.[ch]:
+	* libjana-ecal/jana-ecal-store.[ch]:
+	* libjana-ecal/jana-ecal-time.[ch]:
+	* libjana-ecal/jana-ecal-utils.c:
+	* libjana-ecal/jana-ecal.h:
+	100% symbol docs coverage (40 symbols documented, 0 symbols
+	incomplete, 0 not documented)
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store.c: (jana_ecal_store_class_init):
+	* libjana/doc/reference/libjana-sections.txt:
+	* libjana/jana-component.[ch]:
+	* libjana/jana-event.[ch]:
+	* libjana/jana-note.[ch]:
+	* libjana/jana-store-view.[ch]:
+	* libjana/jana-store.[ch]:
+	* libjana/jana-task.[ch]:
+	* libjana/jana-time.[ch]:
+	* libjana/jana-utils.c: (jana_utils_duration_contains),
+	(jana_utils_event_copy):
+	* libjana/jana.h:
+	100% symbol docs coverage (121 symbols documented, 0 symbols
+	incomplete, 0 not documented)
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-time.c: (jana_time_get_type),
+	(jana_time_get_offset), (jana_time_set_seconds),
+	(jana_time_set_minutes), (jana_time_set_hours),
+	(jana_time_set_day), (jana_time_set_month), (jana_time_set_year),
+	(jana_time_set_isdate), (jana_time_set_tzname),
+	(jana_time_set_offset), (jana_time_duplicate),
+	(jana_duration_get_type), (jana_duration_new),
+	(jana_duration_copy), (jana_duration_set_start),
+	(jana_duration_set_end), (jana_duration_valid):
+	* libjana/jana-time.h:
+	Complete documentation
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	Correct section titles (use CamelCase)
+
+	* libjana/jana-store-view.c: (jana_store_view_base_init),
+	(jana_store_view_get_type), (jana_store_view_get_range),
+	(jana_store_view_set_range):
+	Complete documentation
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-note.c: (jana_note_get_type):
+	* libjana/jana-task.c: (jana_task_get_type):
+	Remove unnecessary commented out code
+
+	* libjana/jana-store.c: (jana_store_base_init),
+	(jana_store_get_type):
+	Complete documentation
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-component.h:
+	Document JanaComponentType enum
+
+	* libjana/jana-event.c: (jana_recurrence_get_type),
+	(jana_recurrence_copy), (jana_recurrence_free),
+	(jana_exceptions_free):
+	* libjana/jana-event.h:
+	Complete documentation
+
+2007-09-29  Chris Lord  <chris@openedhand.com>
+
+	* libjana/doc/reference/libjana-sections.txt:
+	Re-add ommitted jana_utils_time_to_tm
+
+	* libjana/jana-utils.c: (jana_utils_time_is_leap_year),
+	(jana_utils_time_days_in_month), (jana_utils_time_day_of_week),
+	(jana_utils_time_week_of_year),
+	(jana_utils_time_set_start_of_week),
+	(jana_utils_time_set_end_of_week), (jana_utils_time_to_gdate),
+	(jana_utils_time_to_tm), (jana_utils_strftime),
+	(jana_utils_time_compare), (jana_utils_time_diff),
+	(jana_utils_time_adjust), (jana_utils_duration_contains),
+	(jana_utils_event_copy), (jana_utils_event_get_instances),
+	(jana_utils_instance_list_free):
+	Complete documentation
+
+2007-09-28  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-main.c: (main):
+	Typo s/g_timeout_add_seconds/g_timeout_add
+
+2007-09-28  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-store.c: (change_events_cb),
+	(jana_gtk_event_store_set_offset):
+	Don't use g_hash_table_get_keys().
+
+2007-09-28  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-month.c: (year_clicked_cb):
+	Set the dialog window hint on the year view
+
+2007-09-28  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (relayout):
+	Fix bug with non-24-hour events ending before 1am
+
+2007-09-28  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (event_get_start),
+	(event_get_end):
+	Set the timezone from tzid when available
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_time_now),
+	(jana_ecal_utils_time_today):
+	Set the timezone after retrieving the time with zone (it isn't set
+	otherwise, despite having provided a zone for it to set)
+
+	* libjana-gtk/doc/reference/libjana-gtk-sections.txt:
+	Update
+
+	* libjana-gtk/jana-gtk-event-store.c: (event_store_added_cb),
+	(event_store_modified_cb), (jana_gtk_event_store_get_property),
+	(jana_gtk_event_store_set_property),
+	(jana_gtk_event_store_class_init), (jana_gtk_event_store_new_full),
+	(jana_gtk_event_store_set_offset):
+	* libjana-gtk/jana-gtk-event-store.h:
+	Allow specifying an offset to use when instancing events
+
+	* libjana/jana-utils.c: (jana_utils_event_get_instances):
+	* libjana/jana-utils.h:
+	Require an offset when instancing events
+
+	* openmoko/dates-main.c: (opened_cb), (main):
+	Use GLIB_CHECK_VERSION to determine whether to use
+	g_timeout_add_seconds
+
+2007-09-27  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_finalize):
+	Free highlighted time on finalize
+
+	* libjana-gtk/jana-gtk-year-view.c: (recount_events),
+	(jana_gtk_year_view_get_property),
+	(jana_gtk_year_view_set_property), (jana_gtk_year_view_finalize),
+	(jana_gtk_year_view_class_init), (regenerate_labels),
+	(jana_gtk_year_view_init), (jana_gtk_year_view_new),
+	(jana_gtk_year_view_set_year), (jana_gtk_year_view_get_year),
+	(jana_gtk_year_view_set_selected_month),
+	(jana_gtk_year_view_set_highlighted_time):
+	* libjana-gtk/jana-gtk-year-view.h:
+	Use a JanaTime to set year (so we can consider timezones) and add a
+	function to set a highlighted time
+
+	* openmoko/dates-list.c: (update_header):
+	* openmoko/dates-month.c: (set_range), (year_clicked_cb):
+	* openmoko/dates-week.c: (refresh_view):
+	Use shorter window titles and highlight the current month on year view
+
+	* openmoko/dates-main.c: (main):
+	Correct some comments and use GNOME stock names for tab icons
+
+2007-09-27  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (relayout):
+	Consider time offset when laying out events
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_get_property),
+	(jana_gtk_month_view_set_property),
+	(jana_gtk_month_view_expose_event),
+	(jana_gtk_month_view_class_init),
+	(jana_gtk_month_view_set_highlighted_time):
+	* libjana-gtk/jana-gtk-month-view.h:
+	Add function to set a highlighted time
+
+	* openmoko/dates-main.c: (time_update_idle):
+	Set highlighted time on month view
+
+2007-09-27  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (create_layouts),
+	(time_to_cell_coords), (jana_gtk_day_view_get_property),
+	(jana_gtk_day_view_set_property), (jana_gtk_day_view_dispose),
+	(jana_gtk_day_view_finalize), (layout_expose_event_cb),
+	(end_selection), (jana_gtk_day_view_class_init),
+	(adjustment_changed_after_size_allocate_cb),
+	(viewport_size_allocate_cb), (jana_gtk_day_view_scroll_to_time),
+	(recalculate_cell_coords), (jana_gtk_day_view_set_range),
+	(jana_gtk_day_view_set_selection), (jana_gtk_day_view_set_cells),
+	(jana_gtk_day_view_set_highlighted_time),
+	(jana_gtk_day_view_set_active_range):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Add new functions to set an active range (times outside of the active 
+	range will be low-lighted) and a highlighted time (which will have
+	a bold day header + a Marcus Bains line). Also fix the adjustments 
+	changing the visible area when the widget is resized and fix various
+	time offset bugs that probably existed.
+
+	* libjana/jana-utils.c: (jana_utils_time_compare), (days_between),
+	(jana_utils_time_diff):
+	Make jana_utils_time_diff accumulate time difference when
+	parameters are missing. Also don't unnecessarily create a new time
+	in jana_utils_time_compare when both times have the same offset
+
+	* openmoko/dates.h:
+	* openmoko/dates-main.c: (delete_event_cb), (time_update_idle),
+	(main):
+	Set the highlighted time on the week view and update every minute to
+	get a Marcus Bains line
+
+	* openmoko/dates-week.c: (refresh_view), (dates_create_week_page):
+	Set the active time to work hours (9am - 5pm)
+
+2007-09-26  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (layout_expose_event_cb),
+	(start_selection), (end_selection):
+	Store the selection cell co-ordinates and don't use jana_time functions
+	when redrawing main grid - should speed up selections
+
+	* openmoko/dates-view.c: (edit_toggled_cb):
+	Remove bogus hidden check when editing events (fixes not saving events
+	when switching away from view tab without first switching out of edit
+	mode)
+
+2007-09-26  Chris Lord  <chris@openedhand.com>
+
+	* libjana*/doc/reference/tmpl/dummy.sgml:
+	Move dummy -> dummy.sgml to fix first-time gtk-doc build
+
+2007-09-26  Chris Lord  <chris@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	* doc/libjana-ecal/Makefile.am:
+	* doc/libjana-ecal/libjana-ecal-docs.sgml:
+	* doc/libjana-ecal/libjana-ecal-sections.txt:
+	* doc/libjana-ecal/libjana-ecal.types:
+	* doc/libjana-gtk/Makefile.am:
+	* doc/libjana-gtk/libjana-gtk-docs.sgml:
+	* doc/libjana-gtk/libjana-gtk-sections.txt:
+	* doc/libjana-gtk/libjana-gtk.types:
+	* doc/libjana/Makefile.am:
+	* doc/libjana/libjana-docs.sgml:
+	* doc/libjana/libjana-overrides.txt:
+	* doc/libjana/libjana-sections.txt:
+	* doc/libjana/libjana.types:
+	* libjana-ecal/Makefile.am:
+	* libjana-ecal/doc/reference/Makefile.am:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/doc/reference/Makefile.am:
+	* libjana/Makefile.am:
+	* libjana/doc/reference/Makefile.am:
+	Move libjana-* documentation to their respective source directories
+
+2007-09-26  Chris Lord  <chris@openedhand.com>
+
+	* doc/libjana-ecal/libjana-ecal-sections.txt:
+	* doc/libjana-ecal/libjana-ecal.types:
+	* doc/libjana-gtk/libjana-gtk-docs.sgml:
+	* doc/libjana-gtk/libjana-gtk-sections.txt:
+	* doc/libjana-gtk/libjana-gtk.types:
+	* doc/libjana/Makefile.am:
+	* doc/libjana/libjana-overrides.txt:
+	* doc/libjana/libjana-sections.txt:
+	* doc/libjana/libjana.types:
+	* libjana/jana-utils.h:
+	Fix some gtk-doc issues
+
+2007-09-25  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	* openmoko/Makefile.am:
+	* openmoko/data/Makefile.am:
+	* openmoko/data/openmoko-dates.desktop:
+	Add .desktop file
+
+2007-09-25  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/jana-gtk-year-view.[ch]:
+	Add new widget JanaGtkYearView
+
+	* openmoko/dates-month.c: (year_selection_changed_cb),
+	(year_clicked_cb), (dates_create_month_page):
+	Add a year view month selector
+
+	* openmoko/dates-view.c: (dates_create_view_page):
+	Change button names for start/time toggle buttons
+
+2007-09-24  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-month.c: (set_range):
+	Set month title correctly when days from the previous month are visible
+
+2007-09-24  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-list.c: (update_header), (page_shown),
+	(page_hidden):
+	* openmoko/dates-main.c: (main):
+	* openmoko/dates-month.c: (set_range), (page_shown), (page_hidden):
+	* openmoko/dates-utils.c: (dates_utils_title_idle_cb):
+	* openmoko/dates-utils.h:
+	* openmoko/dates-view.c: (page_shown), (page_hidden),
+	(notify_visible_cb), (visibility_notify_event_cb), (unmap_cb):
+	* openmoko/dates-week.c: (refresh_view), (page_shown),
+	(page_hidden):
+	* openmoko/dates.h:
+	Set window title when changing views/ranges/editing
+
+2007-09-24  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-utils.[ch]:
+	Remove jana_ecal_utils_time_to_tm and jana_ecal_utils_strftime
+
+	* libjana-gtk/jana-gtk-event-list.c: (recalculate_headers):
+	* openmoko/dates-list.c: (update_header):
+	Use jana-utils functions for printing formatted time
+
+	* libjana/jana-utils.c: (jana_utils_time_to_tm),
+	(jana_utils_strftime):
+	* libjana/jana-utils.h:
+	Add functions for converting JanaTime to libc broken-down time format
+	and printing formatted time strings
+
+2007-09-24  Chris Lord,,,  <chris@openedhand.com>
+
+	* Makefile.am:
+	Add doc subdir
+
+	* libjana/jana-component.c: (jana_component_get_type),
+	(jana_component_is_fully_represented), (jana_component_get_uid),
+	(jana_component_supports_custom_props),
+	(jana_component_get_custom_props_list),
+	(jana_component_get_custom_prop), (jana_component_set_custom_prop):
+	Add documentation
+
+2007-09-24  Chris Lord,,,  <chris@openedhand.com>
+
+	* configure.ac:
+	* doc/libjana-ecal/Makefile.am:
+	* doc/libjana-ecal/libjana-ecal-docs.sgml:
+	* doc/libjana-gtk/Makefile.am:
+	* doc/libjana-gtk/libjana-gtk-docs.sgml:
+	Add gtkdoc framework for libjana-ecal and libjana-gtk
+
+2007-09-23  Chris Lord,,,  <chris@openedhand.com>
+
+	* configure.ac:
+	* doc/libjana/Makefile.am:
+	* doc/libjana/libjana-docs.sgml:
+	Add gtkdoc framework for libjana
+
+2007-09-21  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c:
+	(jana_gtk_day_view_set_visible_func), (jana_gtk_day_view_refilter):
+	* libjana-gtk/jana-gtk-day-view.h:
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_set_visible_func),
+	(jana_gtk_month_view_refilter):
+	* libjana-gtk/jana-gtk-month-view.h:
+	Add visibility filter callback setting functions for internal
+	layouts
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (tree_layout_row_changed_cb),
+	(get_visible_cells), (jana_gtk_tree_layout_get_property),
+	(jana_gtk_tree_layout_set_property),
+	(jana_gtk_tree_layout_expose_event), (tree_layout_get_size),
+	(jana_gtk_tree_layout_size_allocate),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event),
+	(jana_gtk_tree_layout_class_init), (jana_gtk_tree_layout_init),
+	(tree_layout_add_cell), (tree_layout_remove_cell_with_list),
+	(jana_gtk_tree_layout_set_visible_func),
+	(jana_gtk_tree_layout_refilter):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Implement visibility filtering support
+
+	* openmoko/dates-month.c: (refilter), (page_shown),
+	(search_text_changed_cb), (search_combo_changed_cb),
+	(dates_create_month_page):
+	* openmoko/dates-week.c: (page_shown), (search_text_changed_cb),
+	(search_combo_changed_cb), (dates_create_week_page):
+	Set visibility filter and refilter when search changes
+
+	* openmoko/dates-utils.c: (dates_utils_event_store_filter_cb),
+	(dates_utils_event_list_filter_cb):
+	* openmoko/dates-utils.h:
+	Split dates_utils_event_store_filter_cb out of
+	dates_utils_event_list_filter_cb so it can be used with day and month
+	views
+
+2007-09-21  Chris Lord  <chris@openedhand.com>
+
+	* libjana/jana-utils.c: (jana_utils_time_diff),
+	(jana_utils_time_adjust), (jana_utils_get_local_tzname):
+	* libjana/jana-utils.h:
+	Add function to get local tzname, add FIXME note to time_diff about
+	accumulating diff in provided variables and only adjust time components
+	when parameters are non-zero
+
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(notify_visible_cb), (unmap_cb), (allday_toggled_cb),
+	(edit_toggled_cb), (dates_create_view_page):
+	* openmoko/dates.h:
+	Add all-day event check-button
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-view.c: (edit_event), (set_entry_editable),
+	(set_text_view_editable), (entry_focus_in_cb),
+	(entry_focus_out_cb), (text_view_focus_in_cb),
+	(text_view_focus_out_cb), (edit_toggled_cb),
+	(dates_create_view_page):
+	Don't mess with widget focus to set hint text
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_class_init), (jana_ecal_store_view_init):
+	Set default removal timeout to zero, add FIXME note
+
+	* libjana-gtk/jana-gtk-day-view.c: (relayout):
+	Hide out-of-range all-day events
+
+	* libjana/jana-utils.c: (jana_utils_duration_contains):
+	* libjana/jana-utils.h:
+	Add new function jana_utils_duration_contains
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_render):
+	Pick text colour depending on intensity of background
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-main.c: (repopulate_category_list), (main):
+	Assign Tango-based unique colours per category
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-date-time.c:
+	(jana_gtk_date_time_set_property),
+	(jana_gtk_date_time_set_editable),
+	(jana_gtk_date_time_get_editable), (jana_gtk_date_time_get_time),
+	(jana_gtk_date_time_set_time):
+	* libjana-gtk/jana-gtk-day-view.c:
+	(jana_gtk_day_view_set_property), (jana_gtk_day_view_set_range),
+	(jana_gtk_day_view_get_range), (jana_gtk_day_view_get_selection),
+	(jana_gtk_day_view_set_selection), (jana_gtk_day_view_set_spacing),
+	(jana_gtk_day_view_set_cells), (jana_gtk_day_view_get_cells),
+	(jana_gtk_day_view_get_spacing),
+	(jana_gtk_day_view_get_visible_ratio),
+	(jana_gtk_day_view_get_selected_event),
+	(jana_gtk_day_view_set_selected_event):
+	* libjana-gtk/jana-gtk-day-view.h:
+	* libjana-gtk/jana-gtk-event-store.c:
+	(jana_gtk_event_store_set_property),
+	(jana_gtk_event_store_set_view), (jana_gtk_event_store_get_view):
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_set_property),
+	(jana_gtk_month_view_set_month), (jana_gtk_month_view_get_month),
+	(jana_gtk_month_view_set_spacing),
+	(jana_gtk_month_view_get_spacing),
+	(jana_gtk_month_view_set_selection),
+	(jana_gtk_month_view_get_selection):
+	* libjana-gtk/jana-gtk-month-view.h:
+	Stop doing so much unnecessary property getting/setting, add various
+	missing API for accessing commonly-used properties
+
+2007-09-20  Chris Lord  <chris@openedhand.com>
+
+
+	* libjana-gtk/jana-gtk-day-view.c: (end_selection),
+	(motion_notify_event_cb):
+	Don't unnecessarily change/redraw the selection
+
+2007-09-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_get_property),
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(cell_renderer_event_render):
+	* libjana-gtk/jana-gtk-day-view.c: (relayout), (row_changed_cb),
+	(row_inserted_cb):
+	* libjana-gtk/jana-gtk-month-view.c: (row_inserted_cb):
+	Add support for category colours
+
+	* openmoko/dates-main.c: (main):
+	* openmoko/dates-month.c: (dates_create_month_page):
+	* openmoko/dates-week.c: (dates_create_week_page):
+	* openmoko/dates.h:
+	Add support for category colours (colours not yet generated)
+
+2007-09-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_set_property),
+	(get_description_layout):
+	* libjana-gtk/jana-gtk-day-view.c: (row_inserted_cb):
+	Don't forget to render location text
+
+2007-09-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-date-time.c: (create_edit_page), (refresh),
+	(jana_gtk_date_time_set_property):
+	Fire changed signal when time property set, don't show time-editing
+	widgets or print time label when time is date-only
+
+	* libjana/jana-utils.c: (jana_utils_time_diff),
+	(jana_utils_time_adjust):
+	* libjana/jana-utils.h:
+	Add utility functions for diffing and adjusting times
+
+	* openmoko/dates-view.c: (start_changed_cb), (end_changed_cb),
+	(dates_create_view_page):
+	Move the end time with the start time and move the start time back when
+	the end time is moved before the start time
+
+2007-09-19  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-list.c: (size_allocate_cb):
+	Fix continuous, unnecessary redrawing
+
+2007-09-18  Chris Lord  <chris@openedhand.com>
+
+	* configure.ac:
+	Update libmokoui version
+
+	* libjana-gtk/jana-gtk-day-view.c: (row_deleted_cb):
+	Unselect the selected event when it gets deleted from the store
+
+	* libjana-gtk/jana-gtk-event-list.c: (jana_gtk_event_list_compare):
+	Don't crash when sorting events without summaries
+
+	* openmoko/dates.h:
+	* openmoko/dates-view.c: (clear_details), (edit_event),
+	(set_entry_editable), (edit_toggled_cb), (dates_create_view_page):
+	Add support for MokoHintEntry (#def'd out at the moment), add frames
+	around the start/end times to match om-contacts
+
+2007-09-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c:
+	(jana_gtk_day_view_get_property), (jana_gtk_day_view_set_property),
+	(button_press_event_cb), (jana_gtk_day_view_class_init),
+	(compare_selection), (layout_selection_changed_cb),
+	(layout24hr_selection_changed_cb), (jana_gtk_day_view_init),
+	(jana_gtk_day_view_get_selected_event),
+	(jana_gtk_day_view_set_selected_event):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Keep a reference to the event between selections, don't fire
+	event selection events when selection hasn't really changed and add
+	functions to get and set selected event
+
+	* openmoko/dates-week.c: (page_shown), (new_clicked_cb),
+	(event_selected_cb):
+	Use the time of the currently selected event when creating a new
+	event, set the selected event when selecting an event on the view
+	and re-set the selected event when re-focusing the page
+
+2007-09-18  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (relayout):
+	Use the correct cell renderer when laying out 24-hour events
+
+	* openmoko/dates-week.c: (dates_create_week_page):
+	Increase inner padding on y-axis for 24-hour events
+
+2007-09-17  Chris Lord  <chris@openedhand.com>
+
+	* openmoko/dates-week.c: (page_shown), (dates_create_week_page):
+	Set event cell renderers not to draw text
+
+2007-09-17  Chris Lord  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(get_description_layout):
+	Don't crash when there isn't enough room to draw the description
+
+	* libjana-gtk/jana-gtk-day-view.c: (button_press_event_cb),
+	(jana_gtk_day_view_size_request), (jana_gtk_day_view_class_init):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Allow shrinking when not viewing a sub-section of the set range
+
+	* openmoko/dates-week.c: (event_selected_cb),
+	(preview_box_size_allocate_cb), (preview_box_expose_event_cb),
+	(dates_create_week_page):
+	* openmoko/dates.h:
+	Add an event preview pane to the week view
+
+2007-09-17  Chris Lord  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-5.c: (realize_cb), (main):
+	Scroll to 9am on realize, don't set unnecessary renderer props
+
+	* libjana-gtk/jana-gtk-day-view.c: (set_alignments),
+	(create_layouts), (jana_gtk_day_view_set_property),
+	(layout_expose_event_cb), (layout24hr_expose_event_cb),
+	(jana_gtk_day_view_expose_event), (relayout),
+	(button_press_event_cb),
+	(jana_gtk_day_view_set_scroll_adjustments),
+	(jana_gtk_day_view_class_init), (viewport_size_allocate_cb),
+	(layout24hr_selection_changed_cb), (cell_activated_cb),
+	(jana_gtk_day_view_init), (row_changed_cb), (row_inserted_cb),
+	(jana_gtk_day_view_scroll_to_cell),
+	(jana_gtk_day_view_scroll_to_time),
+	(jana_gtk_day_view_get_24hr_cell_renderer),
+	(jana_gtk_day_view_set_selection):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Add special all-day event visualisation, scroll_to_(cell|time)
+	functions and signals for event selection/activation
+
+	* openmoko/dates-week.c: (page_shown), (dates_create_week_page):
+	Set 12-hours visible in week view, scroll to 8am when switching to the
+	week-view tab
+
+2007-09-17  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (button_press_event_cb),
+	(button_release_event_cb), (motion_notify_event_cb):
+	Don't redraw the whole widget when selecting cells
+
+2007-09-15  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (relayout):
+	Fix memory leak in relayout function
+
+2007-09-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c:
+	(jana_gtk_day_view_expose_event_cb), (relayout),
+	(button_release_event_cb):
+	Fix all-day events appearing invisible and backwards-selections being
+	one cell too short
+
+	* libjana/jana-utils.c: (jana_utils_time_compare),
+	(jana_utils_event_get_instances):
+	Fix silly bug comparing date-only times to normal times, don't create
+	zero-length events in get_instances
+
+2007-09-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-5.c: (main):
+	Draw event text/detail in JanaGtkDayView example
+
+2007-09-13  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (main):
+	* examples/jana-gtk-example-4.c: (main):
+	* examples/jana-gtk-example-5.c: (main):
+	Don't set the style-hint on the event renderer
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (cell_renderer_event_render):
+	Set the default style hint to "button" again, also draw with
+	GTK_SHADOW_IN when state == active
+
+	* libjana-gtk/jana-gtk-day-view.c: (create_layouts),
+	(jana_gtk_day_view_get_property), (jana_gtk_day_view_set_property),
+	(paint_box), (jana_gtk_day_view_expose_event_cb),
+	(jana_gtk_day_view_expose_event), (adjustment_changed_cb),
+	(jana_gtk_day_view_set_scroll_adjustments),
+	(marshal_VOID__OBJECT_OBJECT), (jana_gtk_day_view_class_init),
+	(viewport_size_allocate_cb), (jana_gtk_day_view_init),
+	(jana_gtk_day_view_set_visible_ratio),
+	(jana_gtk_day_view_get_visible_ratio):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Add native scrolling support, draw cells with shadows + flat boxes.
+	Also, don't modify the style to use the base colour as bg
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_expose_event), (jana_gtk_month_view_init):
+	Don't modify the style to use the base colour as bg, draw cells with
+	flat box and shadow
+
+	* openmoko/dates-week.c: (dates_create_week_page):
+	Pack the week view straight into a scrolled window
+
+2007-09-12  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/Makefile.am:
+	* openmoko/dates.h:
+	* openmoko/dates-week.[ch]:
+	* openmoko/dates-main.c: (opened_cb), (main):
+	* openmoko/dates-utils.c: (dates_utils_update_category_bars):
+	Add a (very preliminary) week view, using JanaGtkDayView
+
+2007-09-12  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (style_set_cb),
+	(jana_gtk_day_view_init):
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_expose_event), (style_set_cb),
+	(jana_gtk_month_view_init):
+	Use base instead of bg colour when drawing event boxes
+
+2007-09-12  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-day-view.c: (create_layouts),
+	(jana_gtk_day_view_set_property), (jana_gtk_day_view_expose_event),
+	(relayout), (start_selection), (end_selection),
+	(button_press_event_cb), (jana_gtk_day_view_class_init),
+	(jana_gtk_day_view_set_range), (jana_gtk_day_view_get_range),
+	(jana_gtk_day_view_get_selection), (jana_gtk_day_view_get_spacing),
+	(jana_gtk_day_view_get_layout):
+	* libjana-gtk/jana-gtk-day-view.h:
+	Finish writing property accessors, fix typo g_object_set instead of
+	g_object_get in property accessors, fix bugs in relayout/drawing with
+	24-hour range
+
+2007-09-12  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-5.c: (opened_cb), (main):
+	Add example for new JanaGtkDayView
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/jana-gtk-day-view.[ch]:
+	Add new JanaGtkDayView widget
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_set_property), (jana_gtk_month_view_finalize),
+	(size_request_cb), (jana_gtk_month_view_init):
+	Override size request (fixes odd behaviour resizing), free memory on
+	finalize and redraw when setting spacing and style hint
+
+	* libjana/jana-time.c: (jana_duration_set_start),
+	(jana_duration_set_end), (jana_duration_valid):
+	* libjana/jana-time.h:
+	Free old start/end when setting start/end on a JanaDuration, add new
+	function jana_duration_valid to check if a duration specifies a
+	positive length of time
+
+2007-09-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-month.c: (search_text_changed_cb):
+	Don't forget to refilter when search text changes in month-view
+
+2007-09-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-list.c: (new_clicked_cb), (row_activated_cb):
+	Use the currently selected date header/event to determine the starting
+	time of a new event
+
+	* openmoko/dates-month.c: (new_clicked_cb),
+	(day_selection_changed_cb), (dates_create_month_page):
+	Change the year-view button to a new-event button, allow new events
+	to be created. When selecting a date on the month view that isn't in
+	the list, clear the selection.
+
+	* openmoko/dates-utils.c: (dates_utils_create_new_event),
+	(dates_utils_event_list_selection_changed_cb),
+	(dates_utils_event_list_get_time):
+	* openmoko/dates-utils.h:
+	Fix trying to unref the selected store instead of the selected event,
+	add functions to get the time from a JanaGtkEventList and to set the
+	currently selected event/store from a JanaGtkEventList selection
+
+	* openmoko/dates-view.c: (delete_clicked_cb), (edit_toggled_cb):
+	Switch back to the last active page after deleting in every case,
+	except when the new event was created from the view page
+
+2007-09-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-utils.h:
+	* openmoko/dates-utils.c:
+	(dates_utils_event_list_selection_changed_cb):
+	* openmoko/dates-list.c: (page_shown), (selection_changed_cb):
+	Moved selection_changed_cb to dates-utils, make sure to re-set the
+	selected event when page is shown
+
+	* openmoko/dates-month.c: (set_range), (day_selection_changed_cb),
+	(list_selection_changed_cb), (dates_create_month_page):
+	Allow events to be selected for viewing/editing via the list view
+	panel
+
+2007-09-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-4.c: (main):
+	Set "button" style hint for event renderer
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_get_property),
+	(jana_gtk_month_view_set_property),
+	(jana_gtk_month_view_expose_event), (relayout),
+	(button_press_event_cb), (jana_gtk_month_view_class_init),
+	(jana_gtk_month_view_init):
+	* libjana-gtk/jana-gtk-month-view.h:
+	Add support for selecting a day, with selection_changed signal. Also
+	create the internal layout with selections disabled
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_button_press_event), (tree_layout_add_cell),
+	(jana_gtk_tree_layout_set_selection),
+	(jana_gtk_tree_layout_get_cell),
+	(jana_gtk_tree_layout_set_cell_sensitive):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Add support for marking a cell insensitive, and functions to set the
+	selection and get particular cells from row references
+
+	* openmoko/dates-month.c: (selection_changed_cb),
+	(dates_create_month_page):
+	When the selected day changes, scroll to and highlight it in the
+	event list
+
+2007-09-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-utils.h:
+	* openmoko/dates-utils.c: (dates_utils_event_list_filter_cb):
+	* openmoko/dates-list.c: (dates_create_list_page):
+	Move event-list filtering function to dates-utils
+
+	* openmoko/dates-month.c: (page_shown), (page_hidden),
+	(notify_visible_cb), (visibility_notify_event_cb), (unmap_cb),
+	(search_combo_changed_cb), (view_size_allocate_cb),
+	(dates_create_month_page):
+	Add an event-list to the month view
+
+	* openmoko/dates-view.c: (delete_clicked_cb):
+	Switch to the last selected page after deleting a contact
+
+	* openmoko/dates-main.c: (opened_cb), (switch_page_cb), (main):
+	* openmoko/dates.h:
+	Store last selected notebook page, keep month event list updated
+
+2007-09-08  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init):
+	Revert setting the default style hint to "button", unnecessary
+
+	* libjana-gtk/jana-gtk-month-view.c:
+	(jana_gtk_month_view_set_property),
+	(jana_gtk_month_view_add_store), (jana_gtk_month_view_set_month),
+	(jana_gtk_month_view_get_month), (jana_gtk_month_view_set_spacing),
+	(jana_gtk_month_view_get_spacing):
+	* libjana-gtk/jana-gtk-month-view.h:
+	Add accessor methods for properties, make sure to connect signals
+	after to prevent crashes during relayout due to inconsistent tree
+	row references in JanaGtkTreeLayout
+
+	* openmoko/dates-main.c: (opened_cb), (main):
+	* openmoko/dates-month.[ch]:
+	* openmoko/Makefile.am:
+	Add preliminary month view page
+
+	* openmoko/dates-list.c: (page_shown), (page_hidden),
+	(notify_visible_cb), (visibility_notify_event_cb), (unmap_cb):
+	Save the last time shown when switching away and check if it's still
+	in range when switching back, to stop the time progressing backwards
+	when switching to and from month view
+
+	* openmoko/dates-utils.c: (dates_utils_update_category_bars):
+	Update the month view category bar in update_category_bars
+
+	* openmoko/dates.h:
+	Store month view widget and last time shown in list/week views
+
+2007-09-07  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-4.c:
+	Add a new example for JanaGtkMonthView
+
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/jana-gtk-month-view.[ch]:
+	* libjana-gtk/Makefile.am:
+	Add first run at new JanaGtkMonthView widget
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init):
+	Set default style hint to "button"
+
+	* libjana-gtk/jana-gtk-event-list.c: (row_deleted_cb),
+	(insert_rows), (delete_rows), (jana_gtk_event_list_add_store),
+	(jana_gtk_event_list_remove_store):
+	Add all rows from a store when adding, and remove rows when removing
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (tree_layout_row_changed_cb),
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event),
+	(jana_gtk_tree_layout_init):
+	Draw cells correct, with regard to the origin of the widget allocation
+
+	* libjana/jana-utils.c: (jana_utils_time_day_of_week),
+	(jana_utils_time_week_of_year),
+	(jana_utils_time_set_start_of_week),
+	(jana_utils_time_set_end_of_week), (jana_utils_time_copy):
+	* libjana/jana-utils.h:
+	Add new utility functions, remove debugging output that got left in
+	jana_utils_time_copy
+
+	* openmoko/Makefile.am:
+	Fix linker warnings
+
+2007-09-05  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_get_property),
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (get_summary_layout):
+	Add and use first-instance/last-instance properties to display
+	something sensible when events span across multiple days or have unset
+	start or end
+
+2007-09-05  Chris Lord,,,  <chris@openedhand.com>
+
+	* configure.ac:
+	* libjana-ecal/jana-ecal-store.c: (e_cal_new_system_memos):
+	Add check for e_cal_new_system_memos
+
+2007-09-05  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-list.c: (update_header), (new_clicked_cb):
+	Shorten the header text, use new dates_utils function to create new
+	events
+
+	* openmoko/dates.h:
+	* openmoko/dates-main.c: (main):
+	Store the main window in the global data structure
+
+	* openmoko/dates-utils.c: (dates_utils_create_new_event):
+	* openmoko/dates-utils.h:
+	Add utility function to create a new event
+
+	* openmoko/dates-view.c: (edit_event), (delete_clicked_cb),
+	(edit_toggled_cb):
+	When creating a new event, don't forget to ref the Store. Implement
+	deletion of events. When clicking the edit button with no event
+	selected, prompt whether to create a new event.
+
+2007-09-04  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (event_set_categories):
+	Check the category list exists before setting an empty category list
+
+	* openmoko/dates-list.c: (new_clicked_cb):
+	Hook up the new event button
+
+	* openmoko/dates-main.c: (main):
+	Store a pointer to the main notebook in the global data structure
+
+	* openmoko/dates-view.c: (clear_details), (edit_event),
+	(notify_visible_cb), (visibility_notify_event_cb), (unmap_cb):
+	Commit an event when switching away from the tab, also create new
+	events when no store is selected
+
+	* openmoko/dates.h:
+	Keep a pointer to the main notebook
+
+2007-09-04  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-list.c: (dates_create_list_page):
+	Don't update the category bar when creating the list page, all
+	category bars get updated after creating the interface
+
+	* openmoko/dates-main.c: (repopulate_category_list), (main):
+	Use g_utf8_collate to sort categories and update category bars on
+	initialisation
+
+	* openmoko/dates-utils.c: (dates_utils_fill_category_bar),
+	(dates_utils_insert_preset_categories):
+	* openmoko/dates-utils.h:
+	Make dates_utils_update_category_bar private and add a new function
+	that adds the global categories to a combo box
+
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(edit_event), (edit_toggled_cb), (entry_focus_in_cb),
+	(entry_focus_out_cb), (combo_changed_cb), (dates_create_view_page):
+	Implement category editing/display
+
+	* openmoko/dates.h:
+	Add category combo entry widget
+
+2007-09-04  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-date-time.c: (clear):
+	Don't try to set invalid values when clearing
+
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(visibility_notify_event_cb), (set_entry_editable),
+	(set_text_view_editable), (edit_toggled_cb),
+	(dates_create_view_page):
+	Add 'Starts' and 'Ends' labels to times and hide widgets in view mode
+	when they're empty.
+
+	* openmoko/dates.h:
+	Add variables for Starts/Ends labels in view/edit tab
+
+2007-09-04  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-list.c: (row_changed_cb):
+	Re-filter on row changed
+
+	* openmoko/dates-list.c: (visibility_notify_event_cb), (filter_cb),
+	(search_text_changed_cb), (search_combo_changed_cb),
+	(search_toggled_cb), (dates_create_list_page):
+	Fix category filter and implement category search
+
+	* openmoko/dates-main.c: (repopulate_category_list),
+	(row_inserted_cb), (row_changed_cb), (row_deleted_cb), (opened_cb):
+	Hook up row changed/deleted correctly and make a copy of the category
+	when adding it to the category list
+
+	* openmoko/dates-utils.c: (dates_utils_update_category_bar):
+	Don't assume a GtkComboBox-text is backed by a GtkListStore (it is,
+	but that could change?)
+
+2007-09-04  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-list.c: (recalculate_headers),
+	(jana_gtk_event_list_init), (jana_gtk_event_list_add_store),
+	(jana_gtk_event_list_remove_store),
+	(jana_gtk_event_list_get_filter), (jana_gtk_event_list_refilter):
+	* libjana-gtk/jana-gtk-event-list.h:
+	Put a filter on the private model and add accessor functions. Only
+	allow JanaGtkEventStore's to be added, due to evil hackiness, filters
+	won't work.
+
+	* openmoko/dates-list.c: (selection_changed_cb), (filter_cb),
+	(search_text_changed_cb), (dates_create_list_page):
+	* openmoko/dates-main.c: (repopulate_category_list),
+	(row_inserted_cb), (row_changed_cb), (row_deleted_cb), (opened_cb),
+	(main):
+	Update to new method of filtering, fixes crashes but no less evil.
+	Also add code to collect currently visible categories (disabled).
+
+	* openmoko/dates-utils.c: (dates_utils_update_category_bar),
+	(dates_utils_update_category_bars),
+	(dates_utils_insert_preset_categories):
+	* openmoko/dates-utils.h:
+	Add new functions for adding categories to MokoSearchBar
+
+	* openmoko/dates.h:
+	Add variables to store event categories
+
+2007-09-03  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_set_property):
+	Don't check that the model in a row reference is a JanaGtkEventStore
+
+	* libjana-gtk/jana-gtk-event-list.h:
+	* libjana-gtk/jana-gtk-event-list.c:
+	(jana_gtk_event_list_add_store),
+	(jana_gtk_event_list_remove_store):
+	Add GtkTreeModel's instead of JanaGtkEventStore's
+
+	* openmoko/dates-list.c: (selection_changed_cb),
+	(search_text_changed_cb), (dates_create_list_page):
+	Set search text when searching
+
+	* openmoko/dates-main.c: (delete_event_cb), (filter_cb),
+	(opened_cb), (main):
+	Add GtkTreeModelFilter's to the JanaGtkEventStore's, allows for
+	searching
+
+	* openmoko/dates-utils.c: (dates_utils_casefold_replace),
+	(dates_utils_refilter):
+	* openmoko/dates-utils.h:
+	Add utility functions to update filter and utf8 casefold string replace
+
+	* openmoko/dates.h:
+	Add variables for storing search category/filter string
+
+2007-08-31  Chris Lord,,,  <chris@openedhand.com>
+
+	* openmoko/dates-view.c: (edit_toggled_cb),
+	(dates_create_view_page):
+	* openmoko/dates.h:
+	Set wrapping on the text view and add padding/background to time
+	editing widgets
+
+2007-08-31  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-date-time.c:
+	(jana_gtk_date_time_get_property):
+	Don't crash when getting time property without time set
+
+	* openmoko/dates-view.c: (edit_event),
+	(visibility_notify_event_cb), (edit_toggled_cb):
+	Implement editing of events
+
+	* openmoko/dates.h:
+	Remove 'dirty' flag, unnecessary
+
+2007-08-31  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-date-time.c: (adjust_entry),
+	(activate_button), (button_repeat_cb),
+	(button_start_fast_repeat_cb), (button_start_repeat_cb),
+	(button_pressed_cb), (button_released_cb), (insert_text_cb),
+	(minute_entry_changed_cb), (hour_entry_changed_cb),
+	(day_entry_changed_cb), (month_entry_changed_cb),
+	(year_entry_changed_cb), (create_edit_page), (refresh), (clear),
+	(jana_gtk_date_time_get_property),
+	(jana_gtk_date_time_set_property), (jana_gtk_date_time_class_init),
+	(jana_gtk_date_time_init):
+	Finish basic functionality
+
+	* openmoko/dates-main.c: (main):
+	Make sure to initialise editing to FALSE
+
+	* openmoko/dates-utils.c: (dates_utils_toolbutton_new),
+	(dates_utils_toggle_toolbutton_new):
+	Use new_from_stock instead of creating an icon with a specific size
+
+	* openmoko/dates-view.c: (dates_create_view_page):
+	Pack start/end times closely to their editing buttons
+
+2007-08-31  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_strftime):
+	Fix jana_ecal_utils_strftime
+
+	* openmoko/dates-list.c: (update_header),
+	(visibility_notify_event_cb), (back_clicked_cb), (home_clicked_cb),
+	(forward_clicked_cb), (selection_changed_cb),
+	(dates_create_list_page):
+	Add a header to the list view
+
+	* openmoko/dates-view.c: (edit_toggled_cb),
+	(dates_create_view_page):
+	Don't put 'Description' in empty descriptions after editing
+
+	* openmoko/dates.h:
+	Add an 'editing' flag
+
+2007-08-30  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/jana-gtk-date-time.[ch]:
+	Add new widget for editing JanaTime's (unfinished)
+
+	* openmoko/dates-list.c: (dates_create_list_page):
+	* openmoko/dates-main.c: (main):
+	* openmoko/dates-view.c: (clear_details), (fill_details),
+	(edit_toggled_cb), (toggled_cb), (dates_create_view_page):
+	* openmoko/dates.h:
+	Add time-editing widgets to the edit/view page (unfinished)
+
+2007-08-30  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana/jana-store.h:
+	* libjana/jana-store-view.h:
+	* libjana/jana-store-view.c: (jana_store_view_get_store):
+	* libjana-ecal/jana-ecal-store-view.c: (store_view_interface_init),
+	(jana_ecal_store_view_class_init), (jana_ecal_store_view_init),
+	(store_view_get_store):
+	Add accessor function to get the JanaStore from a JanaStoreView
+
+	* libjana/jana-time.h:
+	* libjana/jana-time.c: (jana_time_set_seconds),
+	(jana_time_set_minutes), (jana_time_set_hours),
+	(jana_time_set_day), (jana_time_set_month), (jana_time_set_year):
+	* libjana-ecal/jana-ecal-time.c: (time_set_seconds),
+	(time_set_minutes), (time_set_hours), (time_set_day),
+	(time_set_month), (time_set_year):
+	Make time setting functions use signed integers so that normalisation
+	works as expected.
+
+	* libjana-gtk/jana-gtk-event-store.c:
+	(jana_gtk_event_store_get_store):
+	* libjana-gtk/jana-gtk-event-store.h:
+	Add accessor function to get the JanaStore
+
+	* openmoko/Makefile.am:
+	* openmoko/dates-view.[ch]:
+	Add viewing/editing pane
+
+	* openmoko/dates-list.c:
+	Hook up some signals for event selection/range changing
+	
+	* openmoko/dates-main.c: (delete_event_cb), (startup_cb), (main):
+	Initialise time query range times before starting
+
+	* openmoko/dates-utils.h:
+	* openmoko/dates-utils.c: (dates_utils_toggle_toolbutton_new),
+	(dates_utils_refresh_query):
+	Add utility functions for refreshing queries and creating toggle
+	tool-buttons
+
+	* openmoko/dates.h:
+	Store timezone, JanaStore[View]s, widgets and an edited indicator
+
+2007-08-28  Chris Lord,,,  <chris@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	Add --with-frontend option
+
+	* openmoko/Makefile.am:
+	* openmoko/dates-list.c: (new_clicked_cb), (back_clicked_cb),
+	(home_clicked_cb), (forward_clicked_cb), (dates_create_list_page):
+	* openmoko/dates-list.h:
+	* openmoko/dates-main.c: (dates_notebook_add_page_with_icon),
+	(delete_event_cb), (opened_cb), (startup_cb), (main):
+	* openmoko/dates-utils.c: (dates_utils_toolbutton_new):
+	* openmoko/dates-utils.h:
+	* openmoko/dates.h:
+	Add start of openmoko interface
+
+	* pimlico/Makefile.am:
+	* pimlico/dates-main.c: (delete_event_cb), (main):
+	* pimlico/dates.h:
+	Add skeleton for pimlico interface
+
+2007-08-26  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_size_allocate), (select_idle_cb),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_class_init), (tree_layout_add_cell),
+	(tree_layout_move_cell), (tree_layout_remove_cell_with_list):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Add new signals "selection-changed" and "cell-activated"
+
+2007-08-26  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-event-store.c: (event_store_added_cb),
+	(event_store_modified_cb):
+	Specify range when getting event instances, fixes multi-day events that
+	start or end outside of a StoreView range appearing more than they
+	should
+
+	* libjana/jana-utils.c: (jana_utils_event_copy),
+	(jana_utils_event_get_instances):
+	* libjana/jana-utils.h:
+	Allow a range to be specified when getting event instances
+
+2007-08-26  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_get_property),
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (get_description_layout),
+	(cell_renderer_event_render), (cell_renderer_event_get_size):
+	Do sizing in a slightly saner way, fix bug where descriptions needing
+	ellipsizing on the first line would not get shown
+
+	* libjana-gtk/jana-gtk-event-list.c: (tree_autosize_idle):
+	Adapt to new event cell sizing
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_size_allocate):
+	Set the fixed size on the cell where necessary
+
+	* examples/jana-gtk-example-1.c:
+	Remove hack to get correctly sized tree rows, it doesn't work anymore.
+	Also set time to UTC instead of Europe/London.
+
+	* examples/jana-gtk-example-2.c:
+	Set time to UTC instead of Europe/London
+
+	* examples/jana-gtk-example-3.c:
+	Rename treeview -> event_list, to avoid confusion. Also set time to
+	UTC instead of Europe/London.
+
+2007-08-26  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_get_property),
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (cell_renderer_event_render),
+	(cell_renderer_event_get_size):
+	Make inner padding of events customisable, reduce default to 3 (from 6)
+
+2007-08-26  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_set_property):
+	If it's a JanaEcalTime, just duplicate instead of copying
+
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_set_property),
+	(time_get_daylight), (time_get_tzname), (time_normalise),
+	(time_get_offset), (time_set_seconds), (time_set_minutes),
+	(time_set_hours), (time_set_day), (time_set_month),
+	(time_set_year), (time_set_isdate), (time_set_tzname),
+	(time_set_offset):
+	Only normalise when it's a valid date, don't set tzname or offset when
+	they're already equal to the value called with
+
+	* libjana-gtk/jana-gtk-event-store.c: (event_store_added_cb),
+	(event_store_modified_cb), (event_store_removed_cb),
+	(jana_gtk_event_store_dispose), (jana_gtk_event_store_finalize),
+	(jana_gtk_event_store_class_init), (jana_gtk_event_store_compare),
+	(event_store_free_iter_list), (jana_gtk_event_store_init):
+	* libjana-gtk/jana-gtk-event-store.h:
+	Store multiple instances when an event spans across multiple days
+
+	* libjana/jana-time.c:
+	* libjana/jana-time.h:
+	Add new boxed type JanaDuration
+
+	* libjana/jana-utils.c: (jana_utils_time_copy),
+	(jana_utils_event_copy):
+	* libjana/jana-utils.h:
+	Add new function to get a list of durations for all the separate
+	instances of an event across multiple days. Also make time copying set
+	variables in a more sensible order.
+
+2007-08-25  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(get_description_layout):
+	Fix and comment multiple-line ellipsis (was broken on wrapped lines
+	that needed to be truncated to provide room for ellipsis)
+
+2007-08-25  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_strftime):
+	* libjana-ecal/jana-ecal-utils.h:
+	Add new utility function jana_ecal_utils_strftime
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init), (get_summary_layout):
+	Change time rendering style slightly and make sure to set properties
+	to NULL before returning when a NULL row is set.
+
+	* libjana-gtk/jana-gtk-event-list.c: (jana_gtk_event_list_compare),
+	(recalculate_headers), (row_deleted_cb), (row_changed_cb),
+	(row_inserted_cb), (jana_gtk_event_list_get_property),
+	(jana_gtk_event_list_class_init), (style_set_cb),
+	(jana_gtk_event_list_init):
+	* libjana-gtk/jana-gtk-event-list.h:
+	Fix event removal, add day headers, add properties to access cell
+	renderers and tree columns. Also, don't show the column header by
+	default. Day headers don't interact correctly with events spanning
+	multiple days, this is probably better fixed at the EventStore level by
+	splitting multi-day events into separate events with times adjusted
+	accordingly.
+
+	* libjana/jana-utils.c: (jana_utils_time_to_gdate),
+	(jana_utils_time_compare):
+	* libjana/jana-utils.h:
+	Add new utility function jana_utils_time_to_gdate and fix non-date
+	comparisons involving dates
+
+2007-08-24  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c: (get_summary_layout),
+	(get_description_layout), (cell_renderer_event_render),
+	(cell_renderer_event_get_size):
+	Request the correct size and add multiple-line ellipsis
+
+2007-08-22  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c: (opened_cb), (main):
+	Simplify
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-3.c: (opened_cb), (main):
+	Example for JanaGtkEventList
+
+	* libjana-ecal/jana-ecal-utils.c: (jana_ecal_utils_time_to_tm):
+	* libjana-ecal/jana-ecal-utils.h:
+	New utility function jana_ecal_utils_time_to_tm
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-event-list.[ch]:
+	New widget JanaGtkEventList that aggregates multiple JanaGtkEventStore's
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (cell_renderer_event_render),
+	(cell_renderer_event_get_size):
+	Add a property to allow setting properties via a GtkTreeRowReference,
+	don't allow drawing of resize grip when not drawing box, request zero
+	size and don't draw when draw_box and draw_text are both FALSE, and
+	change the default of draw_resize to FALSE.
+
+2007-08-22  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (animate_cb):
+	Fix memory leak, use new utility function to get correct time for
+	today
+
+	* libjana/jana.h:
+	* libjana/Makefile.am:
+	* libjana-ecal/jana-ecal.h:
+	* libjana-ecal/Makefile.am:
+	* libjana-gtk/jana-gtk.h:
+	* libjana-gtk/Makefile.am:
+	Add new convenience 'include-all' headers for libjana, libjana-ecal
+	and libjana-gtk
+
+	* libjana-ecal/jana-ecal-time.c: (time_set_isdate):
+	Zero the hours/minutes/seconds when setting isdate
+
+	* libjana-ecal/jana-ecal-utils.c:
+	* libjana-ecal/jana-ecal-utils.h:
+	Add new utility functions for getting the time now and the time today,
+	for a particular location
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_dispose), (get_layout),
+	(cell_renderer_event_render), (cell_renderer_event_get_size):
+	Simplify a little, free memory on dispose/destroy
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_finalize), (tree_layout_set_properties),
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_size_allocate):
+	Make sure to set the properties of the cell renderer before retrieving
+	its size
+
+2007-08-21  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_get_size):
+	Make sure to set x_offset and y_offset to zero
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_expose_event), (tree_layout_get_size),
+	(jana_gtk_tree_layout_size_allocate), (tree_layout_add_cell),
+	(tree_layout_move_cell), (jana_gtk_tree_layout_add_cell),
+	(jana_gtk_tree_layout_move_cell):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Fix issues with resizing with fill_width/height and hover
+
+2007-08-21  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (row_inserted_cb):
+	Use height-for-width size allocation
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_render), (cell_renderer_event_get_size):
+	Add support for height-for-width size allocation
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_expose_event):
+	If width and/or height are -1, ask the cell renderer for the size
+
+2007-08-21  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (main):
+	Add a note about fill_width/fill_height on JanaGtkTreeLayout
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_render):
+	Do more safety checks to avoid critical warnings when painting
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (find_point_cb),
+	(tree_layout_row_changed_cb), (jana_gtk_tree_layout_get_property),
+	(jana_gtk_tree_layout_set_property),
+	(jana_gtk_tree_layout_expose_event), (tree_layout_get_size),
+	(jana_gtk_tree_layout_size_request),
+	(jana_gtk_tree_layout_size_allocate),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event),
+	(jana_gtk_tree_layout_class_init), (tree_layout_style_set_cb),
+	(jana_gtk_tree_layout_init), (tree_layout_add_cell),
+	(tree_layout_move_cell):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Add fill_width and fill_height properties
+
+2007-08-21  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (delete_event_cb), (main):
+	Remove animation function before quitting
+
+	* libjana-gtk/jana-gtk-event-store.c:
+	(jana_gtk_event_store_compare):
+	Don't leak memory when sorting
+
+2007-08-21  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_render):
+	Fix rendering glitch on some themes with resize grip
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (animate_cb), (row_inserted_cb),
+	(opened_cb), (main):
+	Make example a lot more interesting :)
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (tree_layout_move_cell),
+	(jana_gtk_tree_layout_get_selection):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Add accessor functions for cells and selection, unset prelight cell
+	after it gets moved
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c:
+	* examples/jana-gtk-example-2.c:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-event-store.c:
+	* libjana-gtk/jana-gtk-event-store.h:
+	* libjana-gtk/jana-gtk-events-store.c:
+	* libjana-gtk/jana-gtk-events-store.h:
+	Rename JanaGtkEventsStore -> JanaGtkEventStore
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (row_inserted_cb), (opened_cb),
+	(main):
+	Make example more interesting
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_motion_notify_event):
+	Make rendering consistent with mouse actions
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_dispose), (jana_gtk_tree_layout_finalize):
+	Free memory/release references on dispose/finalize
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (tree_layout_row_deleted_cb),
+	(tree_layout_add_cell), (tree_layout_move_cell),
+	(tree_layout_remove_cell_with_list):
+	Request widget (re)size correctly
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event):
+	Add cell activation, allow cells to be deselected when already selected
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c:
+	(jana_gtk_tree_layout_get_property),
+	(jana_gtk_tree_layout_set_property),
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event),
+	(jana_gtk_tree_layout_class_init), (jana_gtk_tree_layout_init),
+	(tree_layout_remove_cell_with_list),
+	(jana_gtk_tree_layout_get_selection):
+	* libjana-gtk/jana-gtk-tree-layout.h:
+	Add support for different selection modes
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (find_point_cb),
+	(jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_button_press_event),
+	(jana_gtk_tree_layout_motion_notify_event),
+	(jana_gtk_tree_layout_class_init), (jana_gtk_tree_layout_init),
+	(tree_layout_remove_cell_with_list):
+	Allow hovering over and selection of cells
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (tree_layout_clear):
+	Fix jana_gtk_tree_layout_clear
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-2.c: (row_inserted_cb), (opened_cb),
+	(main):
+	Change example to just show the local calendar
+
+	* libjana-gtk/jana-gtk-tree-layout.c: (find_path_cb),
+	(find_row_cb), (tree_layout_row_changed_cb),
+	(tree_layout_row_deleted_cb), (jana_gtk_tree_layout_expose_event),
+	(jana_gtk_tree_layout_init), (tree_layout_add_cell),
+	(tree_layout_remove_cell_with_list), (tree_layout_remove_cell):
+	Monitor changes on tree models and remove rows/redraw when necessary
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c: (opened_cb), (main):
+	Change example to just show the local calendar
+
+	* libjana-gtk/jana-gtk-events-store.c: (events_store_added_cb),
+	(events_store_modified_cb), (events_store_removed_cb),
+	(events_store_free_iter), (jana_gtk_events_store_init):
+	Just use GtkTreeIter instead of GtkTreeRowReference - GtkListStore
+	guarantees life-time.
+
+2007-08-20  Chris Lord,,,  <chris@openedhand.com>
+
+	* configure.ac:
+	* libjana-ecal/jana-ecal-store-view.c:
+	(store_view_objects_removed_cb):
+	Make sure to check for ECalComponentId, fixes delete signal
+
+2007-08-17  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-2.c: (row_inserted_cb), (opened_cb),
+	(main):
+	Add new example for JanaGtkTreeLayout
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c: (get_layout),
+	(cell_renderer_event_render), (cell_renderer_event_get_size):
+	Don't render outside of the allocated cell area
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-tree-layout.[ch]:
+	Add new widget JanaGtkTreeLayout to arbitrarily place cells related to
+	a GtkTreeModel (unfinished).
+
+2007-08-17  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c: (tree_autosize_idle),
+	(resize_tree):
+	Don't constantly refresh column size
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(jana_gtk_cell_renderer_event_get_property),
+	(jana_gtk_cell_renderer_event_set_property),
+	(jana_gtk_cell_renderer_event_class_init),
+	(jana_gtk_cell_renderer_event_init), (get_layout),
+	(cell_renderer_event_render), (cell_renderer_event_get_size):
+	Add new properties "style_hint", "draw_text" and "draw_resize"
+
+2007-08-16  Chris Lord,,,  <chris@openedhand.com>
+
+	* examples/jana-gtk-example-1.c: (opened_cb), (main):
+	Add dynamic GtkTreeView column resizing
+
+	* libjana-gtk/jana-gtk-cell-renderer-event.c:
+	(cell_renderer_event_get_size):
+	Don't request full width, to allow resizing
+
+2007-08-16  Chris Lord,,,  <chris@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/Makefile.am:
+	* examples/jana-gtk-example-1.c: (added_cb), (modified_cb),
+	(removed_cb), (opened_cb), (main):
+	Add examples of libjana(-ecal/-gtk) use
+
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-cell-renderer-event.[ch]:
+	* libjana-gtk/jana-gtk-events-store.[ch]:
+	Add licence blocks, a GtkCellRenderer for events (unfinished) and
+	HAS_ALARM column to JanaGtkEventsStore
+
+2007-08-16  Chris Lord,,,  <chris@openedhand.com>
+
+	* Makefile.am:
+	* configure.ac:
+	* libjana-gtk/Makefile.am:
+	* libjana-gtk/jana-gtk-events-store.[ch]:
+	Add new libjana-gtk with a GtkTreeModel
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_get_property),
+	(jana_ecal_store_view_set_property),
+	(jana_ecal_store_view_class_init), (store_view_jcomp_from_ecomp),
+	(store_view_objects_added_cb):
+	Fix typo (adding ECalComponent instead of JanaComponent to the added
+	list)
+
+	* libjana/jana-time.[ch]:
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_set_property),
+	(jana_ecal_time_dispose), (jana_ecal_time_finalize),
+	(time_interface_init), (jana_ecal_time_init), (time_duplicate):
+	Add new 'duplicate' function
+
+	* libjana/jana-event.c: (jana_recurrence_get_type),
+	(jana_recurrence_copy), (jana_recurrence_free):
+	* libjana/jana-event.h:
+	Make JanaRecurrence a boxed type
+
+	* libjana/jana-utils.c: (jana_utils_time_is_leap_year),
+	(jana_utils_time_days_in_month), (jana_utils_time_compare):
+	* libjana/jana-utils.h:
+	Add new utility functions, time_is_leap_year, time_days_in_month and
+	time_compare
+
+2007-08-15  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_class_init), (store_view_jcomp_from_ecomp),
+	(store_view_objects_added_cb), (store_view_objects_modified_cb),
+	(store_view_objects_removed_cb), (store_view_refresh_query):
+	* libjana-ecal/jana-ecal-store.c: (store_interface_init):
+	* libjana/jana-store.c:
+	* libjana/jana-store.h:
+	Don't assume we're storing events in a JanaEcalStoreView, remove
+	get_component_type from JanaStore, as it may contain multiple types
+	of component.
+
+2007-08-15  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (jana_ecal_event_class_init):
+	Don't add a zero-size private to the class
+
+	* tests/test-jana-ecal-event.c:
+	Include string.h
+
+2007-08-15  Rob Bradford  <rob@openedhand.com>
+
+	* libjana-ecal/Makefile.am:
+	* libjana/Makefile.am:
+	* tests/Makefile.am:
+	Use libtool archives for linking.
+
+2007-08-15  Thomas Wood  <thomas@openedhand.com>
+
+	* po/POTFILES.in:
+	* autogen.sh:
+	Added
+
+2007-08-15  Thomas Wood  <thomas@openedhand.com>
+
+	* configure.ac:
+	* libjana-ecal/Makefile.am:
+	* libjana/Makefile.am:
+	* tests/Makefile.am:
+	First go at adding autotools support
+
+	* libjana/jana-note.c: (jana_note_get_type):
+	* libjana/jana-note.h:
+	* libjana/jana-task.c: (jana_task_get_type):
+	* libjana/jana-task.h:
+	Correct some possible typos to fix the build
+
+2007-08-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store.c: (store_interface_init),
+	(store_get_component):
+	* libjana/jana-store.c: (jana_store_get_component):
+	* libjana/jana-store.h:
+	Add a get_component function to JanaStore/JanaEcalStore that lets you
+	retrieve a JanaComponent via uid (untested).
+
+	* tests/test-jana-ecal-store-view.c: (main):
+	Don't display the success message before success is guaranteed.
+
+2007-08-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_set_property),
+	(jana_ecal_store_view_dispose), (jana_ecal_store_view_finalize),
+	(jana_ecal_store_view_init), (store_view_remove_old_cb),
+	(store_view_objects_added_cb), (store_view_refresh_query),
+	(store_view_start):
+	Fix memory freeing, query updating and ECalView callbacks
+
+	* libjana-ecal/jana-ecal-store.c: (store_add_component):
+	Reset component UIDs before adding to a store (prevents uid collisions)
+
+	* libjana-ecal/jana-ecal-time.c: (time_get_tzname):
+	Return "UTC" for the tzname when no timezone is set
+
+	* tests/test-jana-ecal-store-view.c: (added_cb), (modified_cb),
+	(removed_cb), (opened_cb), (timeout_cb), (main):
+	Add test for JanaStore/JanaStoreView
+
+2007-08-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.c:
+	(jana_ecal_component_dispose), (component_interface_init),
+	(component_supports_custom_props),
+	(component_get_custom_props_list), (component_get_custom_prop),
+	(component_set_custom_prop):
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_finalize):
+	* libjana-ecal/jana-ecal-store.c: (jana_ecal_store_dispose):
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_dispose):
+	* libjana/jana-component.c: (jana_component_supports_custom_props),
+	(jana_component_get_custom_props_list),
+	(jana_component_get_custom_prop), (jana_component_set_custom_prop),
+	(jana_component_props_list_free):
+	* libjana/jana-component.h:
+	Add support for custom properties on components
+
+2007-08-14  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.c:
+	(jana_ecal_component_dispose):
+	* libjana-ecal/jana-ecal-store-view.c:
+	(jana_ecal_store_view_dispose), (jana_ecal_store_view_finalize):
+	* libjana-ecal/jana-ecal-store.c: (jana_ecal_store_dispose):
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_dispose):
+	Unref objects on dispose, free memory on finalize
+
+2007-08-13  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-component.h:
+	* libjana-ecal/jana-ecal-event.c:
+	* libjana-ecal/jana-ecal-event.h:
+	* libjana-ecal/jana-ecal-store-view.[ch]:
+	* libjana-ecal/jana-ecal-store.[ch]:
+	* libjana-ecal/jana-ecal-time.[ch]:
+	* libjana/jana-store-view.[ch]:
+	* libjana/jana-store.[ch]:
+	* tests/test-jana-ecal-event.c:
+	Add new JanaStore, JanaStoreView and implementations (allowing queries
+	and general calendar interaction). Also, fix lots of bugs.
+
+2007-08-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana/jana-component.[ch]:
+	* libjana-ecal/jana-ecal-component.[ch]:
+	Move get_uid function to JanaComponent, implement JanaEcalComponent
+
+	* libjana/jana-event.[ch]:
+	* libjana-ecal/jana-ecal-event.c:
+	Remove get_uid function from JanaEvent
+
+	* tests/test-jana-ecal-event.c:
+	Update compile line
+
+2007-08-10  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c:
+	Implement has_exceptions.
+
+	* libjana-ecal/jana-ecal-time.[ch]:
+	Remove new_from_time (replaced with utility function), fix up
+	icaltimezone warnings and fix use of g_slice
+
+	* libjana/jana-utils.[ch]:
+	Add utility functions to copy times and events
+
+	* libjana/jana-event.[ch]:
+	Add has_exceptions to make API more consistent.
+
+	* tests/test-jana-ecal-event.c:
+	Update compile line
+
+2007-08-09  Chris Lord,,,  <chris@openedhand.com>
+
+	* libjana-ecal/jana-ecal-event.c: (jana_ecal_event_set_property):
+	* libjana-ecal/jana-ecal-time.c: (jana_ecal_time_set_property),
+	(jana_ecal_time_init):
+	Use g_slice instead of malloc (thanks Rob Bradford)
+
+	* libjana/jana-component.h:
+	Fix typo (thanks Ross Burton)
+
+2007-08-09  Chris Lord,,,  <chris@openedhand.com>
+
+	* AUTHORS:
+	* libjana-ecal/jana-ecal-event.c:
+	* libjana-ecal/jana-ecal-event.h:
+	* libjana-ecal/jana-ecal-time.c:
+	* libjana-ecal/jana-ecal-time.h:
+	* libjana/jana-component.c:
+	* libjana/jana-component.h:
+	* libjana/jana-event.c:
+	* libjana/jana-event.h:
+	* libjana/jana-note.c:
+	* libjana/jana-note.h:
+	* libjana/jana-task.c:
+	* libjana/jana-task.h:
+	* libjana/jana-time.c:
+	* libjana/jana-time.h:
+	* tests/lstz.c:
+	* tests/test-jana-ecal-event.c:
+	* tests/test-jana-ecal-time-2.c:
+	* tests/test-jana-ecal-time.c:
+	Initial check-in
+

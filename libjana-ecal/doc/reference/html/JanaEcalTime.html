@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaEcalTime</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-ecal Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-ecal">
+<link rel="prev" href="JanaEcalStoreView.html" title="JanaEcalStoreView">
+<link rel="next" href="libjana-ecal-jana-ecal-utils.html" title="jana-ecal-utils">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaEcalStoreView.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-ecal Reference Manual</th>
+<td><a accesskey="n" href="libjana-ecal-jana-ecal-utils.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaEcalTime.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaEcalTime.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaEcalTime.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaEcalTime.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaEcalTime.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaEcalTime">
+<a name="JanaEcalTime"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaEcalTime.top_of_page"></a>JanaEcalTime</span></h2>
+<p>JanaEcalTime — An implementation of <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> using libecal</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaEcalTime.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaEcalTime.html#JanaEcalTime-struct" title="JanaEcalTime">JanaEcalTime</a>;
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEcalTime.html#jana-ecal-time-new" title="jana_ecal_time_new ()">jana_ecal_time_new</a>                  ();
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEcalTime.html#jana-ecal-time-new-from-icaltime" title="jana_ecal_time_new_from_icaltime ()">jana_ecal_time_new_from_icaltime</a>    (<em class="parameter"><code>const <span class="type">icaltimetype</span> *time</code></em>);
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEcalTime.html#jana-ecal-time-new-from-ecaltime" title="jana_ecal_time_new_from_ecaltime ()">jana_ecal_time_new_from_ecaltime</a>    (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html#ECalComponentDateTime"><span class="type">ECalComponentDateTime</span></a> *dt</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalTime.html#jana-ecal-time-set-location" title="jana_ecal_time_set_location ()">jana_ecal_time_set_location</a>         (<em class="parameter"><code><a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="JanaEcalTime.html#jana-ecal-time-get-location" title="jana_ecal_time_get_location ()">jana_ecal_time_get_location</a>         (<em class="parameter"><code><a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaEcalTime.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----JanaEcalTime
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaEcalTime.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaEcalTime implements
+ <a href="../libjana/JanaTime.html">JanaTime</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaEcalTime.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaEcalTime.html#JanaEcalTime--icaltime" title='The "icaltime" property'>icaltime</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaEcalTime.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> is an implementation of <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> that provides a 
+wrapper over <span class="type">icaltimetype</span>, using libecal.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaEcalTime.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaEcalTime">
+<a name="JanaEcalTime-struct"></a><h3>JanaEcalTime</h3>
+<pre class="programlisting">typedef struct _JanaEcalTime JanaEcalTime;</pre>
+<p>
+The <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_time_new ()">
+<a name="jana-ecal-time-new"></a><h3>jana_ecal_time_new ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_time_new                  ();</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_time_new_from_icaltime ()">
+<a name="jana-ecal-time-new-from-icaltime"></a><h3>jana_ecal_time_new_from_icaltime ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_time_new_from_icaltime    (<em class="parameter"><code>const <span class="type">icaltimetype</span> *time</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> using the given <span class="type">icaltimetype</span>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>An <span class="type">icaltimetype</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_time_new_from_ecaltime ()">
+<a name="jana-ecal-time-new-from-ecaltime"></a><h3>jana_ecal_time_new_from_ecaltime ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_time_new_from_ecaltime    (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html#ECalComponentDateTime"><span class="type">ECalComponentDateTime</span></a> *dt</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> using the given <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html#ECalComponentDateTime"><span class="type">ECalComponentDateTime</span></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dt</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_time_set_location ()">
+<a name="jana-ecal-time-set-location"></a><h3>jana_ecal_time_set_location ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_time_set_location         (<em class="parameter"><code><a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);</pre>
+<p>
+Sets the location of the time, using a timezone string such as 
+"Europe/London", as opposed to the libc timezone name as used in 
+<a href="../libjana/JanaTime.html#jana-time-set-tzname"><code class="function">jana_time_set_tzname()</code></a>. The time will still be adjusted for the new 
+timezone. A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> location parameter will be treated as "UTC".
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>An iCal/vCalendar timezone string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_time_get_location ()">
+<a name="jana-ecal-time-get-location"></a><h3>jana_ecal_time_get_location ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       jana_ecal_time_get_location         (<em class="parameter"><code><a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the full timezone name of the given time. See 
+<a class="link" href="JanaEcalTime.html#jana-ecal-time-set-location" title="jana_ecal_time_set_location ()"><code class="function">jana_ecal_time_set_location()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A string containing the full timezone name. This is owned by 
+libecal and must not be freed.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaEcalTime.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "icaltime" property'>
+<a name="JanaEcalTime--icaltime"></a><h3>The <code class="literal">"icaltime"</code> property</h3>
+<pre class="programlisting">  "icaltime"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only</pre>
+<p>The icaltimetype represented by this JanaTime object.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

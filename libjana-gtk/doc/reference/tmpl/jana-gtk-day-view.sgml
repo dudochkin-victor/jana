@@ -1,0 +1,322 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkDayView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkDayView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkDayView::event-activated ##### -->
+<para>
+
+</para>
+
+@janagtkdayview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaGtkDayView::event-selected ##### -->
+<para>
+
+</para>
+
+@janagtkdayview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaGtkDayView::selection-changed ##### -->
+<para>
+
+</para>
+
+@janagtkdayview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaGtkDayView::set-scroll-adjustments ##### -->
+<para>
+
+</para>
+
+@janagtkdayview: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### ARG JanaGtkDayView:active-range ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:cells ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:highlighted-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:range ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:selected-event ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:selection ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:spacing ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:style-hint ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:xratio ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDayView:yratio ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_day_view_new ##### -->
+<para>
+
+</para>
+
+@range: 
+@cells: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_add_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_remove_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_scroll_to_cell ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_scroll_to_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_cell_renderer ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_24hr_cell_renderer ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_range ##### -->
+<para>
+
+</para>
+
+@self: 
+@range: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_range ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_cells ##### -->
+<para>
+
+</para>
+
+@self: 
+@cells: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_cells ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_spacing ##### -->
+<para>
+
+</para>
+
+@self: 
+@spacing: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_spacing ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_selection ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_selection ##### -->
+<para>
+
+</para>
+
+@self: 
+@selection: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_visible_ratio ##### -->
+<para>
+
+</para>
+
+@self: 
+@xratio: 
+@yratio: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_visible_ratio ##### -->
+<para>
+
+</para>
+
+@self: 
+@xratio: 
+@yratio: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_get_selected_event ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_selected_event ##### -->
+<para>
+
+</para>
+
+@self: 
+@row: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_visible_func ##### -->
+<para>
+
+</para>
+
+@self: 
+@visible_cb: 
+@data: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_refilter ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_highlighted_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_day_view_set_active_range ##### -->
+<para>
+
+</para>
+
+@self: 
+@range: 
+
+

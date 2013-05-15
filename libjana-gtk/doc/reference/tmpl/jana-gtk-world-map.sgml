@@ -1,0 +1,207 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkWorldMap
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkWorldMap ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkWorldMap::clicked ##### -->
+<para>
+
+</para>
+
+@janagtkworldmap: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaGtkWorldMap::render-start ##### -->
+<para>
+
+</para>
+
+@janagtkworldmap: the object which received the signal.
+
+<!-- ##### SIGNAL JanaGtkWorldMap::render-stop ##### -->
+<para>
+
+</para>
+
+@janagtkworldmap: the object which received the signal.
+
+<!-- ##### ARG JanaGtkWorldMap:height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkWorldMap:static ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkWorldMap:time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkWorldMap:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_world_map_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_set_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_latlon ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+@y: 
+@lat: 
+@lon: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_xy ##### -->
+<para>
+
+</para>
+
+@self: 
+@lat: 
+@lon: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_add_marker ##### -->
+<para>
+
+</para>
+
+@self: 
+@mark: 
+@lat: 
+@lon: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_remove_marker ##### -->
+<para>
+
+</para>
+
+@self: 
+@mark: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_move_marker ##### -->
+<para>
+
+</para>
+
+@self: 
+@mark: 
+@lat: 
+@lon: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_markers ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_set_static ##### -->
+<para>
+
+</para>
+
+@self: 
+@set_static: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_static ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_set_width ##### -->
+<para>
+
+</para>
+
+@self: 
+@width: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_width ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_set_height ##### -->
+<para>
+
+</para>
+
+@self: 
+@height: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_get_height ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

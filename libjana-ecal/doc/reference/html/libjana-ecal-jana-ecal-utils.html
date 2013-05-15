@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jana-ecal-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-ecal Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-ecal">
+<link rel="prev" href="JanaEcalTime.html" title="JanaEcalTime">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaEcalTime.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-ecal Reference Manual</th>
+<td> </td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libjana-ecal-jana-ecal-utils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libjana-ecal-jana-ecal-utils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="jana-ecal-utils">
+<a name="libjana-ecal-jana-ecal-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libjana-ecal-jana-ecal-utils.top_of_page"></a>jana-ecal-utils</span></h2>
+<p>jana-ecal-utils — A set of utility functions for libjana-ecal</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="libjana-ecal-jana-ecal-utils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-now" title="jana_ecal_utils_time_now ()">jana_ecal_utils_time_now</a>            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-now-local" title="jana_ecal_utils_time_now_local ()">jana_ecal_utils_time_now_local</a>      ();
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-time-today" title="jana_ecal_utils_time_today ()">jana_ecal_utils_time_today</a>          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-guess-location" title="jana_ecal_utils_guess_location ()">jana_ecal_utils_guess_location</a>      ();
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-get-locations" title="jana_ecal_utils_get_locations ()">jana_ecal_utils_get_locations</a>       ();
+#define             <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY">JANA_ECAL_LOCATION_KEY</a>
+#define             <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY-DIR:CAPS" title="JANA_ECAL_LOCATION_KEY_DIR">JANA_ECAL_LOCATION_KEY_DIR</a>
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="libjana-ecal-jana-ecal-utils.description"></a><h2>Description</h2>
+<p>
+jana-ecal-utils contains a set of libjana-ecal related utility functions.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="libjana-ecal-jana-ecal-utils.details"></a><h2>Details</h2>
+<div class="refsect2" title="jana_ecal_utils_time_now ()">
+<a name="jana-ecal-utils-time-now"></a><h3>jana_ecal_utils_time_now ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_utils_time_now            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> with the current time of the given location.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>A full timezone name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_utils_time_now_local ()">
+<a name="jana-ecal-utils-time-now-local"></a><h3>jana_ecal_utils_time_now_local ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_utils_time_now_local      ();</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> with the current time of the guessed location. 
+See <a class="link" href="libjana-ecal-jana-ecal-utils.html#jana-ecal-utils-guess-location" title="jana_ecal_utils_guess_location ()"><code class="function">jana_ecal_utils_guess_location()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_utils_time_today ()">
+<a name="jana-ecal-utils-time-today"></a><h3>jana_ecal_utils_time_today ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_utils_time_today          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a> with the current date of the given location.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>A full timezone name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalTime.html" title="JanaEcalTime"><span class="type">JanaEcalTime</span></a>, cast as a <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_utils_guess_location ()">
+<a name="jana-ecal-utils-guess-location"></a><h3>jana_ecal_utils_guess_location ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_ecal_utils_guess_location      ();</pre>
+<p>
+Tries to guess the location by checking for common system settings and 
+files, and finally falling back on the first location that matches the
+current system timezone. See also <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY"><span class="type">JANA_ECAL_LOCATION_KEY</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the guessed location.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_utils_get_locations ()">
+<a name="jana-ecal-utils-get-locations"></a><h3>jana_ecal_utils_get_locations ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            jana_ecal_utils_get_locations       ();</pre>
+<p>
+Retrieves the built-in list of timezone locations from libecal.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string array, to be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="JANA_ECAL_LOCATION_KEY">
+<a name="JANA-ECAL-LOCATION-KEY:CAPS"></a><h3>JANA_ECAL_LOCATION_KEY</h3>
+<pre class="programlisting">#define JANA_ECAL_LOCATION_KEY "/apps/evolution/calendar/display/timezone"
+</pre>
+<p>
+The GConf key used to determine whether to use the system timezone or to
+use the <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY"><span class="type">JANA_ECAL_LOCATION_KEY</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="JANA_ECAL_LOCATION_KEY_DIR">
+<a name="JANA-ECAL-LOCATION-KEY-DIR:CAPS"></a><h3>JANA_ECAL_LOCATION_KEY_DIR</h3>
+<pre class="programlisting">#define JANA_ECAL_LOCATION_KEY_DIR "/apps/evolution/calendar/display"
+</pre>
+<p>
+The parent directory of the GConf key used to store the ecal timezone
+location. If <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY"><span class="type">JANA_ECAL_LOCATION_KEY</span></a> exists, this GConf directory can be 
+monitored to detect when it has changed. See also <a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY"><span class="type">JANA_ECAL_LOCATION_KEY</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>see_also</code></em> :</span></p></td>
+<td>
+<a class="link" href="libjana-ecal-jana-ecal-utils.html#JANA-ECAL-LOCATION-KEY:CAPS" title="JANA_ECAL_LOCATION_KEY"><span class="type">JANA_ECAL_LOCATION_KEY</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

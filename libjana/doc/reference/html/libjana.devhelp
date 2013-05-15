@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libjana Reference Manual" link="index.html" author="" name="libjana">
+  <chapters>
+    <sub name="libjana" link="ch01.html">
+      <sub name="JanaComponent" link="JanaComponent.html"/>
+      <sub name="JanaEvent" link="JanaEvent.html"/>
+      <sub name="JanaNote" link="JanaNote.html"/>
+      <sub name="JanaStore" link="JanaStore.html"/>
+      <sub name="JanaStoreView" link="JanaStoreView.html"/>
+      <sub name="JanaTask" link="JanaTask.html"/>
+      <sub name="JanaTime" link="JanaTime.html"/>
+      <sub name="jana-utils" link="libjana-jana-utils.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <function name="JanaComponent" link="JanaComponent.html#JanaComponent-struct"/>
+    <function name="enum JanaComponentType" link="JanaComponent.html#JanaComponentType"/>
+    <function name="jana_component_get_component_type ()" link="JanaComponent.html#jana-component-get-component-type"/>
+    <function name="jana_component_is_fully_represented ()" link="JanaComponent.html#jana-component-is-fully-represented"/>
+    <function name="jana_component_get_uid ()" link="JanaComponent.html#jana-component-get-uid"/>
+    <function name="jana_component_get_categories ()" link="JanaComponent.html#jana-component-get-categories"/>
+    <function name="jana_component_set_categories ()" link="JanaComponent.html#jana-component-set-categories"/>
+    <function name="jana_component_supports_custom_props ()" link="JanaComponent.html#jana-component-supports-custom-props"/>
+    <function name="jana_component_get_custom_props_list ()" link="JanaComponent.html#jana-component-get-custom-props-list"/>
+    <function name="jana_component_get_custom_prop ()" link="JanaComponent.html#jana-component-get-custom-prop"/>
+    <function name="jana_component_set_custom_prop ()" link="JanaComponent.html#jana-component-set-custom-prop"/>
+    <function name="jana_component_props_list_free ()" link="JanaComponent.html#jana-component-props-list-free"/>
+    <function name="JanaEvent" link="JanaEvent.html#JanaEvent-struct"/>
+    <function name="JanaRecurrence" link="JanaEvent.html#JanaRecurrence"/>
+    <function name="enum JanaRecurrenceType" link="JanaEvent.html#JanaRecurrenceType"/>
+    <function name="jana_recurrence_new ()" link="JanaEvent.html#jana-recurrence-new"/>
+    <function name="jana_recurrence_copy ()" link="JanaEvent.html#jana-recurrence-copy"/>
+    <function name="jana_recurrence_free ()" link="JanaEvent.html#jana-recurrence-free"/>
+    <function name="jana_exceptions_free ()" link="JanaEvent.html#jana-exceptions-free"/>
+    <function name="jana_event_get_summary ()" link="JanaEvent.html#jana-event-get-summary"/>
+    <function name="jana_event_get_description ()" link="JanaEvent.html#jana-event-get-description"/>
+    <function name="jana_event_get_location ()" link="JanaEvent.html#jana-event-get-location"/>
+    <function name="jana_event_get_start ()" link="JanaEvent.html#jana-event-get-start"/>
+    <function name="jana_event_get_end ()" link="JanaEvent.html#jana-event-get-end"/>
+    <function name="jana_event_get_categories ()" link="JanaEvent.html#jana-event-get-categories"/>
+    <function name="jana_event_supports_alarm ()" link="JanaEvent.html#jana-event-supports-alarm"/>
+    <function name="jana_event_has_alarm ()" link="JanaEvent.html#jana-event-has-alarm"/>
+    <function name="jana_event_get_alarm_time ()" link="JanaEvent.html#jana-event-get-alarm-time"/>
+    <function name="jana_event_supports_recurrence ()" link="JanaEvent.html#jana-event-supports-recurrence"/>
+    <function name="jana_event_has_recurrence ()" link="JanaEvent.html#jana-event-has-recurrence"/>
+    <function name="jana_event_get_recurrence ()" link="JanaEvent.html#jana-event-get-recurrence"/>
+    <function name="jana_event_supports_exceptions ()" link="JanaEvent.html#jana-event-supports-exceptions"/>
+    <function name="jana_event_has_exceptions ()" link="JanaEvent.html#jana-event-has-exceptions"/>
+    <function name="jana_event_get_exceptions ()" link="JanaEvent.html#jana-event-get-exceptions"/>
+    <function name="jana_event_set_summary ()" link="JanaEvent.html#jana-event-set-summary"/>
+    <function name="jana_event_set_description ()" link="JanaEvent.html#jana-event-set-description"/>
+    <function name="jana_event_set_location ()" link="JanaEvent.html#jana-event-set-location"/>
+    <function name="jana_event_set_start ()" link="JanaEvent.html#jana-event-set-start"/>
+    <function name="jana_event_set_end ()" link="JanaEvent.html#jana-event-set-end"/>
+    <function name="jana_event_set_categories ()" link="JanaEvent.html#jana-event-set-categories"/>
+    <function name="jana_event_set_alarm ()" link="JanaEvent.html#jana-event-set-alarm"/>
+    <function name="jana_event_set_recurrence ()" link="JanaEvent.html#jana-event-set-recurrence"/>
+    <function name="jana_event_set_exceptions ()" link="JanaEvent.html#jana-event-set-exceptions"/>
+    <function name="JanaNote" link="JanaNote.html#JanaNote-struct"/>
+    <function name="jana_note_get_author ()" link="JanaNote.html#jana-note-get-author"/>
+    <function name="jana_note_get_recipient ()" link="JanaNote.html#jana-note-get-recipient"/>
+    <function name="jana_note_get_body ()" link="JanaNote.html#jana-note-get-body"/>
+    <function name="jana_note_get_creation_time ()" link="JanaNote.html#jana-note-get-creation-time"/>
+    <function name="jana_note_get_modified_time ()" link="JanaNote.html#jana-note-get-modified-time"/>
+    <function name="jana_note_set_author ()" link="JanaNote.html#jana-note-set-author"/>
+    <function name="jana_note_set_recipient ()" link="JanaNote.html#jana-note-set-recipient"/>
+    <function name="jana_note_set_body ()" link="JanaNote.html#jana-note-set-body"/>
+    <function name="jana_note_set_creation_time ()" link="JanaNote.html#jana-note-set-creation-time"/>
+    <function name="JanaStore" link="JanaStore.html#JanaStore-struct"/>
+    <function name="jana_store_open ()" link="JanaStore.html#jana-store-open"/>
+    <function name="jana_store_get_component ()" link="JanaStore.html#jana-store-get-component"/>
+    <function name="jana_store_get_view ()" link="JanaStore.html#jana-store-get-view"/>
+    <function name="jana_store_add_component ()" link="JanaStore.html#jana-store-add-component"/>
+    <function name="jana_store_modify_component ()" link="JanaStore.html#jana-store-modify-component"/>
+    <function name="jana_store_remove_component ()" link="JanaStore.html#jana-store-remove-component"/>
+    <function name="The &quot;opened&quot; signal" link="JanaStore.html#JanaStore-opened"/>
+    <function name="JanaStoreView" link="JanaStoreView.html#JanaStoreView-struct"/>
+    <function name="enum JanaStoreViewField" link="JanaStoreView.html#JanaStoreViewField"/>
+    <function name="jana_store_view_get_range ()" link="JanaStoreView.html#jana-store-view-get-range"/>
+    <function name="jana_store_view_set_range ()" link="JanaStoreView.html#jana-store-view-set-range"/>
+    <function name="jana_store_view_add_match ()" link="JanaStoreView.html#jana-store-view-add-match"/>
+    <function name="jana_store_view_get_matches ()" link="JanaStoreView.html#jana-store-view-get-matches"/>
+    <function name="jana_store_view_remove_match ()" link="JanaStoreView.html#jana-store-view-remove-match"/>
+    <function name="jana_store_view_clear_matches ()" link="JanaStoreView.html#jana-store-view-clear-matches"/>
+    <function name="jana_store_view_start ()" link="JanaStoreView.html#jana-store-view-start"/>
+    <function name="jana_store_view_get_store ()" link="JanaStoreView.html#jana-store-view-get-store"/>
+    <function name="The &quot;added&quot; signal" link="JanaStoreView.html#JanaStoreView-added"/>
+    <function name="The &quot;modified&quot; signal" link="JanaStoreView.html#JanaStoreView-modified"/>
+    <function name="The &quot;progress&quot; signal" link="JanaStoreView.html#JanaStoreView-progress"/>
+    <function name="The &quot;removed&quot; signal" link="JanaStoreView.html#JanaStoreView-removed"/>
+    <function name="JanaTask" link="JanaTask.html#JanaTask-struct"/>
+    <function name="JanaDuration" link="JanaTime.html#JanaDuration"/>
+    <function name="JanaTime" link="JanaTime.html#JanaTime-struct"/>
+    <function name="jana_time_get_seconds ()" link="JanaTime.html#jana-time-get-seconds"/>
+    <function name="jana_time_get_minutes ()" link="JanaTime.html#jana-time-get-minutes"/>
+    <function name="jana_time_get_hours ()" link="JanaTime.html#jana-time-get-hours"/>
+    <function name="jana_time_get_day ()" link="JanaTime.html#jana-time-get-day"/>
+    <function name="jana_time_get_month ()" link="JanaTime.html#jana-time-get-month"/>
+    <function name="jana_time_get_year ()" link="JanaTime.html#jana-time-get-year"/>
+    <function name="jana_time_get_isdate ()" link="JanaTime.html#jana-time-get-isdate"/>
+    <function name="jana_time_get_daylight ()" link="JanaTime.html#jana-time-get-daylight"/>
+    <function name="jana_time_get_tzname ()" link="JanaTime.html#jana-time-get-tzname"/>
+    <function name="jana_time_get_offset ()" link="JanaTime.html#jana-time-get-offset"/>
+    <function name="jana_time_set_seconds ()" link="JanaTime.html#jana-time-set-seconds"/>
+    <function name="jana_time_set_minutes ()" link="JanaTime.html#jana-time-set-minutes"/>
+    <function name="jana_time_set_hours ()" link="JanaTime.html#jana-time-set-hours"/>
+    <function name="jana_time_set_day ()" link="JanaTime.html#jana-time-set-day"/>
+    <function name="jana_time_set_month ()" link="JanaTime.html#jana-time-set-month"/>
+    <function name="jana_time_set_year ()" link="JanaTime.html#jana-time-set-year"/>
+    <function name="jana_time_set_isdate ()" link="JanaTime.html#jana-time-set-isdate"/>
+    <function name="jana_time_set_tzname ()" link="JanaTime.html#jana-time-set-tzname"/>
+    <function name="jana_time_set_offset ()" link="JanaTime.html#jana-time-set-offset"/>
+    <function name="jana_time_duplicate ()" link="JanaTime.html#jana-time-duplicate"/>
+    <function name="jana_duration_new ()" link="JanaTime.html#jana-duration-new"/>
+    <function name="jana_duration_copy ()" link="JanaTime.html#jana-duration-copy"/>
+    <function name="jana_duration_set_start ()" link="JanaTime.html#jana-duration-set-start"/>
+    <function name="jana_duration_set_end ()" link="JanaTime.html#jana-duration-set-end"/>
+    <function name="jana_duration_valid ()" link="JanaTime.html#jana-duration-valid"/>
+    <function name="jana_duration_free ()" link="JanaTime.html#jana-duration-free"/>
+    <function name="jana_utils_time_is_leap_year ()" link="libjana-jana-utils.html#jana-utils-time-is-leap-year"/>
+    <function name="jana_utils_time_days_in_month ()" link="libjana-jana-utils.html#jana-utils-time-days-in-month"/>
+    <function name="jana_utils_time_day_of_week ()" link="libjana-jana-utils.html#jana-utils-time-day-of-week"/>
+    <function name="jana_utils_time_day_of_year ()" link="libjana-jana-utils.html#jana-utils-time-day-of-year"/>
+    <function name="jana_utils_time_set_start_of_week ()" link="libjana-jana-utils.html#jana-utils-time-set-start-of-week"/>
+    <function name="jana_utils_time_set_end_of_week ()" link="libjana-jana-utils.html#jana-utils-time-set-end-of-week"/>
+    <function name="jana_utils_time_week_of_year ()" link="libjana-jana-utils.html#jana-utils-time-week-of-year"/>
+    <function name="jana_utils_time_to_gdate ()" link="libjana-jana-utils.html#jana-utils-time-to-gdate"/>
+    <function name="jana_utils_time_to_tm ()" link="libjana-jana-utils.html#jana-utils-time-to-tm"/>
+    <function name="jana_utils_strftime ()" link="libjana-jana-utils.html#jana-utils-strftime"/>
+    <function name="jana_utils_time_compare ()" link="libjana-jana-utils.html#jana-utils-time-compare"/>
+    <function name="jana_utils_time_copy ()" link="libjana-jana-utils.html#jana-utils-time-copy"/>
+    <function name="jana_utils_time_diff ()" link="libjana-jana-utils.html#jana-utils-time-diff"/>
+    <function name="jana_utils_time_adjust ()" link="libjana-jana-utils.html#jana-utils-time-adjust"/>
+    <function name="jana_utils_time_now ()" link="libjana-jana-utils.html#jana-utils-time-now"/>
+    <function name="jana_utils_duration_contains ()" link="libjana-jana-utils.html#jana-utils-duration-contains"/>
+    <function name="jana_utils_event_copy ()" link="libjana-jana-utils.html#jana-utils-event-copy"/>
+    <function name="jana_utils_note_copy ()" link="libjana-jana-utils.html#jana-utils-note-copy"/>
+    <function name="jana_utils_event_get_instances ()" link="libjana-jana-utils.html#jana-utils-event-get-instances"/>
+    <function name="jana_utils_component_insert_category ()" link="libjana-jana-utils.html#jana-utils-component-insert-category"/>
+    <function name="jana_utils_component_remove_category ()" link="libjana-jana-utils.html#jana-utils-component-remove-category"/>
+    <function name="jana_utils_component_has_category ()" link="libjana-jana-utils.html#jana-utils-component-has-category"/>
+    <function name="jana_utils_instance_list_free ()" link="libjana-jana-utils.html#jana-utils-instance-list-free"/>
+    <function name="jana_utils_get_local_tzname ()" link="libjana-jana-utils.html#jana-utils-get-local-tzname"/>
+    <function name="jana_utils_recurrence_to_string ()" link="libjana-jana-utils.html#jana-utils-recurrence-to-string"/>
+    <function name="jana_utils_recurrence_diff ()" link="libjana-jana-utils.html#jana-utils-recurrence-diff"/>
+    <function name="jana_utils_ab_day ()" link="libjana-jana-utils.html#jana-utils-ab-day"/>
+    <function name="jana_utils_time_daylight_hours ()" link="libjana-jana-utils.html#jana-utils-time-daylight-hours"/>
+  </functions>
+</book>

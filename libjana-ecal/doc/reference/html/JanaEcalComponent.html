@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaEcalComponent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-ecal Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-ecal">
+<link rel="prev" href="ch01.html" title="libjana-ecal">
+<link rel="next" href="JanaEcalEvent.html" title="JanaEcalEvent">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-ecal Reference Manual</th>
+<td><a accesskey="n" href="JanaEcalEvent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaEcalComponent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaEcalComponent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaEcalComponent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaEcalComponent.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaEcalComponent.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaEcalComponent">
+<a name="JanaEcalComponent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaEcalComponent.top_of_page"></a>JanaEcalComponent</span></h2>
+<p>JanaEcalComponent — An implementation of <a href="../libjana/JanaComponent.html"><span class="type">JanaComponent</span></a> using libecal</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaEcalComponent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaEcalComponent.html#JanaEcalComponent-struct" title="JanaEcalComponent">JanaEcalComponent</a>;
+<a href="../libjana/JanaComponent.html"><span class="returnvalue">JanaComponent</span></a> *     <a class="link" href="JanaEcalComponent.html#jana-ecal-component-new-from-ecalcomp" title="jana_ecal_component_new_from_ecalcomp ()">jana_ecal_component_new_from_ecalcomp</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> *component</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEcalComponent.html#jana-ecal-component-get-summary" title="jana_ecal_component_get_summary ()">jana_ecal_component_get_summary</a>     (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEcalComponent.html#jana-ecal-component-get-description" title="jana_ecal_component_get_description ()">jana_ecal_component_get_description</a> (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEcalComponent.html#jana-ecal-component-get-location" title="jana_ecal_component_get_location ()">jana_ecal_component_get_location</a>    (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEcalComponent.html#jana-ecal-component-get-start" title="jana_ecal_component_get_start ()">jana_ecal_component_get_start</a>       (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEcalComponent.html#jana-ecal-component-get-end" title="jana_ecal_component_get_end ()">jana_ecal_component_get_end</a>         (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalComponent.html#jana-ecal-component-set-summary" title="jana_ecal_component_set_summary ()">jana_ecal_component_set_summary</a>     (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *summary</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalComponent.html#jana-ecal-component-set-description" title="jana_ecal_component_set_description ()">jana_ecal_component_set_description</a> (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalComponent.html#jana-ecal-component-set-location" title="jana_ecal_component_set_location ()">jana_ecal_component_set_location</a>    (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalComponent.html#jana-ecal-component-set-start" title="jana_ecal_component_set_start ()">jana_ecal_component_set_start</a>       (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *start</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEcalComponent.html#jana-ecal-component-set-end" title="jana_ecal_component_set_end ()">jana_ecal_component_set_end</a>         (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *end</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaEcalComponent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----JanaEcalComponent
+         +----<a class="link" href="JanaEcalEvent.html" title="JanaEcalEvent">JanaEcalEvent</a>
+         +----<a class="link" href="JanaEcalNote.html" title="JanaEcalNote">JanaEcalNote</a>
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaEcalComponent.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaEcalComponent implements
+ <a href="../libjana/JanaComponent.html">JanaComponent</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaEcalComponent.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaEcalComponent.html#JanaEcalComponent--ecalcomp" title='The "ecalcomp" property'>ecalcomp</a>"                 <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>*        : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaEcalComponent.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> is an implementation of <a href="../libjana/JanaComponent.html"><span class="type">JanaComponent</span></a> that provides a 
+wrapper over <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, using libecal.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaEcalComponent.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaEcalComponent">
+<a name="JanaEcalComponent-struct"></a><h3>JanaEcalComponent</h3>
+<pre class="programlisting">typedef struct _JanaEcalComponent JanaEcalComponent;</pre>
+<p>
+The <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_new_from_ecalcomp ()">
+<a name="jana-ecal-component-new-from-ecalcomp"></a><h3>jana_ecal_component_new_from_ecalcomp ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaComponent.html"><span class="returnvalue">JanaComponent</span></a> *     jana_ecal_component_new_from_ecalcomp
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a> *component</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> from an <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>component</code></em> :</span></p></td>
+<td>An <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> that wraps the given <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, 
+cast as a <a href="../libjana/JanaComponent.html"><span class="type">JanaComponent</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_get_summary ()">
+<a name="jana-ecal-component-get-summary"></a><h3>jana_ecal_component_get_summary ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_ecal_component_get_summary     (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the summary from the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the summary from the underlying 
+<a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_get_description ()">
+<a name="jana-ecal-component-get-description"></a><h3>jana_ecal_component_get_description ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_ecal_component_get_description (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the first description from the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This 
+function is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the first description from the 
+underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_get_location ()">
+<a name="jana-ecal-component-get-location"></a><h3>jana_ecal_component_get_location ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_ecal_component_get_location    (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the location from the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string with the location from the 
+underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_get_start ()">
+<a name="jana-ecal-component-get-start"></a><h3>jana_ecal_component_get_start ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_component_get_start       (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the dtstart of the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> representing the dtstart of the underlying 
+<a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_get_end ()">
+<a name="jana-ecal-component-get-end"></a><h3>jana_ecal_component_get_end ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_ecal_component_get_end         (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the dtend of the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> representing the dtend of the underlying 
+<a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_set_summary ()">
+<a name="jana-ecal-component-set-summary"></a><h3>jana_ecal_component_set_summary ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_component_set_summary     (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *summary</code></em>);</pre>
+<p>
+Sets the summary on the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>summary</code></em> :</span></p></td>
+<td>A UTF-8 string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_set_description ()">
+<a name="jana-ecal-component-set-description"></a><h3>jana_ecal_component_set_description ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_component_set_description (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);</pre>
+<p>
+Sets the description on the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>description</code></em> :</span></p></td>
+<td>A UTF-8 string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_set_location ()">
+<a name="jana-ecal-component-set-location"></a><h3>jana_ecal_component_set_location ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_component_set_location    (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);</pre>
+<p>
+Sets the location on the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>A UTF-8 string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_set_start ()">
+<a name="jana-ecal-component-set-start"></a><h3>jana_ecal_component_set_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_component_set_start       (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *start</code></em>);</pre>
+<p>
+Sets the dtstart on the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>A <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_ecal_component_set_end ()">
+<a name="jana-ecal-component-set-end"></a><h3>jana_ecal_component_set_end ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_ecal_component_set_end         (<em class="parameter"><code><a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *end</code></em>);</pre>
+<p>
+Sets the dtend on the underlying <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>. This function 
+is intended for using only when extending <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEcalComponent.html" title="JanaEcalComponent"><span class="type">JanaEcalComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>A <a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaEcalComponent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "ecalcomp" property'>
+<a name="JanaEcalComponent--ecalcomp"></a><h3>The <code class="literal">"ecalcomp"</code> property</h3>
+<pre class="programlisting">  "ecalcomp"                 <a href="/usr/share/gtk-doc/html/libecal/ECalComponent.html"><span class="type">ECalComponent</span></a>*        : Read / Write / Construct Only</pre>
+<p>The ECalComponent represented by this JanaComponent object.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

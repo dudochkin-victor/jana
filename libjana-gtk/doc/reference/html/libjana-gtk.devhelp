@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libjana-gtk Reference Manual" link="index.html" author="" name="libjana-gtk">
+  <chapters>
+    <sub name="libjana-gtk" link="ch01.html">
+      <sub name="JanaGtkCellRendererEvent" link="JanaGtkCellRendererEvent.html"/>
+      <sub name="JanaGtkDateTime" link="JanaGtkDateTime.html"/>
+      <sub name="JanaGtkDayView" link="JanaGtkDayView.html"/>
+      <sub name="JanaGtkEventList" link="JanaGtkEventList.html"/>
+      <sub name="JanaGtkEventStore" link="JanaGtkEventStore.html"/>
+      <sub name="JanaGtkMonthView" link="JanaGtkMonthView.html"/>
+      <sub name="JanaGtkTreeLayout" link="libjana-gtk-jana-gtk-tree-layout.html"/>
+      <sub name="JanaGtkYearView" link="JanaGtkYearView.html"/>
+      <sub name="JanaGtkRecurrence" link="JanaGtkRecurrence.html"/>
+      <sub name="JanaGtkClock" link="JanaGtkClock.html"/>
+      <sub name="JanaGtkWorldMap" link="JanaGtkWorldMap.html"/>
+      <sub name="JanaGtkWorldMapMarker" link="JanaGtkWorldMapMarker.html"/>
+      <sub name="JanaGtkWorldMapMarkerPixbuf" link="libjana-gtk-JanaGtkWorldMapMarkerPixbuf.html"/>
+      <sub name="JanaGtkNoteStore" link="JanaGtkNoteStore.html"/>
+      <sub name="JanaGtkCellRendererNote" link="JanaGtkCellRendererNote.html"/>
+      <sub name="jana-gtk-utils" link="libjana-gtk-jana-gtk-utils.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <function name="JanaGtkCellRendererEvent" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent-struct"/>
+    <function name="jana_gtk_cell_renderer_event_new ()" link="JanaGtkCellRendererEvent.html#jana-gtk-cell-renderer-event-new"/>
+    <function name="The &quot;categories&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--categories"/>
+    <function name="The &quot;category-color-hash&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--category-color-hash"/>
+    <function name="The &quot;cell-width&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--cell-width"/>
+    <function name="The &quot;description&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--description"/>
+    <function name="The &quot;draw-box&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--draw-box"/>
+    <function name="The &quot;draw-detail&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--draw-detail"/>
+    <function name="The &quot;draw-resize&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--draw-resize"/>
+    <function name="The &quot;draw-text&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--draw-text"/>
+    <function name="The &quot;draw-time&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--draw-time"/>
+    <function name="The &quot;end&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--end"/>
+    <function name="The &quot;first-instance&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--first-instance"/>
+    <function name="The &quot;has-alarm&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--has-alarm"/>
+    <function name="The &quot;has-recurrences&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--has-recurrences"/>
+    <function name="The &quot;last-instance&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--last-instance"/>
+    <function name="The &quot;location&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--location"/>
+    <function name="The &quot;row&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--row"/>
+    <function name="The &quot;start&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--start"/>
+    <function name="The &quot;style-hint&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--style-hint"/>
+    <function name="The &quot;summary&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--summary"/>
+    <function name="The &quot;uid&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--uid"/>
+    <function name="The &quot;xpad-inner&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--xpad-inner"/>
+    <function name="The &quot;ypad-inner&quot; property" link="JanaGtkCellRendererEvent.html#JanaGtkCellRendererEvent--ypad-inner"/>
+    <function name="JanaGtkDateTime" link="JanaGtkDateTime.html#JanaGtkDateTime-struct"/>
+    <function name="jana_gtk_date_time_new ()" link="JanaGtkDateTime.html#jana-gtk-date-time-new"/>
+    <function name="jana_gtk_date_time_get_time ()" link="JanaGtkDateTime.html#jana-gtk-date-time-get-time"/>
+    <function name="jana_gtk_date_time_set_time ()" link="JanaGtkDateTime.html#jana-gtk-date-time-set-time"/>
+    <function name="jana_gtk_date_time_set_editable ()" link="JanaGtkDateTime.html#jana-gtk-date-time-set-editable"/>
+    <function name="jana_gtk_date_time_get_editable ()" link="JanaGtkDateTime.html#jana-gtk-date-time-get-editable"/>
+    <function name="The &quot;editable&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--editable"/>
+    <function name="The &quot;entry-format&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--entry-format"/>
+    <function name="The &quot;fast-timeout&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--fast-timeout"/>
+    <function name="The &quot;repeat&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--repeat"/>
+    <function name="The &quot;time&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--time"/>
+    <function name="The &quot;timeout&quot; property" link="JanaGtkDateTime.html#JanaGtkDateTime--timeout"/>
+    <function name="The &quot;changed&quot; signal" link="JanaGtkDateTime.html#JanaGtkDateTime-changed"/>
+    <function name="JanaGtkDayView" link="JanaGtkDayView.html#JanaGtkDayView-struct"/>
+    <function name="jana_gtk_day_view_new ()" link="JanaGtkDayView.html#jana-gtk-day-view-new"/>
+    <function name="jana_gtk_day_view_add_store ()" link="JanaGtkDayView.html#jana-gtk-day-view-add-store"/>
+    <function name="jana_gtk_day_view_remove_store ()" link="JanaGtkDayView.html#jana-gtk-day-view-remove-store"/>
+    <function name="jana_gtk_day_view_scroll_to_cell ()" link="JanaGtkDayView.html#jana-gtk-day-view-scroll-to-cell"/>
+    <function name="jana_gtk_day_view_scroll_to_time ()" link="JanaGtkDayView.html#jana-gtk-day-view-scroll-to-time"/>
+    <function name="jana_gtk_day_view_get_cell_renderer ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-cell-renderer"/>
+    <function name="jana_gtk_day_view_get_24hr_cell_renderer ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-24hr-cell-renderer"/>
+    <function name="jana_gtk_day_view_set_range ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-range"/>
+    <function name="jana_gtk_day_view_get_range ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-range"/>
+    <function name="jana_gtk_day_view_set_cells ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-cells"/>
+    <function name="jana_gtk_day_view_get_cells ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-cells"/>
+    <function name="jana_gtk_day_view_set_spacing ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-spacing"/>
+    <function name="jana_gtk_day_view_get_spacing ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-spacing"/>
+    <function name="jana_gtk_day_view_get_selection ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-selection"/>
+    <function name="jana_gtk_day_view_set_selection ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-selection"/>
+    <function name="jana_gtk_day_view_set_visible_ratio ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-visible-ratio"/>
+    <function name="jana_gtk_day_view_get_visible_ratio ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-visible-ratio"/>
+    <function name="jana_gtk_day_view_get_selected_event ()" link="JanaGtkDayView.html#jana-gtk-day-view-get-selected-event"/>
+    <function name="jana_gtk_day_view_set_selected_event ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-selected-event"/>
+    <function name="jana_gtk_day_view_set_visible_func ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-visible-func"/>
+    <function name="jana_gtk_day_view_refilter ()" link="JanaGtkDayView.html#jana-gtk-day-view-refilter"/>
+    <function name="jana_gtk_day_view_set_highlighted_time ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-highlighted-time"/>
+    <function name="jana_gtk_day_view_set_active_range ()" link="JanaGtkDayView.html#jana-gtk-day-view-set-active-range"/>
+    <function name="The &quot;active-range&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--active-range"/>
+    <function name="The &quot;cells&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--cells"/>
+    <function name="The &quot;highlighted-time&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--highlighted-time"/>
+    <function name="The &quot;range&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--range"/>
+    <function name="The &quot;selected-event&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--selected-event"/>
+    <function name="The &quot;selection&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--selection"/>
+    <function name="The &quot;spacing&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--spacing"/>
+    <function name="The &quot;style-hint&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--style-hint"/>
+    <function name="The &quot;xratio&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--xratio"/>
+    <function name="The &quot;yratio&quot; property" link="JanaGtkDayView.html#JanaGtkDayView--yratio"/>
+    <function name="The &quot;event-activated&quot; signal" link="JanaGtkDayView.html#JanaGtkDayView-event-activated"/>
+    <function name="The &quot;event-selected&quot; signal" link="JanaGtkDayView.html#JanaGtkDayView-event-selected"/>
+    <function name="The &quot;selection-changed&quot; signal" link="JanaGtkDayView.html#JanaGtkDayView-selection-changed"/>
+    <function name="The &quot;set-scroll-adjustments&quot; signal" link="JanaGtkDayView.html#JanaGtkDayView-set-scroll-adjustments"/>
+    <function name="JanaGtkEventList" link="JanaGtkEventList.html#JanaGtkEventList-struct"/>
+    <function name="jana_gtk_event_list_new ()" link="JanaGtkEventList.html#jana-gtk-event-list-new"/>
+    <function name="jana_gtk_event_list_add_store ()" link="JanaGtkEventList.html#jana-gtk-event-list-add-store"/>
+    <function name="jana_gtk_event_list_remove_store ()" link="JanaGtkEventList.html#jana-gtk-event-list-remove-store"/>
+    <function name="jana_gtk_event_list_get_filter ()" link="JanaGtkEventList.html#jana-gtk-event-list-get-filter"/>
+    <function name="jana_gtk_event_list_refilter ()" link="JanaGtkEventList.html#jana-gtk-event-list-refilter"/>
+    <function name="jana_gtk_event_list_set_show_headers ()" link="JanaGtkEventList.html#jana-gtk-event-list-set-show-headers"/>
+    <function name="jana_gtk_event_list_get_show_headers ()" link="JanaGtkEventList.html#jana-gtk-event-list-get-show-headers"/>
+    <function name="The &quot;column&quot; property" link="JanaGtkEventList.html#JanaGtkEventList--column"/>
+    <function name="The &quot;event-renderer&quot; property" link="JanaGtkEventList.html#JanaGtkEventList--event-renderer"/>
+    <function name="The &quot;show-headers&quot; property" link="JanaGtkEventList.html#JanaGtkEventList--show-headers"/>
+    <function name="The &quot;text-renderer&quot; property" link="JanaGtkEventList.html#JanaGtkEventList--text-renderer"/>
+    <function name="JanaGtkEventStore" link="JanaGtkEventStore.html#JanaGtkEventStore-struct"/>
+    <function name="jana_gtk_event_store_new ()" link="JanaGtkEventStore.html#jana-gtk-event-store-new"/>
+    <function name="jana_gtk_event_store_new_full ()" link="JanaGtkEventStore.html#jana-gtk-event-store-new-full"/>
+    <function name="jana_gtk_event_store_set_view ()" link="JanaGtkEventStore.html#jana-gtk-event-store-set-view"/>
+    <function name="jana_gtk_event_store_get_view ()" link="JanaGtkEventStore.html#jana-gtk-event-store-get-view"/>
+    <function name="jana_gtk_event_store_get_store ()" link="JanaGtkEventStore.html#jana-gtk-event-store-get-store"/>
+    <function name="jana_gtk_event_store_set_offset ()" link="JanaGtkEventStore.html#jana-gtk-event-store-set-offset"/>
+    <function name="The &quot;offset&quot; property" link="JanaGtkEventStore.html#JanaGtkEventStore--offset"/>
+    <function name="The &quot;view&quot; property" link="JanaGtkEventStore.html#JanaGtkEventStore--view"/>
+    <function name="JanaGtkMonthView" link="JanaGtkMonthView.html#JanaGtkMonthView-struct"/>
+    <function name="jana_gtk_month_view_new ()" link="JanaGtkMonthView.html#jana-gtk-month-view-new"/>
+    <function name="jana_gtk_month_view_add_store ()" link="JanaGtkMonthView.html#jana-gtk-month-view-add-store"/>
+    <function name="jana_gtk_month_view_remove_store ()" link="JanaGtkMonthView.html#jana-gtk-month-view-remove-store"/>
+    <function name="jana_gtk_month_view_get_cell_renderer ()" link="JanaGtkMonthView.html#jana-gtk-month-view-get-cell-renderer"/>
+    <function name="jana_gtk_month_view_set_month ()" link="JanaGtkMonthView.html#jana-gtk-month-view-set-month"/>
+    <function name="jana_gtk_month_view_get_month ()" link="JanaGtkMonthView.html#jana-gtk-month-view-get-month"/>
+    <function name="jana_gtk_month_view_set_spacing ()" link="JanaGtkMonthView.html#jana-gtk-month-view-set-spacing"/>
+    <function name="jana_gtk_month_view_get_spacing ()" link="JanaGtkMonthView.html#jana-gtk-month-view-get-spacing"/>
+    <function name="jana_gtk_month_view_set_selection ()" link="JanaGtkMonthView.html#jana-gtk-month-view-set-selection"/>
+    <function name="jana_gtk_month_view_get_selection ()" link="JanaGtkMonthView.html#jana-gtk-month-view-get-selection"/>
+    <function name="jana_gtk_month_view_set_visible_func ()" link="JanaGtkMonthView.html#jana-gtk-month-view-set-visible-func"/>
+    <function name="jana_gtk_month_view_refilter ()" link="JanaGtkMonthView.html#jana-gtk-month-view-refilter"/>
+    <function name="jana_gtk_month_view_set_highlighted_time ()" link="JanaGtkMonthView.html#jana-gtk-month-view-set-highlighted-time"/>
+    <function name="The &quot;highlighted-time&quot; property" link="JanaGtkMonthView.html#JanaGtkMonthView--highlighted-time"/>
+    <function name="The &quot;month&quot; property" link="JanaGtkMonthView.html#JanaGtkMonthView--month"/>
+    <function name="The &quot;selection&quot; property" link="JanaGtkMonthView.html#JanaGtkMonthView--selection"/>
+    <function name="The &quot;spacing&quot; property" link="JanaGtkMonthView.html#JanaGtkMonthView--spacing"/>
+    <function name="The &quot;style-hint&quot; property" link="JanaGtkMonthView.html#JanaGtkMonthView--style-hint"/>
+    <function name="The &quot;selection-changed&quot; signal" link="JanaGtkMonthView.html#JanaGtkMonthView-selection-changed"/>
+    <function name="JanaGtkTreeLayoutCellInfo" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayoutCellInfo"/>
+    <function name="JanaGtkTreeLayout" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout-struct"/>
+    <function name="jana_gtk_tree_layout_new ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-new"/>
+    <function name="jana_gtk_tree_layout_add_cell ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-add-cell"/>
+    <function name="jana_gtk_tree_layout_move_cell ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-move-cell"/>
+    <function name="jana_gtk_tree_layout_remove_cell ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-remove-cell"/>
+    <function name="jana_gtk_tree_layout_clear ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-clear"/>
+    <function name="jana_gtk_tree_layout_get_selection ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-get-selection"/>
+    <function name="jana_gtk_tree_layout_get_cells ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-get-cells"/>
+    <function name="jana_gtk_tree_layout_set_selection ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-set-selection"/>
+    <function name="jana_gtk_tree_layout_get_cell ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-get-cell"/>
+    <function name="jana_gtk_tree_layout_set_cell_sensitive ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-set-cell-sensitive"/>
+    <function name="jana_gtk_tree_layout_set_visible_func ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-set-visible-func"/>
+    <function name="jana_gtk_tree_layout_refilter ()" link="libjana-gtk-jana-gtk-tree-layout.html#jana-gtk-tree-layout-refilter"/>
+    <function name="The &quot;fill-height&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--fill-height"/>
+    <function name="The &quot;fill-width&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--fill-width"/>
+    <function name="The &quot;select-mode&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--select-mode"/>
+    <function name="The &quot;single-click&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--single-click"/>
+    <function name="The &quot;sort-cb&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--sort-cb"/>
+    <function name="The &quot;sort-data&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--sort-data"/>
+    <function name="The &quot;visible-cb&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--visible-cb"/>
+    <function name="The &quot;visible-data&quot; property" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout--visible-data"/>
+    <function name="The &quot;cell-activated&quot; signal" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout-cell-activated"/>
+    <function name="The &quot;selection-changed&quot; signal" link="libjana-gtk-jana-gtk-tree-layout.html#JanaGtkTreeLayout-selection-changed"/>
+    <function name="JanaGtkYearView" link="JanaGtkYearView.html#JanaGtkYearView-struct"/>
+    <function name="jana_gtk_year_view_new ()" link="JanaGtkYearView.html#jana-gtk-year-view-new"/>
+    <function name="jana_gtk_year_view_add_store ()" link="JanaGtkYearView.html#jana-gtk-year-view-add-store"/>
+    <function name="jana_gtk_year_view_remove_store ()" link="JanaGtkYearView.html#jana-gtk-year-view-remove-store"/>
+    <function name="jana_gtk_year_view_set_year ()" link="JanaGtkYearView.html#jana-gtk-year-view-set-year"/>
+    <function name="jana_gtk_year_view_get_year ()" link="JanaGtkYearView.html#jana-gtk-year-view-get-year"/>
+    <function name="jana_gtk_year_view_set_months_per_row ()" link="JanaGtkYearView.html#jana-gtk-year-view-set-months-per-row"/>
+    <function name="jana_gtk_year_view_get_selected_month ()" link="JanaGtkYearView.html#jana-gtk-year-view-get-selected-month"/>
+    <function name="jana_gtk_year_view_set_selected_month ()" link="JanaGtkYearView.html#jana-gtk-year-view-set-selected-month"/>
+    <function name="jana_gtk_year_view_set_highlighted_time ()" link="JanaGtkYearView.html#jana-gtk-year-view-set-highlighted-time"/>
+    <function name="The &quot;highlighted-time&quot; property" link="JanaGtkYearView.html#JanaGtkYearView--highlighted-time"/>
+    <function name="The &quot;months-per-row&quot; property" link="JanaGtkYearView.html#JanaGtkYearView--months-per-row"/>
+    <function name="The &quot;year&quot; property" link="JanaGtkYearView.html#JanaGtkYearView--year"/>
+    <function name="The &quot;selection-changed&quot; signal" link="JanaGtkYearView.html#JanaGtkYearView-selection-changed"/>
+    <function name="JanaGtkRecurrence" link="JanaGtkRecurrence.html#JanaGtkRecurrence-struct"/>
+    <function name="jana_gtk_recurrence_new ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-new"/>
+    <function name="jana_gtk_recurrence_set_recur ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-set-recur"/>
+    <function name="jana_gtk_recurrence_set_editable ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-set-editable"/>
+    <function name="jana_gtk_recurrence_set_time ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-set-time"/>
+    <function name="jana_gtk_recurrence_get_recur ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-get-recur"/>
+    <function name="jana_gtk_recurrence_get_editable ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-get-editable"/>
+    <function name="jana_gtk_recurrence_get_time ()" link="JanaGtkRecurrence.html#jana-gtk-recurrence-get-time"/>
+    <function name="The &quot;editable&quot; property" link="JanaGtkRecurrence.html#JanaGtkRecurrence--editable"/>
+    <function name="The &quot;recur&quot; property" link="JanaGtkRecurrence.html#JanaGtkRecurrence--recur"/>
+    <function name="The &quot;time&quot; property" link="JanaGtkRecurrence.html#JanaGtkRecurrence--time"/>
+    <function name="JanaGtkClock" link="JanaGtkClock.html#JanaGtkClock-struct"/>
+    <function name="jana_gtk_clock_new ()" link="JanaGtkClock.html#jana-gtk-clock-new"/>
+    <function name="jana_gtk_clock_set_time ()" link="JanaGtkClock.html#jana-gtk-clock-set-time"/>
+    <function name="jana_gtk_clock_get_time ()" link="JanaGtkClock.html#jana-gtk-clock-get-time"/>
+    <function name="jana_gtk_clock_set_digital ()" link="JanaGtkClock.html#jana-gtk-clock-set-digital"/>
+    <function name="jana_gtk_clock_get_digital ()" link="JanaGtkClock.html#jana-gtk-clock-get-digital"/>
+    <function name="jana_gtk_clock_set_show_seconds ()" link="JanaGtkClock.html#jana-gtk-clock-set-show-seconds"/>
+    <function name="jana_gtk_clock_get_show_seconds ()" link="JanaGtkClock.html#jana-gtk-clock-get-show-seconds"/>
+    <function name="jana_gtk_clock_set_buffer_time ()" link="JanaGtkClock.html#jana-gtk-clock-set-buffer-time"/>
+    <function name="jana_gtk_clock_get_buffer_time ()" link="JanaGtkClock.html#jana-gtk-clock-get-buffer-time"/>
+    <function name="jana_gtk_clock_set_draw_shadow ()" link="JanaGtkClock.html#jana-gtk-clock-set-draw-shadow"/>
+    <function name="jana_gtk_clock_get_draw_shadow ()" link="JanaGtkClock.html#jana-gtk-clock-get-draw-shadow"/>
+    <function name="The &quot;buffer-time&quot; property" link="JanaGtkClock.html#JanaGtkClock--buffer-time"/>
+    <function name="The &quot;digital&quot; property" link="JanaGtkClock.html#JanaGtkClock--digital"/>
+    <function name="The &quot;draw-shadow&quot; property" link="JanaGtkClock.html#JanaGtkClock--draw-shadow"/>
+    <function name="The &quot;show-seconds&quot; property" link="JanaGtkClock.html#JanaGtkClock--show-seconds"/>
+    <function name="The &quot;time&quot; property" link="JanaGtkClock.html#JanaGtkClock--time"/>
+    <function name="The &quot;clicked&quot; signal" link="JanaGtkClock.html#JanaGtkClock-clicked"/>
+    <function name="The &quot;render-start&quot; signal" link="JanaGtkClock.html#JanaGtkClock-render-start"/>
+    <function name="The &quot;render-stop&quot; signal" link="JanaGtkClock.html#JanaGtkClock-render-stop"/>
+    <function name="JanaGtkWorldMap" link="JanaGtkWorldMap.html#JanaGtkWorldMap-struct"/>
+    <function name="jana_gtk_world_map_new ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-new"/>
+    <function name="jana_gtk_world_map_set_time ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-set-time"/>
+    <function name="jana_gtk_world_map_get_latlon ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-latlon"/>
+    <function name="jana_gtk_world_map_get_xy ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-xy"/>
+    <function name="jana_gtk_world_map_add_marker ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-add-marker"/>
+    <function name="jana_gtk_world_map_remove_marker ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-remove-marker"/>
+    <function name="jana_gtk_world_map_move_marker ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-move-marker"/>
+    <function name="jana_gtk_world_map_get_markers ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-markers"/>
+    <function name="jana_gtk_world_map_set_static ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-set-static"/>
+    <function name="jana_gtk_world_map_get_static ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-static"/>
+    <function name="jana_gtk_world_map_set_width ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-set-width"/>
+    <function name="jana_gtk_world_map_get_width ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-width"/>
+    <function name="jana_gtk_world_map_set_height ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-set-height"/>
+    <function name="jana_gtk_world_map_get_height ()" link="JanaGtkWorldMap.html#jana-gtk-world-map-get-height"/>
+    <function name="The &quot;height&quot; property" link="JanaGtkWorldMap.html#JanaGtkWorldMap--height"/>
+    <function name="The &quot;static&quot; property" link="JanaGtkWorldMap.html#JanaGtkWorldMap--static"/>
+    <function name="The &quot;time&quot; property" link="JanaGtkWorldMap.html#JanaGtkWorldMap--time"/>
+    <function name="The &quot;width&quot; property" link="JanaGtkWorldMap.html#JanaGtkWorldMap--width"/>
+    <function name="The &quot;clicked&quot; signal" link="JanaGtkWorldMap.html#JanaGtkWorldMap-clicked"/>
+    <function name="The &quot;render-start&quot; signal" link="JanaGtkWorldMap.html#JanaGtkWorldMap-render-start"/>
+    <function name="The &quot;render-stop&quot; signal" link="JanaGtkWorldMap.html#JanaGtkWorldMap-render-stop"/>
+    <function name="JanaGtkWorldMapMarker" link="JanaGtkWorldMapMarker.html#JanaGtkWorldMapMarker-struct"/>
+    <function name="jana_gtk_world_map_marker_new ()" link="JanaGtkWorldMapMarker.html#jana-gtk-world-map-marker-new"/>
+    <function name="jana_gtk_world_map_marker_render ()" link="JanaGtkWorldMapMarker.html#jana-gtk-world-map-marker-render"/>
+    <function name="JanaGtkWorldMapMarkerPixbuf" link="libjana-gtk-JanaGtkWorldMapMarkerPixbuf.html#JanaGtkWorldMapMarkerPixbuf"/>
+    <function name="jana_gtk_world_map_marker_pixbuf_new ()" link="libjana-gtk-JanaGtkWorldMapMarkerPixbuf.html#jana-gtk-world-map-marker-pixbuf-new"/>
+    <function name="JanaGtkNoteStore" link="JanaGtkNoteStore.html#JanaGtkNoteStore-struct"/>
+    <function name="jana_gtk_note_store_new ()" link="JanaGtkNoteStore.html#jana-gtk-note-store-new"/>
+    <function name="jana_gtk_note_store_new_full ()" link="JanaGtkNoteStore.html#jana-gtk-note-store-new-full"/>
+    <function name="jana_gtk_note_store_set_view ()" link="JanaGtkNoteStore.html#jana-gtk-note-store-set-view"/>
+    <function name="jana_gtk_note_store_get_view ()" link="JanaGtkNoteStore.html#jana-gtk-note-store-get-view"/>
+    <function name="jana_gtk_note_store_get_store ()" link="JanaGtkNoteStore.html#jana-gtk-note-store-get-store"/>
+    <function name="The &quot;view&quot; property" link="JanaGtkNoteStore.html#JanaGtkNoteStore--view"/>
+    <function name="JanaGtkCellRendererNote" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote-struct"/>
+    <function name="jana_gtk_cell_renderer_note_new ()" link="JanaGtkCellRendererNote.html#jana-gtk-cell-renderer-note-new"/>
+    <function name="The &quot;author&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--author"/>
+    <function name="The &quot;body&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--body"/>
+    <function name="The &quot;categories&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--categories"/>
+    <function name="The &quot;category-color-hash&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--category-color-hash"/>
+    <function name="The &quot;category-icon-hash&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--category-icon-hash"/>
+    <function name="The &quot;cell-width&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--cell-width"/>
+    <function name="The &quot;created&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--created"/>
+    <function name="The &quot;draw-box&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--draw-box"/>
+    <function name="The &quot;icon&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--icon"/>
+    <function name="The &quot;justify&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--justify"/>
+    <function name="The &quot;modified&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--modified"/>
+    <function name="The &quot;recipient&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--recipient"/>
+    <function name="The &quot;show-author&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--show-author"/>
+    <function name="The &quot;show-body&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--show-body"/>
+    <function name="The &quot;show-created&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--show-created"/>
+    <function name="The &quot;show-modified&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--show-modified"/>
+    <function name="The &quot;show-recipient&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--show-recipient"/>
+    <function name="The &quot;style-hint&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--style-hint"/>
+    <function name="The &quot;uid&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--uid"/>
+    <function name="The &quot;xpad-inner&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--xpad-inner"/>
+    <function name="The &quot;ypad-inner&quot; property" link="JanaGtkCellRendererNote.html#JanaGtkCellRendererNote--ypad-inner"/>
+    <function name="jana_gtk_utils_treeview_resize ()" link="libjana-gtk-jana-gtk-utils.html#jana-gtk-utils-treeview-resize"/>
+  </functions>
+</book>

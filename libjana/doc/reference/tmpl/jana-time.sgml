@@ -1,0 +1,270 @@
+<!-- ##### SECTION Title ##### -->
+JanaTime
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaDuration ##### -->
+<para>
+
+</para>
+
+@start: 
+@end: 
+
+<!-- ##### STRUCT JanaTime ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION jana_time_get_seconds ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_minutes ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_hours ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_day ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_year ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_isdate ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_daylight ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_tzname ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_get_offset ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_time_set_seconds ##### -->
+<para>
+
+</para>
+
+@self: 
+@seconds: 
+
+
+<!-- ##### FUNCTION jana_time_set_minutes ##### -->
+<para>
+
+</para>
+
+@self: 
+@minutes: 
+
+
+<!-- ##### FUNCTION jana_time_set_hours ##### -->
+<para>
+
+</para>
+
+@self: 
+@hours: 
+
+
+<!-- ##### FUNCTION jana_time_set_day ##### -->
+<para>
+
+</para>
+
+@self: 
+@day: 
+
+
+<!-- ##### FUNCTION jana_time_set_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@month: 
+
+
+<!-- ##### FUNCTION jana_time_set_year ##### -->
+<para>
+
+</para>
+
+@self: 
+@year: 
+
+
+<!-- ##### FUNCTION jana_time_set_isdate ##### -->
+<para>
+
+</para>
+
+@self: 
+@isdate: 
+
+
+<!-- ##### FUNCTION jana_time_set_tzname ##### -->
+<para>
+
+</para>
+
+@self: 
+@tzname: 
+
+
+<!-- ##### FUNCTION jana_time_set_offset ##### -->
+<para>
+
+</para>
+
+@self: 
+@offset: 
+
+
+<!-- ##### FUNCTION jana_time_duplicate ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_duration_new ##### -->
+<para>
+
+</para>
+
+@start: 
+@end: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_duration_copy ##### -->
+<para>
+
+</para>
+
+@duration: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_duration_set_start ##### -->
+<para>
+
+</para>
+
+@self: 
+@start: 
+
+
+<!-- ##### FUNCTION jana_duration_set_end ##### -->
+<para>
+
+</para>
+
+@self: 
+@end: 
+
+
+<!-- ##### FUNCTION jana_duration_valid ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_duration_free ##### -->
+<para>
+
+</para>
+
+@self: 
+
+

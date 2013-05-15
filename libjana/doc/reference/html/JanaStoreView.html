@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaStoreView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="JanaStore.html" title="JanaStore">
+<link rel="next" href="JanaTask.html" title="JanaTask">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaStore.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td><a accesskey="n" href="JanaTask.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaStoreView.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaStoreView.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaStoreView.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaStoreView.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#JanaStoreView.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaStoreView">
+<a name="JanaStoreView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaStoreView.top_of_page"></a>JanaStoreView</span></h2>
+<p>JanaStoreView — A store query interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaStoreView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaStoreView.html#JanaStoreView-struct" title="JanaStoreView">JanaStoreView</a>;
+enum                <a class="link" href="JanaStoreView.html#JanaStoreViewField" title="enum JanaStoreViewField">JanaStoreViewField</a>;
+<span class="returnvalue">void</span>                <a class="link" href="JanaStoreView.html#jana-store-view-get-range" title="jana_store_view_get_range ()">jana_store_view_get_range</a>           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> **start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> **end</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStoreView.html#jana-store-view-set-range" title="jana_store_view_set_range ()">jana_store_view_set_range</a>           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);
+<span class="returnvalue">JanaStoreViewMatch</span> * <a class="link" href="JanaStoreView.html#jana-store-view-add-match" title="jana_store_view_add_match ()">jana_store_view_add_match</a>          (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaStoreView.html#JanaStoreViewField" title="enum JanaStoreViewField"><span class="type">JanaStoreViewField</span></a> field</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="JanaStoreView.html#jana-store-view-get-matches" title="jana_store_view_get_matches ()">jana_store_view_get_matches</a>         (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStoreView.html#jana-store-view-remove-match" title="jana_store_view_remove_match ()">jana_store_view_remove_match</a>        (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">JanaStoreViewMatch</span> *match</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStoreView.html#jana-store-view-clear-matches" title="jana_store_view_clear_matches ()">jana_store_view_clear_matches</a>       (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStoreView.html#jana-store-view-start" title="jana_store_view_start ()">jana_store_view_start</a>               (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);
+<a class="link" href="JanaStore.html" title="JanaStore"><span class="returnvalue">JanaStore</span></a> *         <a class="link" href="JanaStoreView.html#jana-store-view-get-store" title="jana_store_view_get_store ()">jana_store_view_get_store</a>           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaStoreView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----JanaStoreView
+</pre>
+</div>
+<div class="refsect1" title="Prerequisites">
+<a name="JanaStoreView.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+JanaStoreView requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="JanaStoreView.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaStoreView.html#JanaStoreView-added" title='The "added" signal'>added</a>"                                          : Run Last
+  "<a class="link" href="JanaStoreView.html#JanaStoreView-modified" title='The "modified" signal'>modified</a>"                                       : Run Last
+  "<a class="link" href="JanaStoreView.html#JanaStoreView-progress" title='The "progress" signal'>progress</a>"                                       : Run Last
+  "<a class="link" href="JanaStoreView.html#JanaStoreView-removed" title='The "removed" signal'>removed</a>"                                        : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaStoreView.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> is the interface for a query, or 'view' on a <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>. A 
+store view has functions to query a particular time range of components.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaStoreView.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaStoreView">
+<a name="JanaStoreView-struct"></a><h3>JanaStoreView</h3>
+<pre class="programlisting">typedef struct _JanaStoreView JanaStoreView;</pre>
+<p>
+The <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum JanaStoreViewField">
+<a name="JanaStoreViewField"></a><h3>enum JanaStoreViewField</h3>
+<pre class="programlisting">typedef enum {
+	JANA_STORE_VIEW_SUMMARY,
+	JANA_STORE_VIEW_LOCATION,
+	JANA_STORE_VIEW_DESCRIPTION,
+	JANA_STORE_VIEW_AUTHOR,
+	JANA_STORE_VIEW_RECIPIENT,
+	JANA_STORE_VIEW_BODY,
+	JANA_STORE_VIEW_CATEGORY,
+	JANA_STORE_VIEW_ANYFIELD,
+} JanaStoreViewField;
+</pre>
+<p>
+Enum values for different types of field to use in the 
+<code class="function">jana_store_view_set_match()</code> function. Using field values for incorrect 
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> types can have undefined results.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-SUMMARY:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_SUMMARY</code></span></p></td>
+<td>An event summary
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-LOCATION:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_LOCATION</code></span></p></td>
+<td>An event location
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-DESCRIPTION:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_DESCRIPTION</code></span></p></td>
+<td>An event description
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-AUTHOR:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_AUTHOR</code></span></p></td>
+<td>A note author
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-RECIPIENT:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_RECIPIENT</code></span></p></td>
+<td>A note recipient
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-BODY:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_BODY</code></span></p></td>
+<td>A note body
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-CATEGORY:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_CATEGORY</code></span></p></td>
+<td>A component category
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-STORE-VIEW-ANYFIELD:CAPS"></a><span class="term"><code class="literal">JANA_STORE_VIEW_ANYFIELD</code></span></p></td>
+<td>Match any field
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_get_range ()">
+<a name="jana-store-view-get-range"></a><h3>jana_store_view_get_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_view_get_range           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> **start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> **end</code></em>);</pre>
+<p>
+Retrieves the range over which this <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> is set to span. A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+start or end indicate an unbounded range.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>Return location for the start of the view range, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>Return location for the end of the view range, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_set_range ()">
+<a name="jana-store-view-set-range"></a><h3>jana_store_view_set_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_view_set_range           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);</pre>
+<p>
+Sets the range for the <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> to span. A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> parameter indicates 
+that that end of the range should be unbounded (i.e. extended infinitely 
+into the past or future). For event stores, this query will match against 
+events that have occurences within this range; for note stores, this query 
+will match against notes that were created or modified within this range.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>The start of the range, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>The end of the range, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_add_match ()">
+<a name="jana-store-view-add-match"></a><h3>jana_store_view_add_match ()</h3>
+<pre class="programlisting"><span class="returnvalue">JanaStoreViewMatch</span> * jana_store_view_add_match          (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaStoreView.html#JanaStoreViewField" title="enum JanaStoreViewField"><span class="type">JanaStoreViewField</span></a> field</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>);</pre>
+<p>
+Adds a matching query to the store view. This allows to search for components
+whose fields contain a particular string. The matching is done disregarding 
+the case of letters in the string. <em class="parameter"><code>field</code></em> must contain a field that matches 
+the component type being store by the underlying <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>, otherwise 
+unexpected results may occur.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em> :</span></p></td>
+<td>The field to match against
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>The matching string to use
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">JanaStoreViewMatch</span>, representing the matching query.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_get_matches ()">
+<a name="jana-store-view-get-matches"></a><h3>jana_store_view_get_matches ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             jana_store_view_get_matches         (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);</pre>
+<p>
+Retrieves all matching queries that have been added to the store view. See 
+<a class="link" href="JanaStoreView.html#jana-store-view-add-match" title="jana_store_view_add_match ()"><code class="function">jana_store_view_add_match()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a>, containing all the <span class="type">JanaStoreViewMatch</span> 
+structures added to the store view. This list must be freed with 
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_remove_match ()">
+<a name="jana-store-view-remove-match"></a><h3>jana_store_view_remove_match ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_view_remove_match        (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">JanaStoreViewMatch</span> *match</code></em>);</pre>
+<p>
+Removes a matching query from a store view. <em class="parameter"><code>match</code></em> must have been returned 
+by <a class="link" href="JanaStoreView.html#jana-store-view-add-match" title="jana_store_view_add_match ()"><code class="function">jana_store_view_add_match()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>match</code></em> :</span></p></td>
+<td>A <span class="type">JanaStoreViewMatch</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_clear_matches ()">
+<a name="jana-store-view-clear-matches"></a><h3>jana_store_view_clear_matches ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_view_clear_matches       (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);</pre>
+<p>
+Removes all matching queries from a store view.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_start ()">
+<a name="jana-store-view-start"></a><h3>jana_store_view_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_view_start               (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);</pre>
+<p>
+Starts the view. No signals will be emitted prior to calling this function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_view_get_store ()">
+<a name="jana-store-view-get-store"></a><h3>jana_store_view_get_store ()</h3>
+<pre class="programlisting"><a class="link" href="JanaStore.html" title="JanaStore"><span class="returnvalue">JanaStore</span></a> *         jana_store_view_get_store           (<em class="parameter"><code><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> that this view operates on.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> that this view operates on.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="JanaStoreView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "added" signal'>
+<a name="JanaStoreView-added"></a><h3>The <code class="literal">"added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *store_view,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       components,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)       : Run Last</pre>
+<p>
+The ::added signal is emitted when new components become
+visible in the scope of the store view.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store_view</code></em> :</span></p></td>
+<td>the store view that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>components</code></em> :</span></p></td>
+<td>A list of <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>s
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "modified" signal'>
+<a name="JanaStoreView-modified"></a><h3>The <code class="literal">"modified"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *store_view,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       components,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)       : Run Last</pre>
+<p>
+The ::modified signal is emitted when components that were
+previously in view have been modified in some way.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store_view</code></em> :</span></p></td>
+<td>the store view that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>components</code></em> :</span></p></td>
+<td>A list of <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>s
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "progress" signal'>
+<a name="JanaStoreView-progress"></a><h3>The <code class="literal">"progress"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *store_view,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>           percent,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)       : Run Last</pre>
+<p>
+The ::progress signal is emitted periodically as the 
+query progresses. When the query is complete, <em class="parameter"><code>percent</code></em> will 
+be 100.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store_view</code></em> :</span></p></td>
+<td>the store view that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>percent</code></em> :</span></p></td>
+<td>Percentage completion of the current running query
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "removed" signal'>
+<a name="JanaStoreView-removed"></a><h3>The <code class="literal">"removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> *store_view,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       uids,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)       : Run Last</pre>
+<p>
+The ::removed signal is emitted when components that were 
+previously in view have been removed from the underling 
+<a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store_view</code></em> :</span></p></td>
+<td>the store view that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uids</code></em> :</span></p></td>
+<td>A list of uids
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="JanaStoreView.see-also"></a><h2>See Also</h2>
+<a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

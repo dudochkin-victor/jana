@@ -1,0 +1,57 @@
+<!-- ##### SECTION Title ##### -->
+JanaEcalStore
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEcalStore ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaEcalStore:ecal ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaEcalStore:type ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_ecal_store_new ##### -->
+<para>
+
+</para>
+
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_store_new_from_uri ##### -->
+<para>
+
+</para>
+
+@uri: 
+@type: 
+@Returns: 
+
+

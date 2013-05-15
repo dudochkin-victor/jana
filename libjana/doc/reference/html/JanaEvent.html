@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaEvent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="JanaComponent.html" title="JanaComponent">
+<link rel="next" href="JanaNote.html" title="JanaNote">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaComponent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td><a accesskey="n" href="JanaNote.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaEvent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaEvent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaEvent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaEvent.prerequisites" class="shortcut">Prerequisites</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaEvent">
+<a name="JanaEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaEvent.top_of_page"></a>JanaEvent</span></h2>
+<p>JanaEvent — An event component interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaEvent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaEvent.html#JanaEvent-struct" title="JanaEvent">JanaEvent</a>;
+                    <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence">JanaRecurrence</a>;
+enum                <a class="link" href="JanaEvent.html#JanaRecurrenceType" title="enum JanaRecurrenceType">JanaRecurrenceType</a>;
+<a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    <a class="link" href="JanaEvent.html#jana-recurrence-new" title="jana_recurrence_new ()">jana_recurrence_new</a>                 ();
+<a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    <a class="link" href="JanaEvent.html#jana-recurrence-copy" title="jana_recurrence_copy ()">jana_recurrence_copy</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-recurrence-free" title="jana_recurrence_free ()">jana_recurrence_free</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-exceptions-free" title="jana_exceptions_free ()">jana_exceptions_free</a>                (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *exceptions</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEvent.html#jana-event-get-summary" title="jana_event_get_summary ()">jana_event_get_summary</a>              (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEvent.html#jana-event-get-description" title="jana_event_get_description ()">jana_event_get_description</a>          (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaEvent.html#jana-event-get-location" title="jana_event_get_location ()">jana_event_get_location</a>             (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEvent.html#jana-event-get-start" title="jana_event_get_start ()">jana_event_get_start</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEvent.html#jana-event-get-end" title="jana_event_get_end ()">jana_event_get_end</a>                  (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="JanaEvent.html#jana-event-get-categories" title="jana_event_get_categories ()">jana_event_get_categories</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-supports-alarm" title="jana_event_supports_alarm ()">jana_event_supports_alarm</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-has-alarm" title="jana_event_has_alarm ()">jana_event_has_alarm</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaEvent.html#jana-event-get-alarm-time" title="jana_event_get_alarm_time ()">jana_event_get_alarm_time</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-supports-recurrence" title="jana_event_supports_recurrence ()">jana_event_supports_recurrence</a>      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-has-recurrence" title="jana_event_has_recurrence ()">jana_event_has_recurrence</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    <a class="link" href="JanaEvent.html#jana-event-get-recurrence" title="jana_event_get_recurrence ()">jana_event_get_recurrence</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-supports-exceptions" title="jana_event_supports_exceptions ()">jana_event_supports_exceptions</a>      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaEvent.html#jana-event-has-exceptions" title="jana_event_has_exceptions ()">jana_event_has_exceptions</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="JanaEvent.html#jana-event-get-exceptions" title="jana_event_get_exceptions ()">jana_event_get_exceptions</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-summary" title="jana_event_set_summary ()">jana_event_set_summary</a>              (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *summary</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-description" title="jana_event_set_description ()">jana_event_set_description</a>          (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-location" title="jana_event_set_location ()">jana_event_set_location</a>             (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-start" title="jana_event_set_start ()">jana_event_set_start</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-end" title="jana_event_set_end ()">jana_event_set_end</a>                  (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-categories" title="jana_event_set_categories ()">jana_event_set_categories</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **categories</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-alarm" title="jana_event_set_alarm ()">jana_event_set_alarm</a>                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-recurrence" title="jana_event_set_recurrence ()">jana_event_set_recurrence</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaEvent.html#jana-event-set-exceptions" title="jana_event_set_exceptions ()">jana_event_set_exceptions</a>           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *exceptions</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----JanaEvent
+</pre>
+</div>
+<div class="refsect1" title="Prerequisites">
+<a name="JanaEvent.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+JanaEvent requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaEvent.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> is the interface for components that store information on 
+calendar events. It has functions for basic event description, as well as 
+recurrences, exceptions and alarms.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaEvent.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaEvent">
+<a name="JanaEvent-struct"></a><h3>JanaEvent</h3>
+<pre class="programlisting">typedef struct _JanaEvent JanaEvent;</pre>
+<p>
+The <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="JanaRecurrence">
+<a name="JanaRecurrence"></a><h3>JanaRecurrence</h3>
+<pre class="programlisting">typedef struct {
+	JanaRecurrenceType type;
+	gint 			interval;
+	gboolean		week_days[7];
+	gboolean 		by_date;
+	JanaTime *		end;
+} JanaRecurrence;
+</pre>
+<p>
+This struct specifies a particular recurrence.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a class="link" href="JanaEvent.html#JanaRecurrenceType" title="enum JanaRecurrenceType"><span class="type">JanaRecurrenceType</span></a> <em class="structfield"><code><a name="JanaRecurrence.type"></a>type</code></em>;</span></p></td>
+<td>The type of recurrence.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> <em class="structfield"><code><a name="JanaRecurrence.interval"></a>interval</code></em>;</span></p></td>
+<td>The interval of the recurrence, where 1 is 'every', 2 is 'every
+other', 3 is 'every third', etc.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="JanaRecurrence.week-days"></a>week_days</code></em>[7];</span></p></td>
+<td>For weekly recurrence, this indicates which days the recurrence
+happens on. The zeroth element in the array corresponds to a Monday and each 
+day follow sequentially. If <em class="parameter"><code>week_days</code></em> is empty, the starting date of the 
+recurrence is assumed to be the day to occur on. If <em class="parameter"><code>week_days</code></em> does not 
+include the starting day but includes other days, the recurrence will 
+occur on the starting day, then every week on the days specified in 
+<em class="parameter"><code>week_days</code></em> after the starting day.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="JanaRecurrence.by-date"></a>by_date</code></em>;</span></p></td>
+<td>For monthly recurrence, this indicates whether the 
+recurrence is by day or by date (i.e. First Monday of the month, or 1st of
+the month). If <em class="parameter"><code>by_date</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>, the day of the starting date will be 
+used to determine which day to occur on. If the starting date is the last 
+day in that month, the recurrence rule is treated as 'last x-day in month',
+as not all months have the same amount of week-days.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *<em class="structfield"><code><a name="JanaRecurrence.end"></a>end</code></em>;</span></p></td>
+<td>The ending time for the recurrence, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for indefinite recurrences
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="enum JanaRecurrenceType">
+<a name="JanaRecurrenceType"></a><h3>enum JanaRecurrenceType</h3>
+<pre class="programlisting">typedef enum {
+	JANA_RECURRENCE_DAILY,
+	JANA_RECURRENCE_WEEKLY,
+	JANA_RECURRENCE_MONTHLY,
+	JANA_RECURRENCE_YEARLY,
+} JanaRecurrenceType;
+</pre>
+<p>
+Enum values for different types of recurrence.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="JANA-RECURRENCE-DAILY:CAPS"></a><span class="term"><code class="literal">JANA_RECURRENCE_DAILY</code></span></p></td>
+<td>A daily recurrence
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-RECURRENCE-WEEKLY:CAPS"></a><span class="term"><code class="literal">JANA_RECURRENCE_WEEKLY</code></span></p></td>
+<td>A weekly recurrence
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-RECURRENCE-MONTHLY:CAPS"></a><span class="term"><code class="literal">JANA_RECURRENCE_MONTHLY</code></span></p></td>
+<td>A monthly recurrence
+</td>
+</tr>
+<tr>
+<td><p><a name="JANA-RECURRENCE-YEARLY:CAPS"></a><span class="term"><code class="literal">JANA_RECURRENCE_YEARLY</code></span></p></td>
+<td>A yearly recurrence
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_recurrence_new ()">
+<a name="jana-recurrence-new"></a><h3>jana_recurrence_new ()</h3>
+<pre class="programlisting"><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    jana_recurrence_new                 ();</pre>
+<p>
+Creates a new <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>. This will be an infinite, daily recurrence, 
+with an interval of 1. All other fields will be left <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>, to be freed with 
+<a class="link" href="JanaEvent.html#jana-recurrence-free" title="jana_recurrence_free ()"><code class="function">jana_recurrence_free()</code></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_recurrence_copy ()">
+<a name="jana-recurrence-copy"></a><h3>jana_recurrence_copy ()</h3>
+<pre class="programlisting"><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    jana_recurrence_copy                (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);</pre>
+<p>
+Creates a copy of a <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>recurrence</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated copy of <em class="parameter"><code>recurrence</code></em>, to be freed with 
+<a class="link" href="JanaEvent.html#jana-recurrence-free" title="jana_recurrence_free ()"><code class="function">jana_recurrence_free()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_recurrence_free ()">
+<a name="jana-recurrence-free"></a><h3>jana_recurrence_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_recurrence_free                (<em class="parameter"><code><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);</pre>
+<p>
+Frees the memory associated with <em class="parameter"><code>recurrence</code></em>. If <em class="parameter"><code>recurrence</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, 
+does nothing.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>recurrence</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_exceptions_free ()">
+<a name="jana-exceptions-free"></a><h3>jana_exceptions_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_exceptions_free                (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *exceptions</code></em>);</pre>
+<p>
+Frees a list of exceptions. See <a class="link" href="JanaEvent.html#jana-event-get-exceptions" title="jana_event_get_exceptions ()"><code class="function">jana_event_get_exceptions()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>exceptions</code></em> :</span></p></td>
+<td>A list of exceptions, as returned by 
+<a class="link" href="JanaEvent.html#jana-event-get-exceptions" title="jana_event_get_exceptions ()"><code class="function">jana_event_get_exceptions()</code></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_summary ()">
+<a name="jana-event-get-summary"></a><h3>jana_event_get_summary ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_event_get_summary              (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the summary associated with the event.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string, containing the summary.
+See <a class="link" href="JanaEvent.html#jana-event-set-summary" title="jana_event_set_summary ()"><code class="function">jana_event_set_summary()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_description ()">
+<a name="jana-event-get-description"></a><h3>jana_event_get_description ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_event_get_description          (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the description associated with the event.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string, containing the description. See 
+<a class="link" href="JanaEvent.html#jana-event-set-description" title="jana_event_set_description ()"><code class="function">jana_event_set_description()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_location ()">
+<a name="jana-event-get-location"></a><h3>jana_event_get_location ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_event_get_location             (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the location associated with the event. Note that this is just 
+a field designated for a user-specified location, and as such, is not related
+to time-zones and has no particular format. See <a class="link" href="JanaEvent.html#jana-event-set-location" title="jana_event_set_location ()"><code class="function">jana_event_set_location()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string, containing the location.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_start ()">
+<a name="jana-event-get-start"></a><h3>jana_event_get_start ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_event_get_start                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the time at which the event starts. See <a class="link" href="JanaEvent.html#jana-event-set-start" title="jana_event_set_start ()"><code class="function">jana_event_set_start()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A referenced <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> for the start of the event.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_end ()">
+<a name="jana-event-get-end"></a><h3>jana_event_get_end ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_event_get_end                  (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the time at which the event ends. See <a class="link" href="JanaEvent.html#jana-event-set-end" title="jana_event_set_end ()"><code class="function">jana_event_set_end()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A referenced <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> for the end of the event.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_categories ()">
+<a name="jana-event-get-categories"></a><h3>jana_event_get_categories ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            jana_event_get_categories           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">jana_event_get_categories</code> is deprecated and should not be used in newly-written code. Use <a class="link" href="JanaComponent.html#jana-component-get-categories" title="jana_component_get_categories ()"><code class="function">jana_component_get_categories()</code></a> instead.</p>
+</div>
+<p>
+See <a class="link" href="JanaComponent.html#jana-component-get-categories" title="jana_component_get_categories ()"><code class="function">jana_component_get_categories()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_supports_alarm ()">
+<a name="jana-event-supports-alarm"></a><h3>jana_event_supports_alarm ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_supports_alarm           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event supports setting an alarm.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event supports setting an alarm, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_has_alarm ()">
+<a name="jana-event-has-alarm"></a><h3>jana_event_has_alarm ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_has_alarm                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event has an alarm set on it.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event has an alarm set, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_alarm_time ()">
+<a name="jana-event-get-alarm-time"></a><h3>jana_event_get_alarm_time ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_event_get_alarm_time           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the alarm time set on the event. See <code class="function">jana_event_set_alarm_time()</code>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A referenced <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> for the alarm set on the event, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if 
+there is no alarm set.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_supports_recurrence ()">
+<a name="jana-event-supports-recurrence"></a><h3>jana_event_supports_recurrence ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_supports_recurrence      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event supports setting a recurrence.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event supports setting a recurrence, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_has_recurrence ()">
+<a name="jana-event-has-recurrence"></a><h3>jana_event_has_recurrence ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_has_recurrence           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event has a set recurrence.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event has a set recurrence, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_recurrence ()">
+<a name="jana-event-get-recurrence"></a><h3>jana_event_get_recurrence ()</h3>
+<pre class="programlisting"><a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="returnvalue">JanaRecurrence</span></a> *    jana_event_get_recurrence           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the recurrence description set on the event.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is no 
+set recurrence. See <a class="link" href="JanaEvent.html#jana-event-get-recurrence" title="jana_event_get_recurrence ()"><code class="function">jana_event_get_recurrence()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_supports_exceptions ()">
+<a name="jana-event-supports-exceptions"></a><h3>jana_event_supports_exceptions ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_supports_exceptions      (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event supports setting an exceptions list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event supports setting exceptions, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_has_exceptions ()">
+<a name="jana-event-has-exceptions"></a><h3>jana_event_has_exceptions ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_event_has_exceptions           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Determines whether the event has an exceptions list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event has an exceptions list, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_get_exceptions ()">
+<a name="jana-event-get-exceptions"></a><h3>jana_event_get_exceptions ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             jana_event_get_exceptions           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>);</pre>
+<p>
+Retrieves the event's exceptions list. See <a class="link" href="JanaEvent.html#jana-event-set-exceptions" title="jana_event_set_exceptions ()"><code class="function">jana_event_set_exceptions()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A list of dates, as <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>, on which the event does not occur, 
+or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is no set exceptions list. This list should be freed with 
+<a class="link" href="JanaEvent.html#jana-exceptions-free" title="jana_exceptions_free ()"><code class="function">jana_exceptions_free()</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_summary ()">
+<a name="jana-event-set-summary"></a><h3>jana_event_set_summary ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_summary              (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *summary</code></em>);</pre>
+<p>
+Sets the event's summary. Ideally, a summary should be a short, one-line 
+description of the event.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>summary</code></em> :</span></p></td>
+<td>A summary string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_description ()">
+<a name="jana-event-set-description"></a><h3>jana_event_set_description ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_description          (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);</pre>
+<p>
+Sets the event's description. A description can elaborate on the event's 
+summary and include event details that do not fit, or are not appropriate 
+in other fields.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>description</code></em> :</span></p></td>
+<td>A description string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_location ()">
+<a name="jana-event-set-location"></a><h3>jana_event_set_location ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_location             (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>);</pre>
+<p>
+Sets the event's location. Ideally, a location should be a short, one-line 
+summary of the event's location. A full address would be more suited to the 
+description field (see <a class="link" href="JanaEvent.html#jana-event-set-description" title="jana_event_set_description ()"><code class="function">jana_event_set_description()</code></a>).
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>A location string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_start ()">
+<a name="jana-event-set-start"></a><h3>jana_event_set_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_start                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *start</code></em>);</pre>
+<p>
+Sets the event's starting time.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_end ()">
+<a name="jana-event-set-end"></a><h3>jana_event_set_end ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_end                  (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *end</code></em>);</pre>
+<p>
+Sets the event's ending time. This should not occur on or before the 
+starting time. Setting an ending time before a starting time may cause 
+unpredictable results, depending on the implementation of <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_categories ()">
+<a name="jana-event-set-categories"></a><h3>jana_event_set_categories ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_categories           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **categories</code></em>);</pre>
+<div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">jana_event_set_categories</code> is deprecated and should not be used in newly-written code. Use <a class="link" href="JanaComponent.html#jana-component-set-categories" title="jana_component_set_categories ()"><code class="function">jana_component_set_categories()</code></a> instead.</p>
+</div>
+<p>
+See <a class="link" href="JanaComponent.html#jana-component-set-categories" title="jana_component_set_categories ()"><code class="function">jana_component_set_categories()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>categories</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_alarm ()">
+<a name="jana-event-set-alarm"></a><h3>jana_event_set_alarm ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_alarm                (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Sets or clears the event's alarm time. This function does nothing if the 
+event does not support alarms. See <a class="link" href="JanaEvent.html#jana-event-supports-alarm" title="jana_event_supports_alarm ()"><code class="function">jana_event_supports_alarm()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_recurrence ()">
+<a name="jana-event-set-recurrence"></a><h3>jana_event_set_recurrence ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_recurrence           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a> *recurrence</code></em>);</pre>
+<p>
+Sets or clears the event's recurrence rule. This function does nothing if 
+the event does not support recurrence. See <a class="link" href="JanaEvent.html#jana-event-supports-recurrence" title="jana_event_supports_recurrence ()"><code class="function">jana_event_supports_recurrence()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>recurrence</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html#JanaRecurrence" title="JanaRecurrence"><span class="type">JanaRecurrence</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_event_set_exceptions ()">
+<a name="jana-event-set-exceptions"></a><h3>jana_event_set_exceptions ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_event_set_exceptions           (<em class="parameter"><code><a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *exceptions</code></em>);</pre>
+<p>
+Sets the event's exceptions list. For each <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> in <em class="parameter"><code>exceptions</code></em>, the 
+event is considered not to occur, even if its start/end or recurrence rule 
+would dictate otherwise. This function does nothing if the event does not 
+support exceptions. See <a class="link" href="JanaEvent.html#jana-event-supports-exceptions" title="jana_event_supports_exceptions ()"><code class="function">jana_event_supports_exceptions()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaEvent.html" title="JanaEvent"><span class="type">JanaEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exceptions</code></em> :</span></p></td>
+<td>A list of <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> objects.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="JanaEvent.see-also"></a><h2>See Also</h2>
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

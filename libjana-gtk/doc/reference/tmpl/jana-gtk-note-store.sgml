@@ -1,0 +1,78 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkNoteStore
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkNoteStore ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaGtkNoteStore:view ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_note_store_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_note_store_new_full ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_note_store_set_view ##### -->
+<para>
+
+</para>
+
+@store: 
+@view: 
+
+
+<!-- ##### FUNCTION jana_gtk_note_store_get_view ##### -->
+<para>
+
+</para>
+
+@store: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_note_store_get_store ##### -->
+<para>
+
+</para>
+
+@store: 
+@Returns: 
+
+

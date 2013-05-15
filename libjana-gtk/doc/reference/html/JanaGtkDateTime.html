@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaGtkDateTime</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-gtk Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-gtk">
+<link rel="prev" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent">
+<link rel="next" href="JanaGtkDayView.html" title="JanaGtkDayView">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaGtkCellRendererEvent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-gtk Reference Manual</th>
+<td><a accesskey="n" href="JanaGtkDayView.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaGtkDateTime.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaGtkDateTime.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaGtkDateTime.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaGtkDateTime.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaGtkDateTime.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#JanaGtkDateTime.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaGtkDateTime">
+<a name="JanaGtkDateTime"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaGtkDateTime.top_of_page"></a>JanaGtkDateTime</span></h2>
+<p>JanaGtkDateTime</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaGtkDateTime.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime-struct" title="JanaGtkDateTime">JanaGtkDateTime</a>;
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a>*          <a class="link" href="JanaGtkDateTime.html#jana-gtk-date-time-new" title="jana_gtk_date_time_new ()">jana_gtk_date_time_new</a>              (<em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);
+<a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaGtkDateTime.html#jana-gtk-date-time-get-time" title="jana_gtk_date_time_get_time ()">jana_gtk_date_time_get_time</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDateTime.html#jana-gtk-date-time-set-time" title="jana_gtk_date_time_set_time ()">jana_gtk_date_time_set_time</a>         (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkDateTime.html#jana-gtk-date-time-set-editable" title="jana_gtk_date_time_set_editable ()">jana_gtk_date_time_set_editable</a>     (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> editable</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaGtkDateTime.html#jana-gtk-date-time-get-editable" title="jana_gtk_date_time_get_editable ()">jana_gtk_date_time_get_editable</a>     (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaGtkDateTime.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkObject.html">GtkObject</a>
+               +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html">GtkWidget</a>
+                     +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkContainer.html">GtkContainer</a>
+                           +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkBox.html">GtkBox</a>
+                                 +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkVBox.html">GtkVBox</a>
+                                       +----JanaGtkDateTime
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaGtkDateTime.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaGtkDateTime implements
+ AtkImplementorIface,  <a href="http://library.gnome.org/devel/gtk/unstable/gtk-gtkbuildable.html#GtkBuildable">GtkBuildable</a> and  <a href="http://library.gnome.org/devel/gtk/unstable/gtk-Orientable.html#GtkOrientable">GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaGtkDateTime.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--editable" title='The "editable" property'>editable</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--entry-format" title='The "entry-format" property'>entry-format</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--fast-timeout" title='The "fast-timeout" property'>fast-timeout</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--repeat" title='The "repeat" property'>repeat</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--time" title='The "time" property'>time</a>"                     <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime--timeout" title='The "timeout" property'>timeout</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="JanaGtkDateTime.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkDateTime.html#JanaGtkDateTime-changed" title='The "changed" signal'>changed</a>"                                        : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaGtkDateTime.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaGtkDateTime.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaGtkDateTime">
+<a name="JanaGtkDateTime-struct"></a><h3>JanaGtkDateTime</h3>
+<pre class="programlisting">typedef struct _JanaGtkDateTime JanaGtkDateTime;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_date_time_new ()">
+<a name="jana-gtk-date-time-new"></a><h3>jana_gtk_date_time_new ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a>*          jana_gtk_date_time_new              (<em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_date_time_get_time ()">
+<a name="jana-gtk-date-time-get-time"></a><h3>jana_gtk_date_time_get_time ()</h3>
+<pre class="programlisting"><a href="../libjana/JanaTime.html"><span class="returnvalue">JanaTime</span></a> *          jana_gtk_date_time_get_time         (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_date_time_set_time ()">
+<a name="jana-gtk-date-time-set-time"></a><h3>jana_gtk_date_time_set_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_date_time_set_time         (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../libjana/JanaTime.html"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_date_time_set_editable ()">
+<a name="jana-gtk-date-time-set-editable"></a><h3>jana_gtk_date_time_set_editable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_date_time_set_editable     (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> editable</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>editable</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_date_time_get_editable ()">
+<a name="jana-gtk-date-time-get-editable"></a><h3>jana_gtk_date_time_get_editable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_gtk_date_time_get_editable     (<em class="parameter"><code><a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaGtkDateTime.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "editable" property'>
+<a name="JanaGtkDateTime--editable"></a><h3>The <code class="literal">"editable"</code> property</h3>
+<pre class="programlisting">  "editable"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>Whether the JanaTime can be edited or not.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "entry-format" property'>
+<a name="JanaGtkDateTime--entry-format"></a><h3>The <code class="literal">"entry-format"</code> property</h3>
+<pre class="programlisting">  "entry-format"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only</pre>
+<p>The order in which day, month and year are shown.</p>
+<p>Allowed values: [0,2]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "fast-timeout" property'>
+<a name="JanaGtkDateTime--fast-timeout"></a><h3>The <code class="literal">"fast-timeout"</code> property</h3>
+<pre class="programlisting">  "fast-timeout"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>The amount of milliseconds after key-repeat starts, before the key-repeat rate is doubled.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1000</p>
+</div>
+<hr>
+<div class="refsect2" title='The "repeat" property'>
+<a name="JanaGtkDateTime--repeat"></a><h3>The <code class="literal">"repeat"</code> property</h3>
+<pre class="programlisting">  "repeat"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>The amount of times per second the key will be activated after pressing, after the initial timeout.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 8</p>
+</div>
+<hr>
+<div class="refsect2" title='The "time" property'>
+<a name="JanaGtkDateTime--time"></a><h3>The <code class="literal">"time"</code> property</h3>
+<pre class="programlisting">  "time"                     <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>*              : Read / Write</pre>
+<p>The JanaTime represented by this widget.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "timeout" property'>
+<a name="JanaGtkDateTime--timeout"></a><h3>The <code class="literal">"timeout"</code> property</h3>
+<pre class="programlisting">  "timeout"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>The amount of milliseconds before key-repeat starts.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 500</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="JanaGtkDateTime.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "changed" signal'>
+<a name="JanaGtkDateTime-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaGtkDateTime.html" title="JanaGtkDateTime"><span class="type">JanaGtkDateTime</span></a> *janagtkdatetime,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)            : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>janagtkdatetime</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

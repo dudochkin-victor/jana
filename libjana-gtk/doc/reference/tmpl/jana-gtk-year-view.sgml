@@ -1,0 +1,133 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkYearView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkYearView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkYearView::selection-changed ##### -->
+<para>
+
+</para>
+
+@janagtkyearview: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG JanaGtkYearView:highlighted-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkYearView:months-per-row ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkYearView:year ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_year_view_new ##### -->
+<para>
+
+</para>
+
+@months_per_row: 
+@year: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_add_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_remove_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_set_year ##### -->
+<para>
+
+</para>
+
+@self: 
+@year: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_get_year ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_set_months_per_row ##### -->
+<para>
+
+</para>
+
+@self: 
+@months_per_row: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_get_selected_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_set_selected_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@month: 
+
+
+<!-- ##### FUNCTION jana_gtk_year_view_set_highlighted_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+

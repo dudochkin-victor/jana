@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaGtkEventList</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-gtk Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-gtk">
+<link rel="prev" href="JanaGtkDayView.html" title="JanaGtkDayView">
+<link rel="next" href="JanaGtkEventStore.html" title="JanaGtkEventStore">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaGtkDayView.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-gtk Reference Manual</th>
+<td><a accesskey="n" href="JanaGtkEventStore.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaGtkEventList.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaGtkEventList.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaGtkEventList.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaGtkEventList.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#JanaGtkEventList.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaGtkEventList">
+<a name="JanaGtkEventList"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaGtkEventList.top_of_page"></a>JanaGtkEventList</span></h2>
+<p>JanaGtkEventList</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaGtkEventList.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaGtkEventList.html#JanaGtkEventList-struct" title="JanaGtkEventList">JanaGtkEventList</a>;
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a>*          <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-new" title="jana_gtk_event_list_new ()">jana_gtk_event_list_new</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-add-store" title="jana_gtk_event_list_add_store ()">jana_gtk_event_list_add_store</a>       (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-remove-store" title="jana_gtk_event_list_remove_store ()">jana_gtk_event_list_remove_store</a>    (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);
+<a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModelFilter.html"><span class="returnvalue">GtkTreeModelFilter</span></a> * <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-get-filter" title="jana_gtk_event_list_get_filter ()">jana_gtk_event_list_get_filter</a>     (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-refilter" title="jana_gtk_event_list_refilter ()">jana_gtk_event_list_refilter</a>        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-set-show-headers" title="jana_gtk_event_list_set_show_headers ()">jana_gtk_event_list_set_show_headers</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_headers</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-get-show-headers" title="jana_gtk_event_list_get_show_headers ()">jana_gtk_event_list_get_show_headers</a>
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaGtkEventList.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkObject.html">GtkObject</a>
+               +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html">GtkWidget</a>
+                     +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkContainer.html">GtkContainer</a>
+                           +----<a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeView.html">GtkTreeView</a>
+                                 +----JanaGtkEventList
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="JanaGtkEventList.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+JanaGtkEventList implements
+ AtkImplementorIface and  <a href="http://library.gnome.org/devel/gtk/unstable/gtk-gtkbuildable.html#GtkBuildable">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="JanaGtkEventList.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaGtkEventList.html#JanaGtkEventList--column" title='The "column" property'>column</a>"                   <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeViewColumn.html"><span class="type">GtkTreeViewColumn</span></a>*    : Read
+  "<a class="link" href="JanaGtkEventList.html#JanaGtkEventList--event-renderer" title='The "event-renderer" property'>event-renderer</a>"           <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a>*  : Read
+  "<a class="link" href="JanaGtkEventList.html#JanaGtkEventList--show-headers" title='The "show-headers" property'>show-headers</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="JanaGtkEventList.html#JanaGtkEventList--text-renderer" title='The "text-renderer" property'>text-renderer</a>"            <a href="http://library.gnome.org/devel/gtk/unstable/GtkCellRendererText.html"><span class="type">GtkCellRendererText</span></a>*  : Read
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaGtkEventList.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaGtkEventList.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaGtkEventList">
+<a name="JanaGtkEventList-struct"></a><h3>JanaGtkEventList</h3>
+<pre class="programlisting">typedef struct _JanaGtkEventList JanaGtkEventList;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_new ()">
+<a name="jana-gtk-event-list-new"></a><h3>jana_gtk_event_list_new ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a>*          jana_gtk_event_list_new             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_add_store ()">
+<a name="jana-gtk-event-list-add-store"></a><h3>jana_gtk_event_list_add_store ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_event_list_add_store       (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_remove_store ()">
+<a name="jana-gtk-event-list-remove-store"></a><h3>jana_gtk_event_list_remove_store ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_event_list_remove_store    (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaGtkEventStore.html" title="JanaGtkEventStore"><span class="type">JanaGtkEventStore</span></a> *store</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_get_filter ()">
+<a name="jana-gtk-event-list-get-filter"></a><h3>jana_gtk_event_list_get_filter ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeModelFilter.html"><span class="returnvalue">GtkTreeModelFilter</span></a> * jana_gtk_event_list_get_filter     (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_refilter ()">
+<a name="jana-gtk-event-list-refilter"></a><h3>jana_gtk_event_list_refilter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_event_list_refilter        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_set_show_headers ()">
+<a name="jana-gtk-event-list-set-show-headers"></a><h3>jana_gtk_event_list_set_show_headers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_event_list_set_show_headers
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_headers</code></em>);</pre>
+<p>
+Sets whether to display unique day-header rows for each day at least one 
+event falls on.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>show_headers</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to show date headers, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_gtk_event_list_get_show_headers ()">
+<a name="jana-gtk-event-list-get-show-headers"></a><h3>jana_gtk_event_list_get_show_headers ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            jana_gtk_event_list_get_show_headers
+                                                        (<em class="parameter"><code><a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a> *self</code></em>);</pre>
+<p>
+Determines whether unique day headers are to be displayed. See 
+<a class="link" href="JanaGtkEventList.html#jana-gtk-event-list-set-show-headers" title="jana_gtk_event_list_set_show_headers ()"><code class="function">jana_gtk_event_list_set_show_headers()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaGtkEventList.html" title="JanaGtkEventList"><span class="type">JanaGtkEventList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if day headers are being displayed, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="JanaGtkEventList.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "column" property'>
+<a name="JanaGtkEventList--column"></a><h3>The <code class="literal">"column"</code> property</h3>
+<pre class="programlisting">  "column"                   <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeViewColumn.html"><span class="type">GtkTreeViewColumn</span></a>*    : Read</pre>
+<p>The column used to display events and headers.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "event-renderer" property'>
+<a name="JanaGtkEventList--event-renderer"></a><h3>The <code class="literal">"event-renderer"</code> property</h3>
+<pre class="programlisting">  "event-renderer"           <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a>*  : Read</pre>
+<p>The cell renderer used to render event objects.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-headers" property'>
+<a name="JanaGtkEventList--show-headers"></a><h3>The <code class="literal">"show-headers"</code> property</h3>
+<pre class="programlisting">  "show-headers"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>Whether or not to display unique day headers.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "text-renderer" property'>
+<a name="JanaGtkEventList--text-renderer"></a><h3>The <code class="literal">"text-renderer"</code> property</h3>
+<pre class="programlisting">  "text-renderer"            <a href="http://library.gnome.org/devel/gtk/unstable/GtkCellRendererText.html"><span class="type">GtkCellRendererText</span></a>*  : Read</pre>
+<p>The cell renderer used to render headers.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

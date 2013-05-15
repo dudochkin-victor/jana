@@ -1,0 +1,130 @@
+<!-- ##### SECTION Title ##### -->
+JanaComponent
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaComponent ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM JanaComponentType ##### -->
+<para>
+
+</para>
+
+@JANA_COMPONENT_NULL: 
+@JANA_COMPONENT_EVENT: 
+@JANA_COMPONENT_NOTE: 
+@JANA_COMPONENT_TASK: 
+
+<!-- ##### FUNCTION jana_component_get_component_type ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_is_fully_represented ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_get_uid ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_get_categories ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_set_categories ##### -->
+<para>
+
+</para>
+
+@self: 
+@categories: 
+
+
+<!-- ##### FUNCTION jana_component_supports_custom_props ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_get_custom_props_list ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_get_custom_prop ##### -->
+<para>
+
+</para>
+
+@self: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_set_custom_prop ##### -->
+<para>
+
+</para>
+
+@self: 
+@name: 
+@value: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_component_props_list_free ##### -->
+<para>
+
+</para>
+
+@props: 
+
+

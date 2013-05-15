@@ -1,0 +1,110 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkDateTime
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkDateTime ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkDateTime::changed ##### -->
+<para>
+
+</para>
+
+@janagtkdatetime: the object which received the signal.
+
+<!-- ##### ARG JanaGtkDateTime:editable ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDateTime:entry-format ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDateTime:fast-timeout ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDateTime:repeat ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDateTime:time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkDateTime:timeout ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_date_time_new ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_date_time_get_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_date_time_set_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_date_time_set_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@editable: 
+
+
+<!-- ##### FUNCTION jana_gtk_date_time_get_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

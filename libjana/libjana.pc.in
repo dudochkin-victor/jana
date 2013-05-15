@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libjana
+Description: An interface library for time-related personal information
+Requires: gobject-2.0
+Version: @VERSION@
+Libs: -L${libdir} -ljana
+Cflags: -I${includedir}/jana
+

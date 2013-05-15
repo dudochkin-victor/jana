@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaNote</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="JanaEvent.html" title="JanaEvent">
+<link rel="next" href="JanaStore.html" title="JanaStore">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaEvent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td><a accesskey="n" href="JanaStore.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaNote.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaNote.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaNote.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaNote.prerequisites" class="shortcut">Prerequisites</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaNote">
+<a name="JanaNote"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaNote.top_of_page"></a>JanaNote</span></h2>
+<p>JanaNote — A note/memo/journal component interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaNote.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaNote.html#JanaNote-struct" title="JanaNote">JanaNote</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaNote.html#jana-note-get-author" title="jana_note_get_author ()">jana_note_get_author</a>                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaNote.html#jana-note-get-recipient" title="jana_note_get_recipient ()">jana_note_get_recipient</a>             (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="JanaNote.html#jana-note-get-body" title="jana_note_get_body ()">jana_note_get_body</a>                  (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaNote.html#jana-note-get-creation-time" title="jana_note_get_creation_time ()">jana_note_get_creation_time</a>         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);
+<a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          <a class="link" href="JanaNote.html#jana-note-get-modified-time" title="jana_note_get_modified_time ()">jana_note_get_modified_time</a>         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaNote.html#jana-note-set-author" title="jana_note_set_author ()">jana_note_set_author</a>                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *author</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaNote.html#jana-note-set-recipient" title="jana_note_set_recipient ()">jana_note_set_recipient</a>             (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *recipient</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaNote.html#jana-note-set-body" title="jana_note_set_body ()">jana_note_set_body</a>                  (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *body</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaNote.html#jana-note-set-creation-time" title="jana_note_set_creation_time ()">jana_note_set_creation_time</a>         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaNote.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----JanaNote
+</pre>
+</div>
+<div class="refsect1" title="Prerequisites">
+<a name="JanaNote.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+JanaNote requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaNote.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> is the interface for components that store miscellaneus textual 
+information.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaNote.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaNote">
+<a name="JanaNote-struct"></a><h3>JanaNote</h3>
+<pre class="programlisting">typedef struct _JanaNote JanaNote;</pre>
+<p>
+The <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_get_author ()">
+<a name="jana-note-get-author"></a><h3>jana_note_get_author ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_note_get_author                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);</pre>
+<p>
+Retrieves the author of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string containing the author of the note,
+or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_get_recipient ()">
+<a name="jana-note-get-recipient"></a><h3>jana_note_get_recipient ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_note_get_recipient             (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);</pre>
+<p>
+Retrieves the recipient of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string containing the recipient of the note,
+or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_get_body ()">
+<a name="jana-note-get-body"></a><h3>jana_note_get_body ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             jana_note_get_body                  (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);</pre>
+<p>
+Retrieves the note body.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string containing the body of the note, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_get_creation_time ()">
+<a name="jana-note-get-creation-time"></a><h3>jana_note_get_creation_time ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_note_get_creation_time         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);</pre>
+<p>
+Retrieves the creation time of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> filled with the creation time of the note.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_get_modified_time ()">
+<a name="jana-note-get-modified-time"></a><h3>jana_note_get_modified_time ()</h3>
+<pre class="programlisting"><a class="link" href="JanaTime.html" title="JanaTime"><span class="returnvalue">JanaTime</span></a> *          jana_note_get_modified_time         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>);</pre>
+<p>
+Retrieves the time of the last modification to this note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> filled with the last modification time of the note.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_set_author ()">
+<a name="jana-note-set-author"></a><h3>jana_note_set_author ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_note_set_author                (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *author</code></em>);</pre>
+<p>
+Sets the author of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>author</code></em> :</span></p></td>
+<td>The author of the note, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_set_recipient ()">
+<a name="jana-note-set-recipient"></a><h3>jana_note_set_recipient ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_note_set_recipient             (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *recipient</code></em>);</pre>
+<p>
+Sets the recipient of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>recipient</code></em> :</span></p></td>
+<td>The recipient of the note, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_set_body ()">
+<a name="jana-note-set-body"></a><h3>jana_note_set_body ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_note_set_body                  (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *body</code></em>);</pre>
+<p>
+Sets the body of the note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>body</code></em> :</span></p></td>
+<td>The note body
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_note_set_creation_time ()">
+<a name="jana-note-set-creation-time"></a><h3>jana_note_set_creation_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_note_set_creation_time         (<em class="parameter"><code><a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a> *note</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a> *time</code></em>);</pre>
+<p>
+Sets the creation time of the note. The creation time is automatically set 
+to the current local time when created, but this allows it to be overridden. 
+This can be useful to back-date notes, for example, or to set a particular 
+timezone on a note.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>note</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaNote.html" title="JanaNote"><span class="type">JanaNote</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaTime.html" title="JanaTime"><span class="type">JanaTime</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="JanaNote.see-also"></a><h2>See Also</h2>
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!-- ##### SECTION Title ##### -->
+JanaStoreView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaStoreView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaStoreView::added ##### -->
+<para>
+
+</para>
+
+@janastoreview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaStoreView::modified ##### -->
+<para>
+
+</para>
+
+@janastoreview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaStoreView::progress ##### -->
+<para>
+
+</para>
+
+@janastoreview: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaStoreView::removed ##### -->
+<para>
+
+</para>
+
+@janastoreview: the object which received the signal.
+@arg1: 
+
+<!-- ##### ENUM JanaStoreViewField ##### -->
+<para>
+
+</para>
+
+@JANA_STORE_VIEW_SUMMARY: 
+@JANA_STORE_VIEW_LOCATION: 
+@JANA_STORE_VIEW_DESCRIPTION: 
+@JANA_STORE_VIEW_AUTHOR: 
+@JANA_STORE_VIEW_RECIPIENT: 
+@JANA_STORE_VIEW_BODY: 
+@JANA_STORE_VIEW_CATEGORY: 
+@JANA_STORE_VIEW_ANYFIELD: 
+
+<!-- ##### FUNCTION jana_store_view_get_range ##### -->
+<para>
+
+</para>
+
+@self: 
+@start: 
+@end: 
+
+
+<!-- ##### FUNCTION jana_store_view_set_range ##### -->
+<para>
+
+</para>
+
+@self: 
+@start: 
+@end: 
+
+
+<!-- ##### FUNCTION jana_store_view_add_match ##### -->
+<para>
+
+</para>
+
+@self: 
+@field: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_store_view_get_matches ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_store_view_remove_match ##### -->
+<para>
+
+</para>
+
+@self: 
+@match: 
+
+
+<!-- ##### FUNCTION jana_store_view_clear_matches ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_store_view_start ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_store_view_get_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

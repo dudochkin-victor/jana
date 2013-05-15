@@ -1,0 +1,106 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkRecurrence
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkRecurrence ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaGtkRecurrence:editable ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkRecurrence:recur ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkRecurrence:time ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_recurrence_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_set_recur ##### -->
+<para>
+
+</para>
+
+@self: 
+@recur: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_set_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@editable: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_set_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_get_recur ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_get_editable ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_recurrence_get_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

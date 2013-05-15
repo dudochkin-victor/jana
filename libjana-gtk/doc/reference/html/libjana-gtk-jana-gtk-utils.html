@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jana-gtk-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana-gtk Reference Manual">
+<link rel="up" href="ch01.html" title="libjana-gtk">
+<link rel="prev" href="JanaGtkCellRendererNote.html" title="JanaGtkCellRendererNote">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaGtkCellRendererNote.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana-gtk Reference Manual</th>
+<td> </td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libjana-gtk-jana-gtk-utils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libjana-gtk-jana-gtk-utils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="jana-gtk-utils">
+<a name="libjana-gtk-jana-gtk-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libjana-gtk-jana-gtk-utils.top_of_page"></a>jana-gtk-utils</span></h2>
+<p>jana-gtk-utils</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="libjana-gtk-jana-gtk-utils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                <a class="link" href="libjana-gtk-jana-gtk-utils.html#jana-gtk-utils-treeview-resize" title="jana_gtk_utils_treeview_resize ()">jana_gtk_utils_treeview_resize</a>      (<em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="type">GtkWidget</span></a> *tree_view</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html#GtkAllocation"><span class="type">GtkAllocation</span></a> *allocation</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> cell_renderer</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="libjana-gtk-jana-gtk-utils.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="libjana-gtk-jana-gtk-utils.details"></a><h2>Details</h2>
+<div class="refsect2" title="jana_gtk_utils_treeview_resize ()">
+<a name="jana-gtk-utils-treeview-resize"></a><h3>jana_gtk_utils_treeview_resize ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_gtk_utils_treeview_resize      (<em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html"><span class="type">GtkWidget</span></a> *tree_view</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk/unstable/GtkWidget.html#GtkAllocation"><span class="type">GtkAllocation</span></a> *allocation</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> cell_renderer</code></em>);</pre>
+<p>
+A convenience callback that can be used in conjunction with 
+<span class="type">"size-allocate"</span> that will set the cell renderer width to the 
+width of the first column in <em class="parameter"><code>tree_view</code></em>. This can be useful if you want 
+correctly sized rows when using <a class="link" href="JanaGtkCellRendererEvent.html" title="JanaGtkCellRendererEvent"><span class="type">JanaGtkCellRendererEvent</span></a> or 
+<a class="link" href="JanaGtkCellRendererNote.html" title="JanaGtkCellRendererNote"><span class="type">JanaGtkCellRendererNote</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree_view</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gtk/unstable/GtkTreeView.html"><span class="type">GtkTreeView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>allocation</code></em> :</span></p></td>
+<td>The widget's allocated size
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cell_renderer</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gtk/unstable/GtkCellRenderer.html"><span class="type">GtkCellRenderer</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

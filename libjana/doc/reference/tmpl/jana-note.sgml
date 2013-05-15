@@ -1,0 +1,109 @@
+<!-- ##### SECTION Title ##### -->
+JanaNote
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaNote ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION jana_note_get_author ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_note_get_recipient ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_note_get_body ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_note_get_creation_time ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_note_get_modified_time ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_note_set_author ##### -->
+<para>
+
+</para>
+
+@note: 
+@author: 
+
+
+<!-- ##### FUNCTION jana_note_set_recipient ##### -->
+<para>
+
+</para>
+
+@note: 
+@recipient: 
+
+
+<!-- ##### FUNCTION jana_note_set_body ##### -->
+<para>
+
+</para>
+
+@note: 
+@body: 
+
+
+<!-- ##### FUNCTION jana_note_set_creation_time ##### -->
+<para>
+
+</para>
+
+@note: 
+@time: 
+
+

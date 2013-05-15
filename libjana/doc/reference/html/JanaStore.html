@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JanaStore</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="libjana Reference Manual">
+<link rel="up" href="ch01.html" title="libjana">
+<link rel="prev" href="JanaNote.html" title="JanaNote">
+<link rel="next" href="JanaStoreView.html" title="JanaStoreView">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="JanaNote.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libjana Reference Manual</th>
+<td><a accesskey="n" href="JanaStoreView.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#JanaStore.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#JanaStore.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#JanaStore.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#JanaStore.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#JanaStore.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="JanaStore">
+<a name="JanaStore"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="JanaStore.top_of_page"></a>JanaStore</span></h2>
+<p>JanaStore — A component store interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="JanaStore.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="JanaStore.html#JanaStore-struct" title="JanaStore">JanaStore</a>;
+<span class="returnvalue">void</span>                <a class="link" href="JanaStore.html#jana-store-open" title="jana_store_open ()">jana_store_open</a>                     (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>);
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="returnvalue">JanaComponent</span></a> *     <a class="link" href="JanaStore.html#jana-store-get-component" title="jana_store_get_component ()">jana_store_get_component</a>            (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uid</code></em>);
+<a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="returnvalue">JanaStoreView</span></a> *     <a class="link" href="JanaStore.html#jana-store-get-view" title="jana_store_get_view ()">jana_store_get_view</a>                 (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStore.html#jana-store-add-component" title="jana_store_add_component ()">jana_store_add_component</a>            (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStore.html#jana-store-modify-component" title="jana_store_modify_component ()">jana_store_modify_component</a>         (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="JanaStore.html#jana-store-remove-component" title="jana_store_remove_component ()">jana_store_remove_component</a>         (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="JanaStore.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----JanaStore
+</pre>
+</div>
+<div class="refsect1" title="Prerequisites">
+<a name="JanaStore.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+JanaStore requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="JanaStore.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="JanaStore.html#JanaStore-opened" title='The "opened" signal'>opened</a>"                                         : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="JanaStore.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> is the interface for a component storage. A component store 
+has functions to add, modify and remove components, as well as query the 
+storage itself and retrieve specific components.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="JanaStore.details"></a><h2>Details</h2>
+<div class="refsect2" title="JanaStore">
+<a name="JanaStore-struct"></a><h3>JanaStore</h3>
+<pre class="programlisting">typedef struct _JanaStore JanaStore;</pre>
+<p>
+The <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> struct contains only private data.
+</p>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_open ()">
+<a name="jana-store-open"></a><h3>jana_store_open ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_open                     (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>);</pre>
+<p>
+Opens the store. Prior to opening a store, any <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> on the store 
+will not receive any components and retrieval of components will fail. 
+This is an asynchronous call. When the store is open and ready, the ::opened 
+signal will be fired. Implementations of this function should return as 
+immediately as possible and do any lengthy processing in idle time, or in 
+a thread.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_get_component ()">
+<a name="jana-store-get-component"></a><h3>jana_store_get_component ()</h3>
+<pre class="programlisting"><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="returnvalue">JanaComponent</span></a> *     jana_store_get_component            (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uid</code></em>);</pre>
+<p>
+Retrieves a particular <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> using its unique identifier.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uid</code></em> :</span></p></td>
+<td>The UID of a <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> requested, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it does not exist in this 
+store.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_get_view ()">
+<a name="jana-store-get-view"></a><h3>jana_store_get_view ()</h3>
+<pre class="programlisting"><a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="returnvalue">JanaStoreView</span></a> *     jana_store_get_view                 (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>);</pre>
+<p>
+Retrieves a <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a> on this <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_add_component ()">
+<a name="jana-store-add-component"></a><h3>jana_store_add_component ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_add_component            (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);</pre>
+<p>
+Adds a component to the store.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>comp</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_modify_component ()">
+<a name="jana-store-modify-component"></a><h3>jana_store_modify_component ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_modify_component         (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);</pre>
+<p>
+Updates the stored component with any changes made. Does nothing if the 
+component does not exist in the store.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>comp</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="jana_store_remove_component ()">
+<a name="jana-store-remove-component"></a><h3>jana_store_remove_component ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                jana_store_remove_component         (<em class="parameter"><code><a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a> *comp</code></em>);</pre>
+<p>
+Removes a component from the store. Does nothing if the component does not 
+exist in the store.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>comp</code></em> :</span></p></td>
+<td>The <a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="JanaStore.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "opened" signal'>
+<a name="JanaStore-opened"></a><h3>The <code class="literal">"opened"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="JanaStore.html" title="JanaStore"><span class="type">JanaStore</span></a> *store,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)      : Run Last</pre>
+<p>
+The ::opened signal is emitted after <a class="link" href="JanaStore.html#jana-store-open" title="jana_store_open ()"><code class="function">jana_store_open()</code></a>
+is called and the store is ready to be queried.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>the store that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="JanaStore.see-also"></a><h2>See Also</h2>
+<a class="link" href="JanaComponent.html" title="JanaComponent"><span class="type">JanaComponent</span></a>, <a class="link" href="JanaStoreView.html" title="JanaStoreView"><span class="type">JanaStoreView</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

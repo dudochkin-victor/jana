@@ -1,0 +1,301 @@
+<!-- ##### SECTION Title ##### -->
+jana-utils
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION jana_utils_time_is_leap_year ##### -->
+<para>
+
+</para>
+
+@year: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_days_in_month ##### -->
+<para>
+
+</para>
+
+@year: 
+@month: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_day_of_week ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_day_of_year ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_set_start_of_week ##### -->
+<para>
+
+</para>
+
+@start: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_set_end_of_week ##### -->
+<para>
+
+</para>
+
+@end: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_week_of_year ##### -->
+<para>
+
+</para>
+
+@time: 
+@week_starts_monday: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_to_gdate ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_to_tm ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_strftime ##### -->
+<para>
+
+</para>
+
+@time: 
+@format: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_compare ##### -->
+<para>
+
+</para>
+
+@time1: 
+@time2: 
+@date_only: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_copy ##### -->
+<para>
+
+</para>
+
+@source: 
+@dest: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_diff ##### -->
+<para>
+
+</para>
+
+@t1: 
+@t2: 
+@year: 
+@month: 
+@day: 
+@hours: 
+@minutes: 
+@seconds: 
+
+
+<!-- ##### FUNCTION jana_utils_time_adjust ##### -->
+<para>
+
+</para>
+
+@time: 
+@year: 
+@month: 
+@day: 
+@hours: 
+@minutes: 
+@seconds: 
+
+
+<!-- ##### FUNCTION jana_utils_time_now ##### -->
+<para>
+
+</para>
+
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_duration_contains ##### -->
+<para>
+
+</para>
+
+@duration: 
+@time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_event_copy ##### -->
+<para>
+
+</para>
+
+@source: 
+@dest: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_note_copy ##### -->
+<para>
+
+</para>
+
+@source: 
+@dest: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_event_get_instances ##### -->
+<para>
+
+</para>
+
+@event: 
+@range_start: 
+@range_end: 
+@offset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_component_insert_category ##### -->
+<para>
+
+</para>
+
+@component: 
+@category: 
+@position: 
+
+
+<!-- ##### FUNCTION jana_utils_component_remove_category ##### -->
+<para>
+
+</para>
+
+@component: 
+@category: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_component_has_category ##### -->
+<para>
+
+</para>
+
+@component: 
+@category: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_instance_list_free ##### -->
+<para>
+
+</para>
+
+@instances: 
+
+
+<!-- ##### FUNCTION jana_utils_get_local_tzname ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_recurrence_to_string ##### -->
+<para>
+
+</para>
+
+@recur: 
+@start: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_recurrence_diff ##### -->
+<para>
+
+</para>
+
+@r1: 
+@r2: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_ab_day ##### -->
+<para>
+
+</para>
+
+@day: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_utils_time_daylight_hours ##### -->
+<para>
+
+</para>
+
+@latitude: 
+@day_of_year: 
+@Returns: 
+
+

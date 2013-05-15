@@ -1,0 +1,174 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkClock
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkClock ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkClock::clicked ##### -->
+<para>
+
+</para>
+
+@janagtkclock: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL JanaGtkClock::render-start ##### -->
+<para>
+
+</para>
+
+@janagtkclock: the object which received the signal.
+
+<!-- ##### SIGNAL JanaGtkClock::render-stop ##### -->
+<para>
+
+</para>
+
+@janagtkclock: the object which received the signal.
+
+<!-- ##### ARG JanaGtkClock:buffer-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkClock:digital ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkClock:draw-shadow ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkClock:show-seconds ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkClock:time ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_clock_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_set_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_get_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_set_digital ##### -->
+<para>
+
+</para>
+
+@self: 
+@digital: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_get_digital ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_set_show_seconds ##### -->
+<para>
+
+</para>
+
+@self: 
+@show_seconds: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_get_show_seconds ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_set_buffer_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@buffer_time: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_get_buffer_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_set_draw_shadow ##### -->
+<para>
+
+</para>
+
+@self: 
+@draw_shadow: 
+
+
+<!-- ##### FUNCTION jana_gtk_clock_get_draw_shadow ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

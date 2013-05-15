@@ -1,0 +1,110 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkEventList
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkEventList ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaGtkEventList:column ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkEventList:event-renderer ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkEventList:show-headers ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkEventList:text-renderer ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_event_list_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_add_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_remove_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_get_filter ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_refilter ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_set_show_headers ##### -->
+<para>
+
+</para>
+
+@self: 
+@show_headers: 
+
+
+<!-- ##### FUNCTION jana_gtk_event_list_get_show_headers ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

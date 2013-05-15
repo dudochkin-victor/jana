@@ -1,0 +1,14 @@
+libjana - An interface library for time-related personal information management
+         related data
+
+libjana-ecal - An implementation of the above using evolution-data-server
+
+libjana-gtk - A set of GTK widgets to use with libjana
+
+libjana, libjana-ecal and libjana-gtk are released under licensed under the
+terms of LPGLv2.1
+
+Note; the data file 'landwater.vmf' distributed as part of libjana-gtk was 
+originally from the application, 'sunclock', released under GPLv2 and 
+copyright John Mackin, <john@cs.su.oz.AU>
+

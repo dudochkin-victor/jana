@@ -1,0 +1,178 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkMonthView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkMonthView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaGtkMonthView::selection-changed ##### -->
+<para>
+
+</para>
+
+@janagtkmonthview: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG JanaGtkMonthView:highlighted-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkMonthView:month ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkMonthView:selection ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkMonthView:spacing ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkMonthView:style-hint ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_month_view_new ##### -->
+<para>
+
+</para>
+
+@month: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_add_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_remove_store ##### -->
+<para>
+
+</para>
+
+@self: 
+@store: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_get_cell_renderer ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_set_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@month: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_get_month ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_set_spacing ##### -->
+<para>
+
+</para>
+
+@self: 
+@spacing: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_get_spacing ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_set_selection ##### -->
+<para>
+
+</para>
+
+@self: 
+@day: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_get_selection ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_set_visible_func ##### -->
+<para>
+
+</para>
+
+@self: 
+@visible_cb: 
+@data: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_refilter ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_gtk_month_view_set_highlighted_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+

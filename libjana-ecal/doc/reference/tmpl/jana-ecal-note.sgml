@@ -1,0 +1,45 @@
+<!-- ##### SECTION Title ##### -->
+JanaEcalNote
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEcalNote ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION jana_ecal_note_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_note_new_from_ecalcomp ##### -->
+<para>
+
+</para>
+
+@note: 
+@Returns: 
+
+

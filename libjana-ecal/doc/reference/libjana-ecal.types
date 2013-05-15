@@ -1,0 +1,6 @@
+jana_ecal_event_get_type
+jana_ecal_note_get_type
+jana_ecal_component_get_type
+jana_ecal_store_view_get_type
+jana_ecal_store_get_type
+jana_ecal_time_get_type

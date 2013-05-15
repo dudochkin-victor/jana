@@ -1,0 +1,49 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkWorldMapMarker
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkWorldMapMarker ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_marker_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_gtk_world_map_marker_render ##### -->
+<para>
+
+</para>
+
+@marker: 
+@style: 
+@cr: 
+@state: 
+@x: 
+@y: 
+
+

@@ -1,0 +1,62 @@
+<!-- ##### SECTION Title ##### -->
+JanaEcalStoreView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEcalStoreView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaEcalStoreView:end ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaEcalStoreView:parent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaEcalStoreView:start ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaEcalStoreView:timeout ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaEcalStoreView:view ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_ecal_store_view_new ##### -->
+<para>
+
+</para>
+
+@store: 
+@Returns: 
+
+

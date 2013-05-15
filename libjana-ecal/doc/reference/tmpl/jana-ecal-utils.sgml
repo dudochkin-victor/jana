@@ -1,0 +1,78 @@
+<!-- ##### SECTION Title ##### -->
+jana-ecal-utils
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION jana_ecal_utils_time_now ##### -->
+<para>
+
+</para>
+
+@location: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_utils_time_now_local ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_utils_time_today ##### -->
+<para>
+
+</para>
+
+@location: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_utils_guess_location ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_utils_get_locations ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### MACRO JANA_ECAL_LOCATION_KEY ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO JANA_ECAL_LOCATION_KEY_DIR ##### -->
+<para>
+
+</para>
+
+
+

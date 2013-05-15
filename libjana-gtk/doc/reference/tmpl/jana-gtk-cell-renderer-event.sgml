@@ -1,0 +1,147 @@
+<!-- ##### SECTION Title ##### -->
+JanaGtkCellRendererEvent
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaGtkCellRendererEvent ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaGtkCellRendererEvent:categories ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:category-color-hash ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:cell-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:description ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:draw-box ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:draw-detail ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:draw-resize ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:draw-text ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:draw-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:end ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:first-instance ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:has-alarm ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:has-recurrences ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:last-instance ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:location ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:row ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:start ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:style-hint ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:summary ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:uid ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:xpad-inner ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG JanaGtkCellRendererEvent:ypad-inner ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_gtk_cell_renderer_event_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

@@ -1,0 +1,132 @@
+<!-- ##### SECTION Title ##### -->
+JanaEcalComponent
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaEcalComponent ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG JanaEcalComponent:ecalcomp ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION jana_ecal_component_new_from_ecalcomp ##### -->
+<para>
+
+</para>
+
+@component: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_get_summary ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_get_description ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_get_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_get_start ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_get_end ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_set_summary ##### -->
+<para>
+
+</para>
+
+@self: 
+@summary: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_set_description ##### -->
+<para>
+
+</para>
+
+@self: 
+@description: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_set_location ##### -->
+<para>
+
+</para>
+
+@self: 
+@location: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_set_start ##### -->
+<para>
+
+</para>
+
+@self: 
+@start: 
+
+
+<!-- ##### FUNCTION jana_ecal_component_set_end ##### -->
+<para>
+
+</para>
+
+@self: 
+@end: 
+
+

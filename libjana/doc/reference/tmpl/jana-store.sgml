@@ -1,0 +1,89 @@
+<!-- ##### SECTION Title ##### -->
+JanaStore
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT JanaStore ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL JanaStore::opened ##### -->
+<para>
+
+</para>
+
+@janastore: the object which received the signal.
+
+<!-- ##### FUNCTION jana_store_open ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION jana_store_get_component ##### -->
+<para>
+
+</para>
+
+@self: 
+@uid: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_store_get_view ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION jana_store_add_component ##### -->
+<para>
+
+</para>
+
+@self: 
+@comp: 
+
+
+<!-- ##### FUNCTION jana_store_modify_component ##### -->
+<para>
+
+</para>
+
+@self: 
+@comp: 
+
+
+<!-- ##### FUNCTION jana_store_remove_component ##### -->
+<para>
+
+</para>
+
+@self: 
+@comp: 
+
+
